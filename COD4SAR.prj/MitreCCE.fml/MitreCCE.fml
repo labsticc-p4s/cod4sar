@@ -1,0 +1,38 @@
+use org.openflexo.foundation.fml.rt.FMLRTVirtualModelInstanceModelSlot as FMLRT;
+
+import java.lang.String;
+
+@URI("http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreCCE.fml")
+@Author("h24hnain")
+public model MitreCCE {
+
+	public concept MCce_CCE {
+      String cce_id;
+      String cce_description;
+      String cce_parameters;
+      String cce_technical_mechanism;
+     OtherAttributes[0,*] otherAttributes with ConceptInstance(virtualModelInstance=container);
+      
+      
+		create::_create(String id, String description, String parameters, String technicalMechanism) {
+         this.cce_id = parameters.id;
+         this.cce_description = parameters.description;
+         this.cce_parameters = parameters.parameters;
+         this.cce_technical_mechanism = parameters.technicalMechanism;
+         
+		}
+		delete() {
+		}
+	}
+	public concept OtherAttributes {
+      String name;
+      String[0,*] value;
+		create::_create(String name, String value) {
+         this.name = parameters.name;
+         this.value.add(parameters.value);
+		}
+		delete() {
+		}
+	}
+	
+}

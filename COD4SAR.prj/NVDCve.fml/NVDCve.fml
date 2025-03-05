@@ -1,0 +1,138 @@
+namespace "http://imt-atlantique.fr/COD4SAR/COD4SAR.prj" as COD4SARPRJ;
+
+use org.openflexo.foundation.fml.rt.FMLRTVirtualModelInstanceModelSlot as FMLRT;
+
+import java.lang.String;
+
+import [COD4SARPRJ + "/MitreCVE.fml"] as MitreCVE;
+import [COD4SARPRJ + "/NVDCve.fml"] as NVDCve;
+
+@URI("http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/NVDCve.fml")
+@Author("h24hnain")
+public model NVDCve extends MitreCVE{
+   
+
+	public concept NVDCve_Cve {
+      String cve_id;
+      String sourceIdentifier;
+      String vulnStatus;
+      String published;
+      String lastModified;
+      String evaluatorComment;
+      String evaluatorSolution;
+      String evaluatorImpact;
+      String cisaExploitAdd;
+      String cisaActionDue;
+      String cisaRequiredAcion;
+      String cisaVulnerabilityName;
+      NVDCve_CveTag[0,*] cveTags with ConceptInstance(virtualModelInstance=container);
+      String[0,*] descriptions;
+      NVDCve_References[0,*] references with ConceptInstance(virtualModelInstance=container);
+      NVDCve_Metrics metrics with ConceptInstance(virtualModelInstance=container);
+      NVDCve_Weakness[0,*] weaknesses with ConceptInstance(virtualModelInstance=container);
+      NVDCve_Config[0,*] configuration with ConceptInstance(virtualModelInstance=container);
+      NVDCve_VendorComments[0,*] vendorComments with ConceptInstance(virtualModelInstance=container);
+      
+  
+      
+      
+		create::_create() {
+		}
+		delete() {
+		}
+	}
+
+	public concept NVDCve_CveTag {
+      String sourceIdentifier;
+      String[0,*] tags;
+      
+		create::_create() {
+		}
+		delete() {
+		}
+	}
+  
+ public concept NVDCve_References {
+      String source;
+      String url;
+      String[0,*] tags;
+      
+      create::_create() {
+      }
+      delete() {
+      }
+   }
+   public concept NVDCve_Metrics {
+      MCVECNAMetricCvssV40 cvssV4_0 with ConceptInstance(virtualModelInstance=container);
+      MCVECNAMetricCvssV3 cvssV3_1 with ConceptInstance(virtualModelInstance=container);
+      MCVECNAMetricCvssV3 cvssV3_0 with ConceptInstance(virtualModelInstance=container);
+      MCVECNAMetricCvssV20 cvssV2_0 with ConceptInstance(virtualModelInstance=container);
+      
+      
+      create::_create() {
+      }
+      delete() {
+      }
+   }
+      public concept NVDCve_Weakness {
+      String source;
+      String type;
+      String[0,*] description;
+      
+      create::_create() {
+      }
+      delete() {
+      }
+   }
+
+  public concept NVDCve_Config {
+      String operator;
+      boolean negate;
+      NVDCve_Node[0,*] nodes with ConceptInstance(virtualModelInstance=container);
+      
+      create::_create() {
+      }
+      delete() {
+      }
+   }
+  public concept NVDCve_Node {
+      String operator;
+      boolean negate;
+      NVDCve_CPEMatch[0,*] cpeMatch with ConceptInstance(virtualModelInstance=container);
+      
+      create::_create() {
+      }
+      delete() {
+      }
+   }
+
+   public concept NVDCve_CPEMatch {
+      boolean vulnerable;
+      String criteria;
+      String matchCriteriaId;
+      String versionStartExcluding;
+      String versionStartIncluding;
+      String versionEndExcluding;
+      String versionEndIncluding;
+    
+      create::_create() {
+      }
+      delete() {
+      }
+   }
+   public concept NVDCve_VendorComments {
+
+      String organisation;
+      String comment;
+      String lastModified;
+
+      create::_create() {
+      }
+      delete() {
+      }
+   }
+  
+  
+
+   
+}

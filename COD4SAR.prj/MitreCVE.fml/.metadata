@@ -1,0 +1,8 @@
+#Metadata for directory C:\Users\h24hnain\Desktop\Security-Ontology\cod4sar-model\COD4SAR.prj\MitreCVE.fml
+#Wed Mar 05 15:35:35 CET 2025
+MitreCVE.fml.requiredModelSlotList=org.openflexo.foundation.fml.rt.FMLRTVirtualModelInstanceModelSlot
+MitreCVE.fml.flexoConceptsList=MCVERecord,MCVEMetaData,MCVEContainer,MCVECna,MCVEProviderMetaData,MCVECNADescription,MCVESupportingMedia,MCVEAffected,MCVEVersion,MCVEProgramRoutine,MCVEChange,MCVEProblemTypeDescription,MCVECNAReference,MCVECNAImpact,MCVECNAMetric,MCVECNAMetricScenario,MCVECNAMetricCvssV40,MCVECNAMetricCvssV3,MCVECNAMetricCvssV20,MCVECNAMetricOther,MCVECNATimeline,MCVECNACredit,MCVECNASource,MCVETaxonomyMapping,MCVETaxonomyRelation,MCVEAdp
+MitreCVE.fml.uri=http\://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreCVE.fml
+MitreCVE.fml.name=MitreCVE
+MitreCVE.fml.virtualModelClassName=org.openflexo.foundation.fml.VirtualModel
+MitreCVE.fml.version=0.1

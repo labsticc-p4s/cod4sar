@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FMLRTVirtualModelInstance id="0" virtualModelURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreCVE.fml" modelVersion="1.0" title="MCVE1" version="0.1" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreCVE.fml" userID="H24" flexoID="1">
+  <FlexoConceptInstance id="1" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreCVE.fml#MCVEMetaData" userID="H24" flexoID="2">
+    <PrimitiveActorReference id="2" valueAsString="PUBLISHED" roleName="state" userID="H24" flexoID="13" />
+    <PrimitiveActorReference id="3" valueAsString="CVE-2023-28084" roleName="cveId" userID="H24" flexoID="14" />
+    <PrimitiveActorReference id="4" valueAsString="eb103674-0d28-4225-80f8-39fb86215de0" roleName="assignerOrgId" userID="H24" flexoID="15" />
+    <PrimitiveActorReference id="5" valueAsString="hpe" roleName="assignerShortName" userID="H24" flexoID="16" />
+    <PrimitiveActorReference id="6" valueAsString="2023-04-25T19:00:24.125Z" roleName="dateUpdated" userID="H24" flexoID="17" />
+    <PrimitiveActorReference id="7" valueAsString="2023-03-10T14:47:44.211Z" roleName="dateReserved" userID="H24" flexoID="18" />
+    <PrimitiveActorReference id="8" valueAsString="2023-04-25T19:00:14.252Z" roleName="datePublished" userID="H24" flexoID="19" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="9" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreCVE.fml#MCVEVersion" userID="H24" flexoID="3">
+    <PrimitiveActorReference id="10" valueAsString="0" roleName="version" userID="H24" flexoID="20" />
+    <PrimitiveActorReference id="11" valueAsString="affected" roleName="status" userID="H24" flexoID="21" />
+    <PrimitiveActorReference id="12" valueAsString="custom" roleName="versionType" userID="H24" flexoID="22" />
+    <PrimitiveActorReference id="13" valueAsString="" roleName="lessThan" userID="H24" flexoID="23" />
+    <PrimitiveActorReference id="14" valueAsString="8.2" roleName="lessThanOrEqual" userID="H24" flexoID="24" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="15" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreCVE.fml#MCVEAffected" userID="H24" flexoID="4">
+    <PrimitiveActorReference id="16" valueAsString="HPE OneView" roleName="product" userID="H24" flexoID="25" />
+    <PrimitiveActorReference id="17" valueAsString="Hewlett Packard Enterprise" roleName="vendor" userID="H24" flexoID="26" />
+    <PrimitiveActorReference id="18" valueAsString="unaffected" roleName="defaultStatus" userID="H24" flexoID="27" />
+    <ModelObjectActorReference id="19" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MCVE1.fml.rt#H24_3" roleName="versions" userID="H24" flexoID="28" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="20" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreCVE.fml#MCVESupportingMedia" userID="H24" flexoID="5">
+    <PrimitiveActorReference id="21" valueAsString="text/html" roleName="type" userID="H24" flexoID="29" />
+    <PrimitiveActorReference id="22" valueAsString="false" roleName="base64" userID="H24" flexoID="30" />
+    <PrimitiveActorReference id="23" valueAsString="HPE OneView and HPE OneView Global Dashboard appliance dumps may expose authentication tokens" roleName="value" userID="H24" flexoID="31" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="24" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreCVE.fml#MCVECNADescription" userID="H24" flexoID="6">
+    <PrimitiveActorReference id="25" valueAsString="en" roleName="lang" userID="H24" flexoID="32" />
+    <PrimitiveActorReference id="26" valueAsString="HPE OneView and HPE OneView Global Dashboard appliance dumps may expose authentication tokens" roleName="value" userID="H24" flexoID="33" />
+    <ModelObjectActorReference id="27" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MCVE1.fml.rt#H24_5" roleName="supportingMedia" userID="H24" flexoID="34" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="28" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreCVE.fml#MCVEProblemTypeDescription" userID="H24" flexoID="7">
+    <PrimitiveActorReference id="29" valueAsString="en" roleName="lang" userID="H24" flexoID="35" />
+    <PrimitiveActorReference id="30" valueAsString="CWE-522 Insufficiently Protected Credentials" roleName="description" userID="H24" flexoID="36" />
+    <PrimitiveActorReference id="31" valueAsString="CWE-522" roleName="cweId" userID="H24" flexoID="37" />
+    <PrimitiveActorReference id="32" valueAsString="CWE" roleName="type" userID="H24" flexoID="38" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="33" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreCVE.fml#MCVEProviderMetaData" userID="H24" flexoID="8">
+    <PrimitiveActorReference id="34" valueAsString="eb103674-0d28-4225-80f8-39fb86215de0" roleName="orgId" userID="H24" flexoID="39" />
+    <PrimitiveActorReference id="35" valueAsString="hpe" roleName="shortName" userID="H24" flexoID="40" />
+    <PrimitiveActorReference id="36" valueAsString="2023-04-25T19:00:24.125Z" roleName="dateUpdate" userID="H24" flexoID="41" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="37" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreCVE.fml#MCVECNAReference" userID="H24" flexoID="9">
+    <PrimitiveActorReference id="38" valueAsString="https://support.hpe.com/hpesc/public/docDisplay?docLocale=en_US&amp;docId=hpesbgn04468en_us" roleName="url" userID="H24" flexoID="42" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="39" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreCVE.fml#MCVECNASource" userID="H24" flexoID="10">
+    <PrimitiveActorReference id="40" valueAsString="UNKNOWN" roleName="discovery" userID="H24" flexoID="43" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="41" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreCVE.fml#MCVECna" userID="H24" flexoID="11">
+    <ModelObjectActorReference id="42" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MCVE1.fml.rt#H24_8" roleName="providerMetaData" userID="H24" flexoID="44" />
+    <PrimitiveActorReference id="43" valueAsString="" roleName="dateAssigned" userID="H24" flexoID="45" />
+    <PrimitiveActorReference id="44" valueAsString="" roleName="datePublic" userID="H24" flexoID="46" />
+    <PrimitiveActorReference id="45" valueAsString="HPE OneView and HPE OneView Global Dashboard appliance dumps may expose authentication tokens" roleName="title" userID="H24" flexoID="47" />
+    <ModelObjectActorReference id="46" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MCVE1.fml.rt#H24_6" roleName="descriptions" userID="H24" flexoID="48" />
+    <ModelObjectActorReference id="47" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MCVE1.fml.rt#H24_4" roleName="affected" userID="H24" flexoID="49" />
+    <ModelObjectActorReference id="48" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MCVE1.fml.rt#H24_7" roleName="problemTypes" userID="H24" flexoID="50" />
+    <ModelObjectActorReference id="49" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MCVE1.fml.rt#H24_9" roleName="references" userID="H24" flexoID="51" />
+    <ModelObjectActorReference id="50" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MCVE1.fml.rt#H24_10" roleName="source" userID="H24" flexoID="52" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="51" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreCVE.fml#MCVEContainer" userID="H24" flexoID="12">
+    <ModelObjectActorReference id="52" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MCVE1.fml.rt#H24_11" roleName="cna" userID="H24" flexoID="53" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="53" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreCVE.fml#MCVERecord" userID="H24" flexoID="54">
+    <PrimitiveActorReference id="54" valueAsString="CVE_RECORD" roleName="dataType" userID="H24" flexoID="55" />
+    <PrimitiveActorReference id="55" valueAsString="5.0" roleName="dataVersion" userID="H24" flexoID="56" />
+    <ModelObjectActorReference id="56" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MCVE1.fml.rt#H24_2" roleName="cveMetaData" userID="H24" flexoID="57" />
+    <ModelObjectActorReference id="57" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MCVE1.fml.rt#H24_12" roleName="containers" userID="H24" flexoID="58" />
+  </FlexoConceptInstance>
+</FMLRTVirtualModelInstance>

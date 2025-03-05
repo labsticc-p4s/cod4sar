@@ -1,0 +1,9 @@
+#Metadata for directory C:\Users\h24hnain\Desktop\Security-Ontology\cod4sar-model\COD4SAR.prj\MitreDefend.fml
+#Wed Mar 05 15:35:35 CET 2025
+MitreDefend.fml.requiredModelSlotList=org.openflexo.foundation.fml.rt.FMLRTVirtualModelInstanceModelSlot
+MitreDefend.fml.dependenciesList=http\://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreDefend.fml
+MitreDefend.fml.uri=http\://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreDefend.fml
+MitreDefend.fml.version=0.1
+MitreDefend.fml.virtualModelClassName=org.openflexo.foundation.fml.VirtualModel
+MitreDefend.fml.name=MitreDefend
+MitreDefend.fml.flexoConceptsList=MDAttack,MDConcept,MDDefendThing,MDActivity,MDOrganizationalActivity,MDArtifact,MDDigitalObject,MDDefensiveTactic,MDOffensiveTactic,MDTechniqueReference,MDDigitalArtifact,MDTechnique,MDProcedure,MDDefensiveTechnique,MDOffensiveTechnique,MDCodeSegment,MDProcess,MDFile,MDUrl,MDUserAccount,MDProcessCodeSegment,MDExecutableFile,MDExecutableBinaryFile,MDRelationship,MDWeakness

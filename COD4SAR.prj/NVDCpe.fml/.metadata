@@ -1,0 +1,8 @@
+#Metadata for directory C:\Users\h24hnain\Desktop\Security-Ontology\cod4sar-model\COD4SAR.prj\NVDCpe.fml
+#Wed Mar 05 15:35:35 CET 2025
+NVDCpe.fml.requiredModelSlotList=org.openflexo.foundation.fml.rt.FMLRTVirtualModelInstanceModelSlot
+NVDCpe.fml.virtualModelClassName=org.openflexo.foundation.fml.VirtualModel
+NVDCpe.fml.name=NVDCpe
+NVDCpe.fml.flexoConceptsList=Cpe,Title,Reference,Deprecation
+NVDCpe.fml.version=0.1
+NVDCpe.fml.uri=http\://imt-atlantique.fr/COD4SAR/COD4SAR.prj/NVDCpe.fml

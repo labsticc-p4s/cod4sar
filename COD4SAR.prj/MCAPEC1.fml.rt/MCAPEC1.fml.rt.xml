@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FMLRTVirtualModelInstance id="0" virtualModelURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreCAPEC.fml" modelVersion="1.0" title="MCAPEC1" version="0.1" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreCAPEC.fml" userID="H24" flexoID="1">
+  <FlexoConceptInstance id="1" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreCAPEC.fml#MCAPECRelatedAttackPattern" userID="H24" flexoID="3">
+    <PrimitiveActorReference id="2" valueAsString="151" roleName="capecId" userID="H24" flexoID="4" />
+    <PrimitiveActorReference id="3" valueAsString="CanPrecede" roleName="nature" userID="H24" flexoID="5" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="4" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreCAPEC.fml#MCAPECAttackStep" userID="H24" flexoID="6">
+    <PrimitiveActorReference id="5" valueAsString="1" roleName="step" userID="H24" flexoID="12" />
+    <PrimitiveActorReference id="6" valueAsString="Explore" roleName="phase" userID="H24" flexoID="13" />
+    <PrimitiveActorReference id="7" valueAsString="[Acquire known credentials] The adversary must obtain known credentials in order to access the target system, application, or service." roleName="description" userID="H24" flexoID="14" />
+    <PrimitiveActorReference id="8" valueAsString="An adversary purchases breached username/password combinations or leaked hashed passwords from the dark web.&lt;/" roleName="techniques" userID="H24" flexoID="15" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="9" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreCAPEC.fml#MCAPECExecutionFlow" userID="H24" flexoID="7">
+    <ModelObjectActorReference id="10" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MCAPEC1.fml.rt#H24_6" roleName="attackSteps" userID="H24" flexoID="16" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="11" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreCAPEC.fml#MCAPECSkill" userID="H24" flexoID="8">
+    <PrimitiveActorReference id="12" valueAsString="Low" roleName="level" userID="H24" flexoID="17" />
+    <PrimitiveActorReference id="13" valueAsString="Once an adversary obtains a known credential, leveraging it is trivial." roleName="description" userID="H24" flexoID="18" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="14" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreCAPEC.fml#MCAPECConsequence" userID="H24" flexoID="9">
+    <PrimitiveActorReference id="15" valueAsString="Confidentiality" roleName="scopes" userID="H24" flexoID="19" />
+    <PrimitiveActorReference id="16" valueAsString="Gain Privileges" roleName="impact" userID="H24" flexoID="20" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="17" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreCAPEC.fml#MCAPECRelatedWeakness" userID="H24" flexoID="10">
+    <PrimitiveActorReference id="18" valueAsString="522" roleName="cweId" userID="H24" flexoID="21" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="19" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreCAPEC.fml#MCAPECTaxonomyMapping" userID="H24" flexoID="11">
+    <PrimitiveActorReference id="20" valueAsString="ATTACK" roleName="taxonomyName" userID="H24" flexoID="22" />
+    <PrimitiveActorReference id="21" valueAsString="1078" roleName="entryId" userID="H24" flexoID="23" />
+    <PrimitiveActorReference id="22" valueAsString="Valid Accounts" roleName="entryName" userID="H24" flexoID="24" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="23" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreCAPEC.fml#MCAPECSubmission" userID="H24" flexoID="25">
+    <PrimitiveActorReference id="24" valueAsString="CAPEC Content Team" roleName="submissionName" userID="H24" flexoID="29" />
+    <PrimitiveActorReference id="25" valueAsString="The MITRE Corporation" roleName="submissionOrganization" userID="H24" flexoID="30" />
+    <PrimitiveActorReference id="26" valueAsString="2015-11-09" roleName="submissionDate" userID="H24" flexoID="31" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="27" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreCAPEC.fml#MCAPECModification" userID="H24" flexoID="26">
+    <PrimitiveActorReference id="28" valueAsString="CAPEC Content Team" roleName="modificationName" userID="H24" flexoID="32" />
+    <PrimitiveActorReference id="29" valueAsString="The MITRE Corporation" roleName="modificationOrganization" userID="H24" flexoID="33" />
+    <PrimitiveActorReference id="30" valueAsString="2015-12-07" roleName="modificationDate" userID="H24" flexoID="34" />
+    <PrimitiveActorReference id="31" valueAsString="Updated References" roleName="modificationComment" userID="H24" flexoID="35" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="32" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreCAPEC.fml#MCAPECContentHistory" userID="H24" flexoID="27">
+    <ModelObjectActorReference id="33" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MCAPEC1.fml.rt#H24_25" roleName="submission" userID="H24" flexoID="36" />
+    <ModelObjectActorReference id="34" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MCAPEC1.fml.rt#H24_26" roleName="modifications" userID="H24" flexoID="37" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="35" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreCAPEC.fml#MCAPECAttackPattern" userID="H24" flexoID="28">
+    <PrimitiveActorReference id="36" valueAsString="560" roleName="id" userID="H24" flexoID="38" />
+    <PrimitiveActorReference id="37" valueAsString="Use of Known Domain Credentials" roleName="name" userID="H24" flexoID="39" />
+    <PrimitiveActorReference id="38" valueAsString="Stable" roleName="status" userID="H24" flexoID="40" />
+    <PrimitiveActorReference id="39" valueAsString="             &lt;xhtml:p&gt;An adversary guesses or obtains (i.e. steals or purchases) legitimate credentials (e.g. userID/password) to achieve authentication and to perform authorized actions under the guise of an authenticated user or service.&lt;/xhtml:p&gt; " roleName="description" userID="H24" flexoID="41" />
+    <PrimitiveActorReference id="40" valueAsString="High" roleName="likelihoodOfAttack" userID="H24" flexoID="42" />
+    <PrimitiveActorReference id="41" valueAsString="High" roleName="typicalSeverity" userID="H24" flexoID="43" />
+    <ModelObjectActorReference id="42" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MCAPEC1.fml.rt#H24_3" roleName="relatedAttackPatterns" userID="H24" flexoID="44" />
+    <ModelObjectActorReference id="43" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MCAPEC1.fml.rt#H24_7" roleName="executionFlow" userID="H24" flexoID="45" />
+    <PrimitiveActorReference id="44" valueAsString="The system/application uses one factor password based authentication, SSO, and/or cloud-based authentication." roleName="prerequisites" userID="H24" flexoID="46" />
+    <ModelObjectActorReference id="45" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MCAPEC1.fml.rt#H24_8" roleName="skillsRequired" userID="H24" flexoID="47" />
+    <PrimitiveActorReference id="46" valueAsString="A list of known credentials." roleName="resourcesRequired" userID="H24" flexoID="48" />
+    <PrimitiveActorReference id="47" valueAsString="Authentication attempts use credentials that have been used previously by the account in question." roleName="indicators" userID="H24" flexoID="49" />
+    <ModelObjectActorReference id="48" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MCAPEC1.fml.rt#H24_9" roleName="consequences" userID="H24" flexoID="50" />
+    <PrimitiveActorReference id="49" valueAsString="Leverage multi-factor authentication for all authentication services and prior to granting an entity access to the domain network." roleName="mitigations" userID="H24" flexoID="51" />
+    <PrimitiveActorReference id="50" valueAsString="Throughout 2015 and 2016, APT28 â€” also known as Pawn Storm, Sednit, Fancy Bear, Sofacy, and STRONTIUM â€” leveraged stolen credentials to infiltrate the Democratic National Committee (DNC), the United States Army, the World Anti-Doping Agency (WADA), the Court of Arbitration for Sport (TAS-CAS), and more. In most cases, the legitimate credentials were obtained via calculated spearphishing, tabnabbing, and DNS attacks targeted at corporate webmail systems. APT28 also executed several watering hole attacks, in addition to exploiting several zero-day vulnerabilities within Flash and Windows. The stolen credentials were then utilized to maintain authenticated access, laterally move within the local network, and exfiltrate sensitive information including DNC emails and personal medical records of numerous athletes. [REF-571]" roleName="exampleInstances" userID="H24" flexoID="52" />
+    <ModelObjectActorReference id="51" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MCAPEC1.fml.rt#H24_10" roleName="relatedWeaknesses" userID="H24" flexoID="53" />
+    <ModelObjectActorReference id="52" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MCAPEC1.fml.rt#H24_11" roleName="taxonomyMappings" userID="H24" flexoID="54" />
+    <ModelObjectActorReference id="53" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MCAPEC1.fml.rt#H24_27" roleName="contentHistory" userID="H24" flexoID="55" />
+  </FlexoConceptInstance>
+</FMLRTVirtualModelInstance>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FMLRTVirtualModelInstance id="0" virtualModelURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/Cod4sarCore.fml" modelVersion="1.0" title="cod5" version="0.1" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/Cod4sarCore.fml" userID="H24" flexoID="1">
+  <FlexoConceptInstance id="1" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/Cod4sarCore.fml#Attack" userID="H24" flexoID="3">
+    <ModelObjectActorReference id="2" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/monMD1.fml.rt#H24_13" roleName="mdOffensiveTechnique" userID="H24" flexoID="5" />
+    <ModelObjectActorReference id="3" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MASTIX1.fml.rt#H24_4" roleName="masAttack" userID="H24" flexoID="6" />
+    <ConceptActorReference id="4" conceptURI="http://coad4sar#Valid_Accounts" roleName="individual" userID="H24" flexoID="4" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="5" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/Cod4sarCore.fml#Attack" userID="H24" flexoID="7">
+    <ModelObjectActorReference id="6" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/monMD1.fml.rt#H24_13" roleName="mdOffensiveTechnique" userID="H24" flexoID="8" />
+    <ModelObjectActorReference id="7" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MASTIX1.fml.rt#H24_4" roleName="masAttack" userID="H24" flexoID="9" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="8" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/Cod4sarCore.fml#Attack" userID="H24" flexoID="11">
+    <ModelObjectActorReference id="9" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/monMD1.fml.rt#H24_13" roleName="mdOffensiveTechnique" userID="H24" flexoID="12" />
+    <ModelObjectActorReference id="10" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MASTIX1.fml.rt#H24_4" roleName="masAttack" userID="H24" flexoID="13" />
+  </FlexoConceptInstance>
+  <FlexoOntologyModelSlotInstance id="11" modelURI="http://coad4sar" modelSlotName="ontology" roleName="ontology" userID="H24" flexoID="2" />
+  <ModelObjectActorReference id="12" objectReference="http://coad4sar#null_null" roleName="attackOWLClass" userID="H24" flexoID="10" />
+</FMLRTVirtualModelInstance>

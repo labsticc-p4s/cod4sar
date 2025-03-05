@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FMLRTVirtualModelInstance id="0" virtualModelURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreDefend.fml" modelVersion="1.0" title="monMD1" version="0.1" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreDefend.fml" userID="SYL" flexoID="1">
+  <FlexoConceptInstance id="1" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreDefend.fml#MDAttack" userID="SYL" flexoID="2">
+    <PrimitiveActorReference id="2" valueAsString="tutu" roleName="name" userID="SYL" flexoID="4" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="3" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreDefend.fml#MDAttack" userID="SYL" flexoID="3">
+    <PrimitiveActorReference id="4" valueAsString="tata" roleName="name" userID="SYL" flexoID="5" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="5" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreDefend.fml#MDDefensiveTechnique" userID="H24" flexoID="6">
+    <PrimitiveActorReference id="6" valueAsString="User Account Permissions" roleName="iri" userID="H24" flexoID="20" />
+    <PrimitiveActorReference id="7" valueAsString="User Account Permissions" roleName="label" userID="H24" flexoID="21" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="8" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreDefend.fml#MDDigitalArtifact" userID="H24" flexoID="7">
+    <PrimitiveActorReference id="9" valueAsString="UserAccount" roleName="iri" userID="H24" flexoID="22" />
+    <PrimitiveActorReference id="10" valueAsString="UserAccount" roleName="label" userID="H24" flexoID="23" />
+    <PrimitiveActorReference id="11" valueAsString="" roleName="definition" userID="H24" flexoID="24" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="12" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreDefend.fml#MDRelationship" userID="H24" flexoID="8">
+    <PrimitiveActorReference id="13" valueAsString="" roleName="sourceId" userID="H24" flexoID="9" />
+    <PrimitiveActorReference id="14" valueAsString="User Account Permissions" roleName="sourceName" userID="H24" flexoID="25" />
+    <PrimitiveActorReference id="15" valueAsString="restricts" roleName="mappingType" userID="H24" flexoID="26" />
+    <PrimitiveActorReference id="16" valueAsString="UserAccount" roleName="targetName" userID="H24" flexoID="10" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="17" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreDefend.fml#MDDefensiveTactic" userID="H24" flexoID="11">
+    <PrimitiveActorReference id="18" valueAsString="Harden" roleName="iri" userID="H24" flexoID="27" />
+    <PrimitiveActorReference id="19" valueAsString="Harden" roleName="label" userID="H24" flexoID="28" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="20" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreDefend.fml#MDRelationship" userID="H24" flexoID="12">
+    <PrimitiveActorReference id="21" valueAsString="" roleName="sourceId" userID="H24" flexoID="29" />
+    <PrimitiveActorReference id="22" valueAsString="User Account Permissions" roleName="sourceName" userID="H24" flexoID="30" />
+    <PrimitiveActorReference id="23" valueAsString="enables" roleName="mappingType" userID="H24" flexoID="31" />
+    <PrimitiveActorReference id="24" valueAsString="" roleName="targetId" userID="H24" flexoID="32" />
+    <PrimitiveActorReference id="25" valueAsString="Harden" roleName="targetName" userID="H24" flexoID="33" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="26" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreDefend.fml#MDOffensiveTechnique" userID="H24" flexoID="13">
+    <PrimitiveActorReference id="27" valueAsString="Valid Accounts" roleName="iri" userID="H24" flexoID="34" />
+    <PrimitiveActorReference id="28" valueAsString="Valid Accounts" roleName="label" userID="H24" flexoID="35" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="29" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreDefend.fml#MDRelationship" userID="H24" flexoID="14">
+    <PrimitiveActorReference id="30" valueAsString="Valid Accounts" roleName="sourceName" userID="H24" flexoID="36" />
+    <PrimitiveActorReference id="31" valueAsString="uses" roleName="mappingType" userID="H24" flexoID="37" />
+    <PrimitiveActorReference id="32" valueAsString="" roleName="targetId" userID="H24" flexoID="38" />
+    <PrimitiveActorReference id="33" valueAsString="User Accounts" roleName="targetName" userID="H24" flexoID="15" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="34" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreDefend.fml#MDOffensiveTactic" userID="H24" flexoID="16">
+    <PrimitiveActorReference id="35" valueAsString="Privilege Escalation" roleName="iri" userID="H24" flexoID="39" />
+    <PrimitiveActorReference id="36" valueAsString="Privilege Escalation" roleName="label" userID="H24" flexoID="40" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="37" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreDefend.fml#MDRelationship" userID="H24" flexoID="17">
+    <PrimitiveActorReference id="38" valueAsString="Valid Accounts" roleName="sourceName" userID="H24" flexoID="41" />
+    <PrimitiveActorReference id="39" valueAsString="enables" roleName="mappingType" userID="H24" flexoID="42" />
+    <PrimitiveActorReference id="40" valueAsString="" roleName="targetId" userID="H24" flexoID="43" />
+    <PrimitiveActorReference id="41" valueAsString="Privilege Escalation" roleName="targetName" userID="H24" flexoID="44" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="42" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreDefend.fml#MDDefensiveTactic" userID="H24" flexoID="18">
+    <PrimitiveActorReference id="43" valueAsString="Persistence" roleName="iri" userID="H24" flexoID="45" />
+    <PrimitiveActorReference id="44" valueAsString="Persistence" roleName="label" userID="H24" flexoID="46" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="45" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreDefend.fml#MDRelationship" userID="H24" flexoID="19">
+    <PrimitiveActorReference id="46" valueAsString="Valid Accounts" roleName="sourceName" userID="H24" flexoID="47" />
+    <PrimitiveActorReference id="47" valueAsString="enables" roleName="mappingType" userID="H24" flexoID="48" />
+    <PrimitiveActorReference id="48" valueAsString="" roleName="targetId" userID="H24" flexoID="49" />
+    <PrimitiveActorReference id="49" valueAsString="Persistence" roleName="targetName" userID="H24" flexoID="50" />
+  </FlexoConceptInstance>
+</FMLRTVirtualModelInstance>

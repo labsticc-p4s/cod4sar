@@ -1,0 +1,780 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FMLRTVirtualModelInstance id="0" virtualModelURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml" modelVersion="1.0" title="MASTIX1" version="0.1" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml" userID="H24" flexoID="1">
+  <FlexoConceptInstance id="1" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXKillChainPhase" userID="H24" flexoID="2">
+    <PrimitiveActorReference id="2" valueAsString="mitre-attack" roleName="kill_chain_name" userID="H24" flexoID="5" />
+    <PrimitiveActorReference id="3" valueAsString="defense-evasion" roleName="phase_name" userID="H24" flexoID="6" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="4" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXExternalReference" userID="H24" flexoID="3">
+    <PrimitiveActorReference id="5" valueAsString="mitre-attack" roleName="source_name" userID="H24" flexoID="7" />
+    <PrimitiveActorReference id="6" valueAsString="https://attack.mitre.org/techniques/T1078" roleName="url" userID="H24" flexoID="8" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="7" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXAttackPattern" userID="H24" flexoID="4">
+    <PrimitiveActorReference id="8" valueAsString="attack-pattern--b17a1a56-e99c-403c-8948-561df0cffe81" roleName="id" userID="H24" flexoID="9" />
+    <PrimitiveActorReference id="9" valueAsString="Valid Accounts" roleName="name" userID="H24" flexoID="10" />
+    <PrimitiveActorReference id="10" valueAsString="Windows" roleName="x_mitre_platforms" userID="H24" flexoID="11" />
+    <PrimitiveActorReference id="11" valueAsString="enterprise-attack" roleName="x_mitre_domains" userID="H24" flexoID="12" />
+    <ModelObjectActorReference id="12" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MASTIX1.fml.rt#H24_2" roleName="kill_chain_phases" userID="H24" flexoID="13" />
+    <PrimitiveActorReference id="13" valueAsString="Configure robust, consistent account activity audit policies across the enterprise and with externally accessible services.(Citation: TechNet Audit Policy) Look for suspicious account behavior across systems that share accounts, either user, admin, or service accounts. Examples: one account logged into multiple systems simultaneously; multiple accounts logged into the same machine simultaneously; accounts logged in at odd times or outside of business hours. Activity may be from interactive login sessions or process ownership from accounts being used to execute binaries on a remote system as a particular account. Correlate other security systems with login information (e.g., a user has an active login session but has not entered the building or does not have VPN access).\n\nPerform regular audits of domain and local system accounts to detect accounts that may have been created by an adversary for persistence. Checks on these accounts could also include whether default accounts such as Guest have been activated. These audits should also include checks on any appliances and applications for default credentials or SSH keys, and if any are discovered, they should be updated immediately." roleName="x_mitre_detection" userID="H24" flexoID="14" />
+    <PrimitiveActorReference id="14" valueAsString="2023-05-09T14:00:00.188Z" roleName="modified" userID="H24" flexoID="15" />
+    <PrimitiveActorReference id="15" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="x_mitre_modified_by_ref" userID="H24" flexoID="16" />
+    <PrimitiveActorReference id="16" valueAsString="Firewall" roleName="x_mitre_defense_bypassed" userID="H24" flexoID="17" />
+    <ModelObjectActorReference id="17" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MASTIX1.fml.rt#H24_3" roleName="external_references" userID="H24" flexoID="18" />
+    <PrimitiveActorReference id="18" valueAsString="User" roleName="x_mitre_permissions_required" userID="H24" flexoID="19" />
+    <PrimitiveActorReference id="19" valueAsString="Syed Ummar Farooqh, McAfee" roleName="x_mitre_contributors" userID="H24" flexoID="20" />
+    <PrimitiveActorReference id="20" valueAsString="2017-05-31T21:31:00.645Z" roleName="created" userID="H24" flexoID="21" />
+    <PrimitiveActorReference id="21" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="created_by_ref" userID="H24" flexoID="22" />
+    <PrimitiveActorReference id="22" valueAsString="3.1.0" roleName="x_mitre_attack_spec_version" userID="H24" flexoID="23" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="23" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXRelationship" userID="H24" flexoID="24">
+    <PrimitiveActorReference id="24" valueAsString="relationship--0528b64e-e719-44a9-94aa-0576bd9a87ec" roleName="id" userID="H24" flexoID="26" />
+    <PrimitiveActorReference id="25" valueAsString="" roleName="x_mitre_platforms" userID="H24" flexoID="27" />
+    <PrimitiveActorReference id="26" valueAsString="" roleName="name" userID="H24" flexoID="28" />
+    <PrimitiveActorReference id="27" valueAsString="enterprise-attack" roleName="x_mitre_domains" userID="H24" flexoID="29" />
+    <PrimitiveActorReference id="28" valueAsString="" roleName="x_mitre_contributors" userID="H24" flexoID="30" />
+    <PrimitiveActorReference id="29" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="x_mitre_modified_by_ref" userID="H24" flexoID="31" />
+    <PrimitiveActorReference id="30" valueAsString="2023-03-23T15:27:10.501Z" roleName="modified" userID="H24" flexoID="32" />
+    <PrimitiveActorReference id="31" valueAsString="2019-09-23T23:08:25.267Z" roleName="created" userID="H24" flexoID="33" />
+    <PrimitiveActorReference id="32" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="created_by_ref" userID="H24" flexoID="34" />
+    <PrimitiveActorReference id="33" valueAsString="1.0" roleName="x_mitre_version" userID="H24" flexoID="35" />
+    <PrimitiveActorReference id="34" valueAsString="3.1.0" roleName="x_mitre_attack_spec_version" userID="H24" flexoID="36" />
+    <PrimitiveActorReference id="35" valueAsString="[APT41](https://attack.mitre.org/groups/G0096) used compromised credentials to log on to other systems.(Citation: FireEye APT41 Aug 2019)(Citation: Crowdstrike GTR2020 Mar 2020)" roleName="description" userID="H24" flexoID="37" />
+    <PrimitiveActorReference id="36" valueAsString="2.1" roleName="spec_version" userID="H24" flexoID="38" />
+    <PrimitiveActorReference id="37" valueAsString="marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168" roleName="object_marking_refs" userID="H24" flexoID="39" />
+    <PrimitiveActorReference id="38" valueAsString="uses" roleName="relationship_type" userID="H24" flexoID="40" />
+    <PrimitiveActorReference id="39" valueAsString="intrusion-set--18854f55-ac7c-4634-bd9a-352dd07613b7" roleName="source_ref" userID="H24" flexoID="41" />
+    <PrimitiveActorReference id="40" valueAsString="attack-pattern--b17a1a56-e99c-403c-8948-561df0cffe81" roleName="target_ref" userID="H24" flexoID="42" />
+    <ModelObjectActorReference id="41" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MASTIX1.fml.rt#H24_45" roleName="external_references" userID="H24" flexoID="54" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="42" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXExternalReference" userID="H24" flexoID="25">
+    <PrimitiveActorReference id="43" valueAsString="FireEye Know Your Enemy FIN8 Aug 2016" roleName="source_name" userID="H24" flexoID="43" />
+    <PrimitiveActorReference id="44" valueAsString="https://www2.fireeye.com/WBNR-Know-Your-Enemy-UNC622-Spear-Phishing.html" roleName="url" userID="H24" flexoID="44" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="45" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXExternalReference" userID="H24" flexoID="45">
+    <PrimitiveActorReference id="46" valueAsString="Crowdstrike GTR2020 Mar 2020" roleName="source_name" userID="H24" flexoID="47" />
+    <PrimitiveActorReference id="47" valueAsString="https://go.crowdstrike.com/rs/281-OBQ-266/images/Report2020CrowdStrikeGlobalThreatReport.pdf" roleName="url" userID="H24" flexoID="48" />
+    <PrimitiveActorReference id="48" valueAsString="" roleName="external_id" userID="H24" flexoID="49" />
+    <PrimitiveActorReference id="49" valueAsString="Crowdstrike. (2020, March 2). 2020 Global Threat Report. Retrieved December 11, 2020." roleName="description" userID="H24" flexoID="50" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="50" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXRelationship" userID="H24" flexoID="55">
+    <PrimitiveActorReference id="51" valueAsString="relationship--060e7485-d2a9-4aa2-a742-58f7e4e6086a" roleName="id" userID="H24" flexoID="56" />
+    <PrimitiveActorReference id="52" valueAsString="enterprise-attack" roleName="x_mitre_domains" userID="H24" flexoID="57" />
+    <PrimitiveActorReference id="53" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="x_mitre_modified_by_ref" userID="H24" flexoID="58" />
+    <PrimitiveActorReference id="54" valueAsString="2021-09-15T14:02:09.916Z" roleName="modified" userID="H24" flexoID="59" />
+    <PrimitiveActorReference id="55" valueAsString="2018-04-18T17:59:24.739Z" roleName="created" userID="H24" flexoID="60" />
+    <PrimitiveActorReference id="56" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="created_by_ref" userID="H24" flexoID="61" />
+    <PrimitiveActorReference id="57" valueAsString="1.0" roleName="x_mitre_version" userID="H24" flexoID="62" />
+    <PrimitiveActorReference id="58" valueAsString="2.1.0" roleName="x_mitre_attack_spec_version" userID="H24" flexoID="63" />
+    <PrimitiveActorReference id="59" valueAsString="[FIN8](https://attack.mitre.org/groups/G0061) has used valid accounts for persistence and lateral movement.(Citation: FireEye Know Your Enemy FIN8 Aug 2016)" roleName="description" userID="H24" flexoID="64" />
+    <PrimitiveActorReference id="60" valueAsString="2.1" roleName="spec_version" userID="H24" flexoID="65" />
+    <PrimitiveActorReference id="61" valueAsString="marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168" roleName="object_marking_refs" userID="H24" flexoID="66" />
+    <PrimitiveActorReference id="62" valueAsString="uses" roleName="relationship_type" userID="H24" flexoID="67" />
+    <PrimitiveActorReference id="63" valueAsString="intrusion-set--fd19bd82-1b14-49a1-a176-6cdc46b8a826" roleName="source_ref" userID="H24" flexoID="68" />
+    <PrimitiveActorReference id="64" valueAsString="attack-pattern--b17a1a56-e99c-403c-8948-561df0cffe81" roleName="target_ref" userID="H24" flexoID="69" />
+    <ModelObjectActorReference id="65" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MASTIX1.fml.rt#H24_25" roleName="external_references" userID="H24" flexoID="70" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="66" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXExternalReference" userID="H24" flexoID="71">
+    <PrimitiveActorReference id="67" valueAsString="FireEye Hacking FIN4 Video Dec 2014" roleName="source_name" userID="H24" flexoID="83" />
+    <PrimitiveActorReference id="68" valueAsString="https://www2.fireeye.com/WBNR-14Q4NAMFIN4.html" roleName="url" userID="H24" flexoID="84" />
+    <PrimitiveActorReference id="69" valueAsString="Vengerik, B. &amp; Dennesen, K.. (2014, December 5). Hacking the Street?  FIN4 Likely Playing the Market. Retrieved January 15, 2019." roleName="description" userID="H24" flexoID="85" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="70" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXRelationship" userID="H24" flexoID="72">
+    <PrimitiveActorReference id="71" valueAsString="relationship--073fd81c-b49a-4800-b73a-c1b3aba3aa54" roleName="id" userID="H24" flexoID="86" />
+    <PrimitiveActorReference id="72" valueAsString="enterprise-attack" roleName="x_mitre_domains" userID="H24" flexoID="87" />
+    <PrimitiveActorReference id="73" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="x_mitre_modified_by_ref" userID="H24" flexoID="88" />
+    <PrimitiveActorReference id="74" valueAsString="2023-02-01T21:27:44.782Z" roleName="modified" userID="H24" flexoID="89" />
+    <PrimitiveActorReference id="75" valueAsString="2019-01-31T02:01:45.564Z" roleName="created" userID="H24" flexoID="90" />
+    <PrimitiveActorReference id="76" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="created_by_ref" userID="H24" flexoID="91" />
+    <PrimitiveActorReference id="77" valueAsString="1.0" roleName="x_mitre_version" userID="H24" flexoID="92" />
+    <PrimitiveActorReference id="78" valueAsString="3.1.0" roleName="x_mitre_attack_spec_version" userID="H24" flexoID="93" />
+    <PrimitiveActorReference id="79" valueAsString="[FIN4](https://attack.mitre.org/groups/G0085) has used legitimate credentials to hijack email communications.(Citation: FireEye Hacking FIN4 Dec 2014)(Citation: FireEye Hacking FIN4 Video Dec 2014)" roleName="description" userID="H24" flexoID="94" />
+    <PrimitiveActorReference id="80" valueAsString="2.1" roleName="spec_version" userID="H24" flexoID="95" />
+    <PrimitiveActorReference id="81" valueAsString="marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168" roleName="object_marking_refs" userID="H24" flexoID="96" />
+    <PrimitiveActorReference id="82" valueAsString="uses" roleName="relationship_type" userID="H24" flexoID="97" />
+    <PrimitiveActorReference id="83" valueAsString="intrusion-set--d0b3393b-3bec-4ba3-bda9-199d30db47b6" roleName="source_ref" userID="H24" flexoID="98" />
+    <PrimitiveActorReference id="84" valueAsString="attack-pattern--b17a1a56-e99c-403c-8948-561df0cffe81" roleName="target_ref" userID="H24" flexoID="99" />
+    <ModelObjectActorReference id="85" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MASTIX1.fml.rt#H24_71" roleName="external_references" userID="H24" flexoID="100" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="86" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXExternalReference" userID="H24" flexoID="73">
+    <PrimitiveActorReference id="87" valueAsString="CrowdStrike Carbon Spider August 2021" roleName="source_name" userID="H24" flexoID="101" />
+    <PrimitiveActorReference id="88" valueAsString="https://www.crowdstrike.com/blog/carbon-spider-embraces-big-game-hunting-part-1/" roleName="url" userID="H24" flexoID="102" />
+    <PrimitiveActorReference id="89" valueAsString="Loui, E. and Reynolds, J. (2021, August 30). CARBON SPIDER Embraces Big Game Hunting, Part 1. Retrieved September 20, 2021." roleName="description" userID="H24" flexoID="103" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="90" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXRelationship" userID="H24" flexoID="74">
+    <PrimitiveActorReference id="91" valueAsString="relationship--08e70a50-f4fe-4856-9bd1-a7098f802fca" roleName="id" userID="H24" flexoID="104" />
+    <PrimitiveActorReference id="92" valueAsString="enterprise-attack" roleName="x_mitre_domains" userID="H24" flexoID="105" />
+    <PrimitiveActorReference id="93" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="x_mitre_modified_by_ref" userID="H24" flexoID="106" />
+    <PrimitiveActorReference id="94" valueAsString="2021-09-23T12:44:50.358Z" roleName="modified" userID="H24" flexoID="107" />
+    <PrimitiveActorReference id="95" valueAsString="2021-09-23T12:44:50.358Z" roleName="created" userID="H24" flexoID="108" />
+    <PrimitiveActorReference id="96" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="created_by_ref" userID="H24" flexoID="109" />
+    <PrimitiveActorReference id="97" valueAsString="1.0" roleName="x_mitre_version" userID="H24" flexoID="110" />
+    <PrimitiveActorReference id="98" valueAsString="2.1.0" roleName="x_mitre_attack_spec_version" userID="H24" flexoID="111" />
+    <PrimitiveActorReference id="99" valueAsString="[FIN7](https://attack.mitre.org/groups/G0046) has harvested valid administrative credentials for lateral movement.(Citation: CrowdStrike Carbon Spider August 2021)" roleName="description" userID="H24" flexoID="112" />
+    <PrimitiveActorReference id="100" valueAsString="2.1" roleName="spec_version" userID="H24" flexoID="113" />
+    <PrimitiveActorReference id="101" valueAsString="marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168" roleName="object_marking_refs" userID="H24" flexoID="114" />
+    <PrimitiveActorReference id="102" valueAsString="uses" roleName="relationship_type" userID="H24" flexoID="115" />
+    <PrimitiveActorReference id="103" valueAsString="intrusion-set--3753cc21-2dae-4dfb-8481-d004e74502cc" roleName="source_ref" userID="H24" flexoID="116" />
+    <PrimitiveActorReference id="104" valueAsString="attack-pattern--b17a1a56-e99c-403c-8948-561df0cffe81" roleName="target_ref" userID="H24" flexoID="117" />
+    <ModelObjectActorReference id="105" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MASTIX1.fml.rt#H24_73" roleName="external_references" userID="H24" flexoID="118" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="106" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXExternalReference" userID="H24" flexoID="75">
+    <PrimitiveActorReference id="107" valueAsString="Aqua Kinsing April 2020" roleName="source_name" userID="H24" flexoID="119" />
+    <PrimitiveActorReference id="108" valueAsString="https://blog.aquasec.com/threat-alert-kinsing-malware-container-vulnerability" roleName="url" userID="H24" flexoID="120" />
+    <PrimitiveActorReference id="109" valueAsString="Singer, G. (2020, April 3). Threat Alert: Kinsing Malware Attacks Targeting Container Environments. Retrieved April 1, 2021." roleName="description" userID="H24" flexoID="121" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="110" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXRelationship" userID="H24" flexoID="76">
+    <PrimitiveActorReference id="111" valueAsString="relationship--13ebbab5-204d-4a61-9ee4-378346626371" roleName="id" userID="H24" flexoID="122" />
+    <PrimitiveActorReference id="112" valueAsString="enterprise-attack" roleName="x_mitre_domains" userID="H24" flexoID="123" />
+    <PrimitiveActorReference id="113" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="x_mitre_modified_by_ref" userID="H24" flexoID="124" />
+    <PrimitiveActorReference id="114" valueAsString="2021-04-08T18:09:43.245Z" roleName="modified" userID="H24" flexoID="125" />
+    <PrimitiveActorReference id="115" valueAsString="2021-04-08T18:09:43.245Z" roleName="created" userID="H24" flexoID="126" />
+    <PrimitiveActorReference id="116" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="created_by_ref" userID="H24" flexoID="127" />
+    <PrimitiveActorReference id="117" valueAsString="1.0" roleName="x_mitre_version" userID="H24" flexoID="128" />
+    <PrimitiveActorReference id="118" valueAsString="2.1.0" roleName="x_mitre_attack_spec_version" userID="H24" flexoID="129" />
+    <PrimitiveActorReference id="119" valueAsString="[Kinsing](https://attack.mitre.org/software/S0599) has used valid SSH credentials to access remote hosts.(Citation: Aqua Kinsing April 2020)" roleName="description" userID="H24" flexoID="130" />
+    <PrimitiveActorReference id="120" valueAsString="2.1" roleName="spec_version" userID="H24" flexoID="131" />
+    <PrimitiveActorReference id="121" valueAsString="marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168" roleName="object_marking_refs" userID="H24" flexoID="132" />
+    <PrimitiveActorReference id="122" valueAsString="uses" roleName="relationship_type" userID="H24" flexoID="133" />
+    <PrimitiveActorReference id="123" valueAsString="malware--d6e55656-e43f-411f-a7af-45df650471c5" roleName="source_ref" userID="H24" flexoID="134" />
+    <PrimitiveActorReference id="124" valueAsString="attack-pattern--b17a1a56-e99c-403c-8948-561df0cffe81" roleName="target_ref" userID="H24" flexoID="135" />
+    <ModelObjectActorReference id="125" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MASTIX1.fml.rt#H24_75" roleName="external_references" userID="H24" flexoID="136" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="126" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXExternalReference" userID="H24" flexoID="77">
+    <PrimitiveActorReference id="127" valueAsString="US-CERT TA18-074A" roleName="source_name" userID="H24" flexoID="137" />
+    <PrimitiveActorReference id="128" valueAsString="https://www.us-cert.gov/ncas/alerts/TA18-074A" roleName="url" userID="H24" flexoID="138" />
+    <PrimitiveActorReference id="129" valueAsString="US-CERT. (2018, March 16). Alert (TA18-074A): Russian Government Cyber Activity Targeting Energy and Other Critical Infrastructure Sectors. Retrieved June 6, 2018." roleName="description" userID="H24" flexoID="139" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="130" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXRelationship" userID="H24" flexoID="78">
+    <PrimitiveActorReference id="131" valueAsString="relationship--1896ca51-adf4-4a3b-be89-1aae18465741" roleName="id" userID="H24" flexoID="140" />
+    <PrimitiveActorReference id="132" valueAsString="enterprise-attack" roleName="x_mitre_domains" userID="H24" flexoID="141" />
+    <PrimitiveActorReference id="133" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="x_mitre_modified_by_ref" userID="H24" flexoID="142" />
+    <PrimitiveActorReference id="134" valueAsString="false" roleName="revoked" userID="H24" flexoID="143" />
+    <PrimitiveActorReference id="135" valueAsString="2021-12-10T14:18:11.856Z" roleName="modified" userID="H24" flexoID="144" />
+    <PrimitiveActorReference id="136" valueAsString="2021-12-07T15:04:35.808Z" roleName="created" userID="H24" flexoID="145" />
+    <PrimitiveActorReference id="137" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="created_by_ref" userID="H24" flexoID="146" />
+    <PrimitiveActorReference id="138" valueAsString="1.0" roleName="x_mitre_version" userID="H24" flexoID="147" />
+    <PrimitiveActorReference id="139" valueAsString="2.1.0" roleName="x_mitre_attack_spec_version" userID="H24" flexoID="148" />
+    <PrimitiveActorReference id="140" valueAsString="[Dragonfly](https://attack.mitre.org/groups/G0035) has compromised user credentials and used valid accounts for operations.(Citation: US-CERT TA18-074A)(Citation: Gigamon Berserk Bear October 2021)(Citation: CISA AA20-296A Berserk Bear December 2020)" roleName="description" userID="H24" flexoID="149" />
+    <PrimitiveActorReference id="141" valueAsString="2.1" roleName="spec_version" userID="H24" flexoID="150" />
+    <PrimitiveActorReference id="142" valueAsString="marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168" roleName="object_marking_refs" userID="H24" flexoID="151" />
+    <PrimitiveActorReference id="143" valueAsString="uses" roleName="relationship_type" userID="H24" flexoID="152" />
+    <PrimitiveActorReference id="144" valueAsString="intrusion-set--1c63d4ec-0a75-4daa-b1df-0d11af3d3cc1" roleName="source_ref" userID="H24" flexoID="153" />
+    <PrimitiveActorReference id="145" valueAsString="attack-pattern--b17a1a56-e99c-403c-8948-561df0cffe81" roleName="target_ref" userID="H24" flexoID="154" />
+    <ModelObjectActorReference id="146" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MASTIX1.fml.rt#H24_77" roleName="external_references" userID="H24" flexoID="155" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="147" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXExternalReference" userID="H24" flexoID="79">
+    <PrimitiveActorReference id="148" valueAsString="Cybereason Soft Cell June 2019" roleName="source_name" userID="H24" flexoID="156" />
+    <PrimitiveActorReference id="149" valueAsString="https://www.cybereason.com/blog/operation-soft-cell-a-worldwide-campaign-against-telecommunications-providers" roleName="url" userID="H24" flexoID="157" />
+    <PrimitiveActorReference id="150" valueAsString="Cybereason Nocturnus. (2019, June 25). Operation Soft Cell: A Worldwide Campaign Against Telecommunications Providers. Retrieved July 18, 2019." roleName="description" userID="H24" flexoID="158" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="151" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXRelationship" userID="H24" flexoID="80">
+    <PrimitiveActorReference id="152" valueAsString="relationship--1a849525-ee44-4c28-86b2-fe883c45dc79" roleName="id" userID="H24" flexoID="159" />
+    <PrimitiveActorReference id="153" valueAsString="enterprise-attack" roleName="x_mitre_domains" userID="H24" flexoID="160" />
+    <PrimitiveActorReference id="154" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="x_mitre_modified_by_ref" userID="H24" flexoID="161" />
+    <PrimitiveActorReference id="155" valueAsString="2020-03-31T14:49:39.188Z" roleName="modified" userID="H24" flexoID="162" />
+    <PrimitiveActorReference id="156" valueAsString="2019-07-18T21:12:51.535Z" roleName="created" userID="H24" flexoID="163" />
+    <PrimitiveActorReference id="157" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="created_by_ref" userID="H24" flexoID="164" />
+    <PrimitiveActorReference id="158" valueAsString="1.0" roleName="x_mitre_version" userID="H24" flexoID="165" />
+    <PrimitiveActorReference id="159" valueAsString="2.1.0" roleName="x_mitre_attack_spec_version" userID="H24" flexoID="166" />
+    <PrimitiveActorReference id="160" valueAsString="[GALLIUM](https://attack.mitre.org/groups/G0093) leveraged valid accounts to maintain access to a victim network.(Citation: Cybereason Soft Cell June 2019)&quot;," roleName="description" userID="H24" flexoID="167" />
+    <PrimitiveActorReference id="161" valueAsString="2.1" roleName="spec_version" userID="H24" flexoID="168" />
+    <PrimitiveActorReference id="162" valueAsString="marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168" roleName="object_marking_refs" userID="H24" flexoID="169" />
+    <PrimitiveActorReference id="163" valueAsString="uses" roleName="relationship_type" userID="H24" flexoID="170" />
+    <PrimitiveActorReference id="164" valueAsString="intrusion-set--06a11b7e-2a36-47fe-8d3e-82c265df3258" roleName="source_ref" userID="H24" flexoID="171" />
+    <PrimitiveActorReference id="165" valueAsString="attack-pattern--b17a1a56-e99c-403c-8948-561df0cffe81" roleName="target_ref" userID="H24" flexoID="172" />
+    <ModelObjectActorReference id="166" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MASTIX1.fml.rt#H24_79" roleName="external_references" userID="H24" flexoID="173" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="167" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXExternalReference" userID="H24" flexoID="81">
+    <PrimitiveActorReference id="168" valueAsString="RSA2017 Detect and Respond Adair" roleName="source_name" userID="H24" flexoID="174" />
+    <PrimitiveActorReference id="169" valueAsString="https://published-prd.lanyonevents.com/published/rsaus17/sessionsFiles/5009/HTA-F02-Detecting-and-Responding-to-Advanced-Threats-within-Exchange-Environments.pdf" roleName="url" userID="H24" flexoID="175" />
+    <PrimitiveActorReference id="170" valueAsString="" roleName="external_id" userID="H24" flexoID="176" />
+    <PrimitiveActorReference id="171" valueAsString="Adair, S. (2017, February 17). Detecting and Responding to Advanced Threats within Exchange Environments. Retrieved March 20, 2017." roleName="description" userID="H24" flexoID="177" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="172" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXRelationship" userID="H24" flexoID="82">
+    <PrimitiveActorReference id="173" valueAsString="relationship--1ac5bace-cdc2-4a1b-abad-d30ca0ed7f45" roleName="id" userID="H24" flexoID="178" />
+    <PrimitiveActorReference id="174" valueAsString="enterprise-attack" roleName="x_mitre_domains" userID="H24" flexoID="179" />
+    <PrimitiveActorReference id="175" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="x_mitre_modified_by_ref" userID="H24" flexoID="180" />
+    <PrimitiveActorReference id="176" valueAsString="2021-06-16T15:46:43.276Z" roleName="modified" userID="H24" flexoID="181" />
+    <PrimitiveActorReference id="177" valueAsString="2017-05-31T21:33:27.060Z" roleName="created" userID="H24" flexoID="182" />
+    <PrimitiveActorReference id="178" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="created_by_ref" userID="H24" flexoID="183" />
+    <PrimitiveActorReference id="179" valueAsString="1.0" roleName="x_mitre_version" userID="H24" flexoID="184" />
+    <PrimitiveActorReference id="180" valueAsString="2.1.0" roleName="x_mitre_attack_spec_version" userID="H24" flexoID="185" />
+    <PrimitiveActorReference id="181" valueAsString="[APT18](https://attack.mitre.org/groups/G0026) actors leverage legitimate credentials to log into external remote services.(Citation: RSA2017 Detect and Respond Adair)" roleName="description" userID="H24" flexoID="186" />
+    <PrimitiveActorReference id="182" valueAsString="2.1" roleName="spec_version" userID="H24" flexoID="187" />
+    <PrimitiveActorReference id="183" valueAsString="marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168" roleName="object_marking_refs" userID="H24" flexoID="188" />
+    <PrimitiveActorReference id="184" valueAsString="uses" roleName="relationship_type" userID="H24" flexoID="189" />
+    <PrimitiveActorReference id="185" valueAsString="intrusion-set--38fd6a28-3353-4f2b-bb2b-459fecd5c648" roleName="source_ref" userID="H24" flexoID="190" />
+    <PrimitiveActorReference id="186" valueAsString="attack-pattern--b17a1a56-e99c-403c-8948-561df0cffe81" roleName="target_ref" userID="H24" flexoID="191" />
+    <ModelObjectActorReference id="187" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MASTIX1.fml.rt#H24_81" roleName="external_references" userID="H24" flexoID="192" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="188" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXRelationship" userID="H24" flexoID="193">
+    <PrimitiveActorReference id="189" valueAsString="relationship--1bccb381-1d71-4c9a-8785-2ada562234f2" roleName="id" userID="H24" flexoID="215" />
+    <PrimitiveActorReference id="190" valueAsString="enterprise-attack" roleName="x_mitre_domains" userID="H24" flexoID="216" />
+    <PrimitiveActorReference id="191" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="x_mitre_modified_by_ref" userID="H24" flexoID="217" />
+    <PrimitiveActorReference id="192" valueAsString="2022-04-25T14:00:00.188Z" roleName="modified" userID="H24" flexoID="218" />
+    <PrimitiveActorReference id="193" valueAsString="2020-03-13T20:36:57.505Z" roleName="created" userID="H24" flexoID="219" />
+    <PrimitiveActorReference id="194" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="created_by_ref" userID="H24" flexoID="220" />
+    <PrimitiveActorReference id="195" valueAsString="1.0" roleName="x_mitre_version" userID="H24" flexoID="221" />
+    <PrimitiveActorReference id="196" valueAsString="2.1.0" roleName="x_mitre_attack_spec_version" userID="H24" flexoID="222" />
+    <PrimitiveActorReference id="197" valueAsString="2.1" roleName="spec_version" userID="H24" flexoID="223" />
+    <PrimitiveActorReference id="198" valueAsString="marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168" roleName="object_marking_refs" userID="H24" flexoID="224" />
+    <PrimitiveActorReference id="199" valueAsString="subtechnique-of" roleName="relationship_type" userID="H24" flexoID="225" />
+    <PrimitiveActorReference id="200" valueAsString="attack-pattern--f232fa7a-025c-4d43-abc7-318e81a73d65" roleName="source_ref" userID="H24" flexoID="226" />
+    <PrimitiveActorReference id="201" valueAsString="attack-pattern--b17a1a56-e99c-403c-8948-561df0cffe81" roleName="target_ref" userID="H24" flexoID="227" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="202" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXExternalReference" userID="H24" flexoID="194">
+    <PrimitiveActorReference id="203" valueAsString="FireEye TRITON 2019" roleName="source_name" userID="H24" flexoID="228" />
+    <PrimitiveActorReference id="204" valueAsString="https://www.fireeye.com/blog/threat-research/2019/04/triton-actor-ttp-profile-custom-attack-tools-detections.html" roleName="url" userID="H24" flexoID="229" />
+    <PrimitiveActorReference id="205" valueAsString="Miller, S, et al. (2019, April 10). TRITON Actor TTP Profile, Custom Attack Tools, Detections, and ATT&amp;CK Mapping. Retrieved April 16, 2019." roleName="description" userID="H24" flexoID="230" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="206" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXRelationship" userID="H24" flexoID="195">
+    <PrimitiveActorReference id="207" valueAsString="relationship--1e8644b0-9e72-47a9-bcd5-4e6c1938118a" roleName="id" userID="H24" flexoID="231" />
+    <PrimitiveActorReference id="208" valueAsString="enterprise-attack" roleName="x_mitre_domains" userID="H24" flexoID="232" />
+    <PrimitiveActorReference id="209" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="x_mitre_modified_by_ref" userID="H24" flexoID="233" />
+    <PrimitiveActorReference id="210" valueAsString="2024-04-10T15:13:27.533Z" roleName="modified" userID="H24" flexoID="234" />
+    <PrimitiveActorReference id="211" valueAsString="2024-03-28T15:48:20.868Z" roleName="created" userID="H24" flexoID="235" />
+    <PrimitiveActorReference id="212" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="created_by_ref" userID="H24" flexoID="236" />
+    <PrimitiveActorReference id="213" valueAsString="0.1" roleName="x_mitre_version" userID="H24" flexoID="237" />
+    <PrimitiveActorReference id="214" valueAsString="3.2.0" roleName="x_mitre_attack_spec_version" userID="H24" flexoID="238" />
+    <PrimitiveActorReference id="215" valueAsString="During the [C0032](https://attack.mitre.org/campaigns/C0032) campaign, [TEMP.Veles](https://attack.mitre.org/groups/G0088) used compromised VPN accounts.(Citation: FireEye TRITON 2019)" roleName="description" userID="H24" flexoID="239" />
+    <PrimitiveActorReference id="216" valueAsString="2.1" roleName="spec_version" userID="H24" flexoID="240" />
+    <PrimitiveActorReference id="217" valueAsString="marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168" roleName="object_marking_refs" userID="H24" flexoID="241" />
+    <PrimitiveActorReference id="218" valueAsString="uses" roleName="relationship_type" userID="H24" flexoID="242" />
+    <PrimitiveActorReference id="219" valueAsString="campaign--7ec2826c-0bf0-4b47-acae-fd683431a4ca" roleName="source_ref" userID="H24" flexoID="243" />
+    <PrimitiveActorReference id="220" valueAsString="attack-pattern--b17a1a56-e99c-403c-8948-561df0cffe81" roleName="target_ref" userID="H24" flexoID="244" />
+    <ModelObjectActorReference id="221" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MASTIX1.fml.rt#H24_194" roleName="external_references" userID="H24" flexoID="245" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="222" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXExternalReference" userID="H24" flexoID="196">
+    <PrimitiveActorReference id="223" valueAsString="Kaspersky ThreatNeedle Feb 2021" roleName="source_name" userID="H24" flexoID="246" />
+    <PrimitiveActorReference id="224" valueAsString="https://securelist.com/lazarus-threatneedle/100803/" roleName="url" userID="H24" flexoID="247" />
+    <PrimitiveActorReference id="225" valueAsString="" roleName="external_id" userID="H24" flexoID="248" />
+    <PrimitiveActorReference id="226" valueAsString="Vyacheslav Kopeytsev and Seongsu Park. (2021, February 25). Lazarus targets defense industry with ThreatNeedle. Retrieved October 27, 2021." roleName="description" userID="H24" flexoID="249" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="227" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXRelationship" userID="H24" flexoID="197">
+    <PrimitiveActorReference id="228" valueAsString="relationship--2c9c331c-0e39-43ad-95e4-38957ad7b956" roleName="id" userID="H24" flexoID="250" />
+    <PrimitiveActorReference id="229" valueAsString="enterprise-attack" roleName="x_mitre_domains" userID="H24" flexoID="251" />
+    <PrimitiveActorReference id="230" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="x_mitre_modified_by_ref" userID="H24" flexoID="252" />
+    <PrimitiveActorReference id="231" valueAsString="2022-04-06T14:00:26.002Z" roleName="modified" userID="H24" flexoID="253" />
+    <PrimitiveActorReference id="232" valueAsString="2022-02-01T14:23:04.470Z" roleName="created" userID="H24" flexoID="254" />
+    <PrimitiveActorReference id="233" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="created_by_ref" userID="H24" flexoID="255" />
+    <PrimitiveActorReference id="234" valueAsString="1.0" roleName="x_mitre_version" userID="H24" flexoID="256" />
+    <PrimitiveActorReference id="235" valueAsString="2.1.0" roleName="x_mitre_attack_spec_version" userID="H24" flexoID="257" />
+    <PrimitiveActorReference id="236" valueAsString="[Lazarus Group](https://attack.mitre.org/groups/G0032) has used administrator credentials to gain access to restricted network segments.(Citation: Kaspersky ThreatNeedle Feb 2021)" roleName="description" userID="H24" flexoID="258" />
+    <PrimitiveActorReference id="237" valueAsString="2.1" roleName="spec_version" userID="H24" flexoID="259" />
+    <PrimitiveActorReference id="238" valueAsString="marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168" roleName="object_marking_refs" userID="H24" flexoID="260" />
+    <PrimitiveActorReference id="239" valueAsString="uses" roleName="relationship_type" userID="H24" flexoID="261" />
+    <PrimitiveActorReference id="240" valueAsString="intrusion-set--c93fccb1-e8e8-42cf-ae33-2ad1d183913a" roleName="source_ref" userID="H24" flexoID="262" />
+    <PrimitiveActorReference id="241" valueAsString="attack-pattern--b17a1a56-e99c-403c-8948-561df0cffe81" roleName="target_ref" userID="H24" flexoID="263" />
+    <ModelObjectActorReference id="242" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MASTIX1.fml.rt#H24_196" roleName="external_references" userID="H24" flexoID="264" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="243" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXExternalReference" userID="H24" flexoID="198">
+    <PrimitiveActorReference id="244" valueAsString="Cycraft Chimera April 2020" roleName="source_name" userID="H24" flexoID="265" />
+    <PrimitiveActorReference id="245" valueAsString="https://cycraft.com/download/CyCraft-Whitepaper-Chimera_V4.1.pdf" roleName="url" userID="H24" flexoID="266" />
+    <PrimitiveActorReference id="246" valueAsString="Cycraft. (2020, April 15). APT Group Chimera - APT Operation Skeleton key Targets Taiwan Semiconductor Vendors. Retrieved August 24, 2020." roleName="description" userID="H24" flexoID="267" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="247" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXRelationship" userID="H24" flexoID="199">
+    <PrimitiveActorReference id="248" valueAsString="relationship--2fff97fc-650c-4db5-97d4-c36db70077dd" roleName="id" userID="H24" flexoID="268" />
+    <PrimitiveActorReference id="249" valueAsString="enterprise-attack" roleName="x_mitre_domains" userID="H24" flexoID="269" />
+    <PrimitiveActorReference id="250" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="x_mitre_modified_by_ref" userID="H24" flexoID="270" />
+    <PrimitiveActorReference id="251" valueAsString="2023-02-06T18:11:56.970Z" roleName="modified" userID="H24" flexoID="271" />
+    <PrimitiveActorReference id="252" valueAsString="2020-08-27T17:29:05.220Z" roleName="created" userID="H24" flexoID="272" />
+    <PrimitiveActorReference id="253" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="created_by_ref" userID="H24" flexoID="273" />
+    <PrimitiveActorReference id="254" valueAsString="1.0" roleName="x_mitre_version" userID="H24" flexoID="274" />
+    <PrimitiveActorReference id="255" valueAsString="3.1.0" roleName="x_mitre_attack_spec_version" userID="H24" flexoID="275" />
+    <PrimitiveActorReference id="256" valueAsString="[Chimera](https://attack.mitre.org/groups/G0114) has used a valid account to maintain persistence via scheduled task.(Citation: Cycraft Chimera April 2020)" roleName="description" userID="H24" flexoID="276" />
+    <PrimitiveActorReference id="257" valueAsString="2.1" roleName="spec_version" userID="H24" flexoID="277" />
+    <PrimitiveActorReference id="258" valueAsString="marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168" roleName="object_marking_refs" userID="H24" flexoID="278" />
+    <PrimitiveActorReference id="259" valueAsString="uses" roleName="relationship_type" userID="H24" flexoID="279" />
+    <PrimitiveActorReference id="260" valueAsString="intrusion-set--8c1f0187-0826-4320-bddc-5f326cfcfe2c" roleName="source_ref" userID="H24" flexoID="280" />
+    <PrimitiveActorReference id="261" valueAsString="attack-pattern--b17a1a56-e99c-403c-8948-561df0cffe81" roleName="target_ref" userID="H24" flexoID="281" />
+    <ModelObjectActorReference id="262" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MASTIX1.fml.rt#H24_198" roleName="external_references" userID="H24" flexoID="282" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="263" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXExternalReference" userID="H24" flexoID="200">
+    <PrimitiveActorReference id="264" valueAsString="Symantec Seaduke 2015" roleName="source_name" userID="H24" flexoID="283" />
+    <PrimitiveActorReference id="265" valueAsString="http://www.symantec.com/connect/blogs/forkmeiamfamous-seaduke-latest-weapon-duke-armory" roleName="url" userID="H24" flexoID="284" />
+    <PrimitiveActorReference id="266" valueAsString="" roleName="external_id" userID="H24" flexoID="285" />
+    <PrimitiveActorReference id="267" valueAsString="Symantec Security Response. (2015, July 13). “Forkmeiamfamous”: Seaduke, latest weapon in the Duke armory. Retrieved July 22, 2015." roleName="description" userID="H24" flexoID="286" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="268" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXRelationship" userID="H24" flexoID="201">
+    <PrimitiveActorReference id="269" valueAsString="relationship--32864e94-8581-4f77-bf7d-53aaf3710f60" roleName="id" userID="H24" flexoID="287" />
+    <PrimitiveActorReference id="270" valueAsString="" roleName="name" userID="H24" flexoID="288" />
+    <PrimitiveActorReference id="271" valueAsString="enterprise-attack" roleName="x_mitre_domains" userID="H24" flexoID="289" />
+    <PrimitiveActorReference id="272" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="x_mitre_modified_by_ref" userID="H24" flexoID="290" />
+    <PrimitiveActorReference id="273" valueAsString="2020-03-17T02:32:26.715Z" roleName="modified" userID="H24" flexoID="291" />
+    <PrimitiveActorReference id="274" valueAsString="2017-12-14T16:46:06.044Z" roleName="created" userID="H24" flexoID="292" />
+    <PrimitiveActorReference id="275" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="created_by_ref" userID="H24" flexoID="293" />
+    <PrimitiveActorReference id="276" valueAsString="1.0" roleName="x_mitre_version" userID="H24" flexoID="294" />
+    <PrimitiveActorReference id="277" valueAsString="2.1.0" roleName="x_mitre_attack_spec_version" userID="H24" flexoID="295" />
+    <PrimitiveActorReference id="278" valueAsString="Some [SeaDuke](https://attack.mitre.org/software/S0053) samples have a module to extract email from Microsoft Exchange servers using compromised credentials.(Citation: Symantec Seaduke 2015)" roleName="description" userID="H24" flexoID="296" />
+    <PrimitiveActorReference id="279" valueAsString="2.1" roleName="spec_version" userID="H24" flexoID="297" />
+    <PrimitiveActorReference id="280" valueAsString="marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168" roleName="object_marking_refs" userID="H24" flexoID="298" />
+    <PrimitiveActorReference id="281" valueAsString="uses" roleName="relationship_type" userID="H24" flexoID="299" />
+    <PrimitiveActorReference id="282" valueAsString="malware--67e6d66b-1b82-4699-b47a-e2efb6268d14" roleName="source_ref" userID="H24" flexoID="300" />
+    <PrimitiveActorReference id="283" valueAsString="attack-pattern--b17a1a56-e99c-403c-8948-561df0cffe81" roleName="target_ref" userID="H24" flexoID="301" />
+    <ModelObjectActorReference id="284" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MASTIX1.fml.rt#H24_200" roleName="external_references" userID="H24" flexoID="302" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="285" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXExternalReference" userID="H24" flexoID="202">
+    <PrimitiveActorReference id="286" valueAsString="US-CERT Alert TA13-175A Risks of Default Passwords on the Internet" roleName="source_name" userID="H24" flexoID="303" />
+    <PrimitiveActorReference id="287" valueAsString="https://www.us-cert.gov/ncas/alerts/TA13-175A" roleName="url" userID="H24" flexoID="304" />
+    <PrimitiveActorReference id="288" valueAsString="US-CERT. (n.d.). Risks of Default Passwords on the Internet. Retrieved April 12, 2019." roleName="description" userID="H24" flexoID="305" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="289" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXRelationship" userID="H24" flexoID="203">
+    <PrimitiveActorReference id="290" valueAsString="relationship--4f24d075-4d6c-49d2-a213-306e4af2083d" roleName="id" userID="H24" flexoID="306" />
+    <PrimitiveActorReference id="291" valueAsString="enterprise-attack" roleName="x_mitre_domains" userID="H24" flexoID="307" />
+    <PrimitiveActorReference id="292" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="x_mitre_modified_by_ref" userID="H24" flexoID="308" />
+    <PrimitiveActorReference id="293" valueAsString="2023-03-27T21:01:57.788Z" roleName="modified" userID="H24" flexoID="309" />
+    <PrimitiveActorReference id="294" valueAsString="2019-06-21T16:21:55.304Z" roleName="created" userID="H24" flexoID="310" />
+    <PrimitiveActorReference id="295" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="created_by_ref" userID="H24" flexoID="311" />
+    <PrimitiveActorReference id="296" valueAsString="1.0" roleName="x_mitre_version" userID="H24" flexoID="312" />
+    <PrimitiveActorReference id="297" valueAsString="3.1.0" roleName="x_mitre_attack_spec_version" userID="H24" flexoID="313" />
+    <PrimitiveActorReference id="298" valueAsString="Applications and appliances that utilize default username and password should be changed immediately after the installation, and before deployment to a production environment.(Citation: US-CERT Alert TA13-175A Risks of Default Passwords on the Internet) When possible, applications that use SSH keys should be updated periodically and properly secured.\n\nPolicies should minimize (if not eliminate) reuse of passwords between different user accounts, especially employees using the same credentials for personal accounts that may not be defended by enterprise security resources." roleName="description" userID="H24" flexoID="314" />
+    <PrimitiveActorReference id="299" valueAsString="2.1" roleName="spec_version" userID="H24" flexoID="315" />
+    <PrimitiveActorReference id="300" valueAsString="marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168" roleName="object_marking_refs" userID="H24" flexoID="316" />
+    <PrimitiveActorReference id="301" valueAsString="mitigates" roleName="relationship_type" userID="H24" flexoID="317" />
+    <PrimitiveActorReference id="302" valueAsString="course-of-action--90c218c3-fbf8-4830-98a7-e8cfb7eaa485" roleName="source_ref" userID="H24" flexoID="318" />
+    <PrimitiveActorReference id="303" valueAsString="attack-pattern--b17a1a56-e99c-403c-8948-561df0cffe81" roleName="target_ref" userID="H24" flexoID="319" />
+    <ModelObjectActorReference id="304" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MASTIX1.fml.rt#H24_202" roleName="external_references" userID="H24" flexoID="320" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="305" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXRelationship" userID="H24" flexoID="204">
+    <PrimitiveActorReference id="306" valueAsString="relationship--571f784e-af1c-4e0d-bd5c-7b9223187e39" roleName="id" userID="H24" flexoID="321" />
+    <PrimitiveActorReference id="307" valueAsString="enterprise-attack" roleName="x_mitre_domains" userID="H24" flexoID="322" />
+    <PrimitiveActorReference id="308" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="x_mitre_modified_by_ref" userID="H24" flexoID="323" />
+    <PrimitiveActorReference id="309" valueAsString="2022-05-24T14:00:00.188Z" roleName="modified" userID="H24" flexoID="324" />
+    <PrimitiveActorReference id="310" valueAsString="2022-03-30T14:26:51.875Z" roleName="created" userID="H24" flexoID="325" />
+    <PrimitiveActorReference id="311" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="created_by_ref" userID="H24" flexoID="326" />
+    <PrimitiveActorReference id="312" valueAsString="1.0" roleName="x_mitre_version" userID="H24" flexoID="327" />
+    <PrimitiveActorReference id="313" valueAsString="2.1.0" roleName="x_mitre_attack_spec_version" userID="H24" flexoID="328" />
+    <PrimitiveActorReference id="314" valueAsString="Monitor for newly constructed logon behavior that may obtain and abuse credentials of existing accounts as a means of gaining Initial Access, Persistence, Privilege Escalation, or Defense Evasion. Correlate other security systems with login information (e.g., a user has an active login session but has not entered the building or does not have VPN access)." roleName="description" userID="H24" flexoID="329" />
+    <PrimitiveActorReference id="315" valueAsString="2.1" roleName="spec_version" userID="H24" flexoID="330" />
+    <PrimitiveActorReference id="316" valueAsString="marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168" roleName="object_marking_refs" userID="H24" flexoID="331" />
+    <PrimitiveActorReference id="317" valueAsString="detects" roleName="relationship_type" userID="H24" flexoID="332" />
+    <PrimitiveActorReference id="318" valueAsString="x-mitre-data-component--9ce98c86-8d30-4043-ba54-0784d478d0b5" roleName="source_ref" userID="H24" flexoID="333" />
+    <PrimitiveActorReference id="319" valueAsString="attack-pattern--b17a1a56-e99c-403c-8948-561df0cffe81" roleName="target_ref" userID="H24" flexoID="334" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="320" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXRelationship" userID="H24" flexoID="205">
+    <PrimitiveActorReference id="321" valueAsString="relationship--aa6cd875-0e05-4a6c-a249-27c708d50bf4" roleName="id" userID="H24" flexoID="335" />
+    <PrimitiveActorReference id="322" valueAsString="true" roleName="x_mitre_deprecated" userID="H24" flexoID="336" />
+    <PrimitiveActorReference id="323" valueAsString="enterprise-attack" roleName="x_mitre_domains" userID="H24" flexoID="337" />
+    <PrimitiveActorReference id="324" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="x_mitre_modified_by_ref" userID="H24" flexoID="338" />
+    <PrimitiveActorReference id="325" valueAsString="2020-03-31T14:49:39.188Z" roleName="modified" userID="H24" flexoID="339" />
+    <PrimitiveActorReference id="326" valueAsString="2019-10-22T20:07:29.385Z" roleName="created" userID="H24" flexoID="340" />
+    <PrimitiveActorReference id="327" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="created_by_ref" userID="H24" flexoID="341" />
+    <PrimitiveActorReference id="328" valueAsString="1.0" roleName="x_mitre_version" userID="H24" flexoID="342" />
+    <PrimitiveActorReference id="329" valueAsString="2.1.0" roleName="x_mitre_attack_spec_version" userID="H24" flexoID="343" />
+    <PrimitiveActorReference id="330" valueAsString="Ensure users and user groups have appropriate permissions for their roles through Identity and Access Management (IAM) controls. Configure user permissions, groups, and roles for access to cloud-based systems as well. Implement strict IAM controls to prevent access to systems except for the applications, users, and services that require access. Consider using temporary credentials that are only good for a certain period of time in cloud environments to reduce the effectiveness of compromised accounts." roleName="description" userID="H24" flexoID="344" />
+    <PrimitiveActorReference id="331" valueAsString="2.1" roleName="spec_version" userID="H24" flexoID="345" />
+    <PrimitiveActorReference id="332" valueAsString="marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168" roleName="object_marking_refs" userID="H24" flexoID="346" />
+    <PrimitiveActorReference id="333" valueAsString="mitigates" roleName="relationship_type" userID="H24" flexoID="347" />
+    <PrimitiveActorReference id="334" valueAsString="course-of-action--93e7968a-9074-4eac-8ae9-9f5200ec3317" roleName="source_ref" userID="H24" flexoID="348" />
+    <PrimitiveActorReference id="335" valueAsString="attack-pattern--b17a1a56-e99c-403c-8948-561df0cffe81" roleName="target_ref" userID="H24" flexoID="349" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="336" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXIdentity" userID="H24" flexoID="206">
+    <PrimitiveActorReference id="337" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="id" userID="H24" flexoID="350" />
+    <PrimitiveActorReference id="338" valueAsString="The MITRE Corporation" roleName="name" userID="H24" flexoID="351" />
+    <PrimitiveActorReference id="339" valueAsString="enterprise-attack" roleName="x_mitre_domains" userID="H24" flexoID="352" />
+    <PrimitiveActorReference id="340" valueAsString="" roleName="x_mitre_modified_by_ref" userID="H24" flexoID="353" />
+    <PrimitiveActorReference id="341" valueAsString="2022-04-25T14:00:00.188Z" roleName="modified" userID="H24" flexoID="354" />
+    <PrimitiveActorReference id="342" valueAsString="2017-06-01T00:00:00.000Z" roleName="created" userID="H24" flexoID="355" />
+    <PrimitiveActorReference id="343" valueAsString="1.0" roleName="x_mitre_version" userID="H24" flexoID="356" />
+    <PrimitiveActorReference id="344" valueAsString="2.1.0" roleName="x_mitre_attack_spec_version" userID="H24" flexoID="357" />
+    <PrimitiveActorReference id="345" valueAsString="2.1" roleName="spec_version" userID="H24" flexoID="358" />
+    <PrimitiveActorReference id="346" valueAsString="marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168" roleName="object_marking_refs" userID="H24" flexoID="359" />
+    <PrimitiveActorReference id="347" valueAsString="organization" roleName="identity_class" userID="H24" flexoID="360" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="348" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXDefinition" userID="H24" flexoID="207">
+    <PrimitiveActorReference id="349" valueAsString="Copyright 2015-2024, The MITRE Corporation. MITRE ATT&amp;CK and ATT&amp;CK are registered trademarks of The MITRE Corporation." roleName="statement" userID="H24" flexoID="361" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="350" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXMarkingDefinition" userID="H24" flexoID="208">
+    <PrimitiveActorReference id="351" valueAsString="marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168" roleName="id" userID="H24" flexoID="362" />
+    <PrimitiveActorReference id="352" valueAsString="enterprise-attack" roleName="x_mitre_domains" userID="H24" flexoID="363" />
+    <PrimitiveActorReference id="353" valueAsString="" roleName="x_mitre_modified_by_ref" userID="H24" flexoID="364" />
+    <PrimitiveActorReference id="354" valueAsString="2017-06-01T00:00:00.000Z" roleName="created" userID="H24" flexoID="365" />
+    <PrimitiveActorReference id="355" valueAsString="2017-06-01T00:00:00.000Z" roleName="created_by_ref" userID="H24" flexoID="366" />
+    <PrimitiveActorReference id="356" valueAsString="" roleName="x_mitre_version" userID="H24" flexoID="367" />
+    <PrimitiveActorReference id="357" valueAsString="2.1.0" roleName="x_mitre_attack_spec_version" userID="H24" flexoID="368" />
+    <PrimitiveActorReference id="358" valueAsString="2.1" roleName="spec_version" userID="H24" flexoID="369" />
+    <PrimitiveActorReference id="359" valueAsString="statement" roleName="definition_type" userID="H24" flexoID="370" />
+    <ModelObjectActorReference id="360" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MASTIX1.fml.rt#H24_207" roleName="definition" userID="H24" flexoID="371" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="361" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXExternalReference" userID="H24" flexoID="209">
+    <PrimitiveActorReference id="362" valueAsString="mitre-attack" roleName="source_name" userID="H24" flexoID="372" />
+    <PrimitiveActorReference id="363" valueAsString="https://attack.mitre.org/groups/G0096" roleName="url" userID="H24" flexoID="373" />
+    <PrimitiveActorReference id="364" valueAsString="G0096" roleName="external_id" userID="H24" flexoID="374" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="365" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXIntrusionSet" userID="H24" flexoID="210">
+    <PrimitiveActorReference id="366" valueAsString="intrusion-set--18854f55-ac7c-4634-bd9a-352dd07613b7" roleName="id" userID="H24" flexoID="375" />
+    <PrimitiveActorReference id="367" valueAsString="APT41" roleName="name" userID="H24" flexoID="376" />
+    <PrimitiveActorReference id="368" valueAsString="Kyaw Pyiyt Htet, @KyawPyiytHtet" roleName="x_mitre_contributors" userID="H24" flexoID="377" />
+    <PrimitiveActorReference id="369" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="x_mitre_modified_by_ref" userID="H24" flexoID="378" />
+    <PrimitiveActorReference id="370" valueAsString="2024-04-03T15:20:38.791Z" roleName="modified" userID="H24" flexoID="379" />
+    <PrimitiveActorReference id="371" valueAsString="2019-09-23T13:43:36.945Z" roleName="created" userID="H24" flexoID="380" />
+    <PrimitiveActorReference id="372" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="created_by_ref" userID="H24" flexoID="381" />
+    <PrimitiveActorReference id="373" valueAsString="4.0" roleName="x_mitre_version" userID="H24" flexoID="382" />
+    <PrimitiveActorReference id="374" valueAsString="3.2.0" roleName="x_mitre_attack_spec_version" userID="H24" flexoID="383" />
+    <PrimitiveActorReference id="375" valueAsString="[APT41](https://attack.mitre.org/groups/G0096) is a threat group that researchers have assessed as Chinese state-sponsored espionage group that also conducts financially-motivated operations. Active since at least 2012, [APT41](https://attack.mitre.org/groups/G0096) has been observed targeting healthcare, telecom, technology, and video game industries in 14 countries. [APT41](https://attack.mitre.org/groups/G0096) overlaps at least partially with public reporting on groups including BARIUM and [Winnti Group](https://attack.mitre.org/groups/G0044).(Citation: FireEye APT41 Aug 2019)(Citation: Group IB APT 41 June 2021)" roleName="description" userID="H24" flexoID="384" />
+    <PrimitiveActorReference id="376" valueAsString="2.1" roleName="spec_version" userID="H24" flexoID="385" />
+    <PrimitiveActorReference id="377" valueAsString="" roleName="object_marking_refs" userID="H24" flexoID="386" />
+    <ModelObjectActorReference id="378" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MASTIX1.fml.rt#H24_209" roleName="external_references" userID="H24" flexoID="387" />
+    <PrimitiveActorReference id="379" valueAsString="Wicked Panda" roleName="x_mitre_aliases" userID="H24" flexoID="388" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="380" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXExternalReference" userID="H24" flexoID="211">
+    <PrimitiveActorReference id="381" valueAsString="mitre-attack" roleName="source_name" userID="H24" flexoID="389" />
+    <PrimitiveActorReference id="382" valueAsString="https://attack.mitre.org/groups/G0061" roleName="url" userID="H24" flexoID="390" />
+    <PrimitiveActorReference id="383" valueAsString="G0061" roleName="external_id" userID="H24" flexoID="391" />
+    <PrimitiveActorReference id="384" valueAsString="" roleName="description" userID="H24" flexoID="392" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="385" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXIntrusionSet" userID="H24" flexoID="212">
+    <PrimitiveActorReference id="386" valueAsString="intrusion-set--fd19bd82-1b14-49a1-a176-6cdc46b8a826" roleName="id" userID="H24" flexoID="393" />
+    <PrimitiveActorReference id="387" valueAsString="FIN8" roleName="name" userID="H24" flexoID="394" />
+    <PrimitiveActorReference id="388" valueAsString="enterprise-attack" roleName="x_mitre_domains" userID="H24" flexoID="395" />
+    <PrimitiveActorReference id="389" valueAsString="Daniyal Naeem, BT Security" roleName="x_mitre_contributors" userID="H24" flexoID="396" />
+    <PrimitiveActorReference id="390" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="x_mitre_modified_by_ref" userID="H24" flexoID="397" />
+    <PrimitiveActorReference id="391" valueAsString="2023-09-19T14:08:59.296Z" roleName="modified" userID="H24" flexoID="398" />
+    <PrimitiveActorReference id="392" valueAsString="2018-04-18T17:59:24.739Z" roleName="created" userID="H24" flexoID="399" />
+    <PrimitiveActorReference id="393" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="created_by_ref" userID="H24" flexoID="400" />
+    <PrimitiveActorReference id="394" valueAsString="2.0" roleName="x_mitre_version" userID="H24" flexoID="401" />
+    <PrimitiveActorReference id="395" valueAsString="3.1.0" roleName="x_mitre_attack_spec_version" userID="H24" flexoID="402" />
+    <PrimitiveActorReference id="396" valueAsString="[FIN8](https://attack.mitre.org/groups/G0061) is a financially motivated threat group that has been active since at least January 2016, and known for targeting organizations in the hospitality, retail, entertainment, insurance, technology, chemical, and financial sectors. In June 2021, security researchers detected [FIN8](https://attack.mitre.org/groups/G0061) switching from targeting point-of-sale (POS) devices to distributing a number of ransomware variants.(Citation: FireEye Obfuscation June 2017)(Citation: FireEye Fin8 May 2016)(Citation: Bitdefender Sardonic Aug 2021)(Citation: Symantec FIN8 Jul 2023)" roleName="description" userID="H24" flexoID="403" />
+    <PrimitiveActorReference id="397" valueAsString="2.1" roleName="spec_version" userID="H24" flexoID="404" />
+    <PrimitiveActorReference id="398" valueAsString="marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168" roleName="object_marking_refs" userID="H24" flexoID="405" />
+    <ModelObjectActorReference id="399" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MASTIX1.fml.rt#H24_211" roleName="external_references" userID="H24" flexoID="406" />
+    <PrimitiveActorReference id="400" valueAsString="Syssphinx" roleName="x_mitre_aliases" userID="H24" flexoID="407" />
+    <PrimitiveActorReference id="401" valueAsString="false" roleName="is_family" userID="H24" flexoID="408" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="402" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXExternalReference" userID="H24" flexoID="213">
+    <PrimitiveActorReference id="403" valueAsString="mitre-attack" roleName="source_name" userID="H24" flexoID="409" />
+    <PrimitiveActorReference id="404" valueAsString="https://attack.mitre.org/groups/G0085" roleName="url" userID="H24" flexoID="410" />
+    <PrimitiveActorReference id="405" valueAsString="G0085" roleName="external_id" userID="H24" flexoID="411" />
+    <PrimitiveActorReference id="406" valueAsString="" roleName="description" userID="H24" flexoID="412" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="407" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXIntrusionSet" userID="H24" flexoID="214">
+    <PrimitiveActorReference id="408" valueAsString="intrusion-set--d0b3393b-3bec-4ba3-bda9-199d30db47b6" roleName="id" userID="H24" flexoID="413" />
+    <PrimitiveActorReference id="409" valueAsString="FIN4" roleName="name" userID="H24" flexoID="414" />
+    <PrimitiveActorReference id="410" valueAsString="enterprise-attack" roleName="x_mitre_domains" userID="H24" flexoID="415" />
+    <PrimitiveActorReference id="411" valueAsString="" roleName="x_mitre_contributors" userID="H24" flexoID="416" />
+    <PrimitiveActorReference id="412" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="x_mitre_modified_by_ref" userID="H24" flexoID="417" />
+    <PrimitiveActorReference id="413" valueAsString="2023-02-01T21:27:44.778Z" roleName="modified" userID="H24" flexoID="418" />
+    <PrimitiveActorReference id="414" valueAsString="2019-01-31T02:01:45.129Z" roleName="created" userID="H24" flexoID="419" />
+    <PrimitiveActorReference id="415" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="created_by_ref" userID="H24" flexoID="420" />
+    <PrimitiveActorReference id="416" valueAsString="1.2" roleName="x_mitre_version" userID="H24" flexoID="421" />
+    <PrimitiveActorReference id="417" valueAsString="3.1.0" roleName="x_mitre_attack_spec_version" userID="H24" flexoID="422" />
+    <PrimitiveActorReference id="418" valueAsString="[FIN4](https://attack.mitre.org/groups/G0085) is a financially-motivated threat group that has targeted confidential information related to the public financial market, particularly regarding healthcare and pharmaceutical companies, since at least 2013.(Citation: FireEye Hacking FIN4 Dec 2014)(Citation: FireEye FIN4 Stealing Insider NOV 2014) [FIN4](https://attack.mitre.org/groups/G0085) is unique in that they do not infect victims with typical persistent malware, but rather they focus on capturing credentials authorized to access email and other non-public correspondence.(Citation: FireEye Hacking FIN4 Dec 2014)(Citation: FireEye Hacking FIN4 Video Dec 2014)" roleName="description" userID="H24" flexoID="423" />
+    <PrimitiveActorReference id="419" valueAsString="2.1" roleName="spec_version" userID="H24" flexoID="424" />
+    <PrimitiveActorReference id="420" valueAsString="marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168" roleName="object_marking_refs" userID="H24" flexoID="425" />
+    <ModelObjectActorReference id="421" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MASTIX1.fml.rt#H24_213" roleName="external_references" userID="H24" flexoID="426" />
+    <PrimitiveActorReference id="422" valueAsString="FIN4" roleName="x_mitre_aliases" userID="H24" flexoID="427" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="423" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXExternalReference" userID="H24" flexoID="428">
+    <PrimitiveActorReference id="424" valueAsString="mitre-attack" roleName="source_name" userID="H24" flexoID="430" />
+    <PrimitiveActorReference id="425" valueAsString="https://attack.mitre.org/groups/G0046" roleName="url" userID="H24" flexoID="431" />
+    <PrimitiveActorReference id="426" valueAsString="G0046" roleName="external_id" userID="H24" flexoID="432" />
+    <PrimitiveActorReference id="427" valueAsString="" roleName="description" userID="H24" flexoID="433" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="428" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXIntrusionSet" userID="H24" flexoID="429">
+    <PrimitiveActorReference id="429" valueAsString="intrusion-set--3753cc21-2dae-4dfb-8481-d004e74502cc" roleName="id" userID="H24" flexoID="434" />
+    <PrimitiveActorReference id="430" valueAsString="FIN7" roleName="name" userID="H24" flexoID="435" />
+    <PrimitiveActorReference id="431" valueAsString="enterprise-attack" roleName="x_mitre_domains" userID="H24" flexoID="436" />
+    <PrimitiveActorReference id="432" valueAsString="Edward Millington" roleName="x_mitre_contributors" userID="H24" flexoID="437" />
+    <PrimitiveActorReference id="433" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="x_mitre_modified_by_ref" userID="H24" flexoID="438" />
+    <PrimitiveActorReference id="434" valueAsString="2024-04-17T22:09:41.004Z" roleName="modified" userID="H24" flexoID="439" />
+    <PrimitiveActorReference id="435" valueAsString="2017-05-31T21:32:09.460Z" roleName="created" userID="H24" flexoID="440" />
+    <PrimitiveActorReference id="436" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="created_by_ref" userID="H24" flexoID="441" />
+    <PrimitiveActorReference id="437" valueAsString="4.0" roleName="x_mitre_version" userID="H24" flexoID="442" />
+    <PrimitiveActorReference id="438" valueAsString="3.2.0" roleName="x_mitre_attack_spec_version" userID="H24" flexoID="443" />
+    <PrimitiveActorReference id="439" valueAsString="[FIN7](https://attack.mitre.org/groups/G0046) is a financially-motivated threat group that has been active since 2013. [FIN7](https://attack.mitre.org/groups/G0046) has primarily targeted the retail, restaurant, hospitality, software, consulting, financial services, medical equipment, cloud services, media, food and beverage, transportation, and utilities industries in the U.S. A portion of [FIN7](https://attack.mitre.org/groups/G0046) was run out of a front company called Combi Security and often used point-of-sale malware for targeting efforts. Since 2020, [FIN7](https://attack.mitre.org/groups/G0046) shifted operations to a big game hunting (BGH) approach including use of [REvil](https://attack.mitre.org/software/S0496) ransomware and their own Ransomware as a Service (RaaS), Darkside. FIN7 may be linked to the [Carbanak](https://attack.mitre.org/groups/G0008) Group, but there appears to be several groups using [Carbanak](https://attack.mitre.org/software/S0030) malware and are therefore tracked separately.(Citation: FireEye FIN7 March 2017)(Citation: FireEye FIN7 April 2017)(Citation: FireEye CARBANAK June 2017)(Citation: FireEye FIN7 Aug 2018)(Citation: CrowdStrike Carbon Spider August 2021)(Citation: Mandiant FIN7 Apr 2022)" roleName="description" userID="H24" flexoID="444" />
+    <PrimitiveActorReference id="440" valueAsString="2.1" roleName="spec_version" userID="H24" flexoID="445" />
+    <PrimitiveActorReference id="441" valueAsString="marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168" roleName="object_marking_refs" userID="H24" flexoID="446" />
+    <ModelObjectActorReference id="442" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MASTIX1.fml.rt#H24_428" roleName="external_references" userID="H24" flexoID="447" />
+    <PrimitiveActorReference id="443" valueAsString="GOLD NIAGARA" roleName="x_mitre_aliases" userID="H24" flexoID="448" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="444" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXExternalReference" userID="H24" flexoID="449">
+    <PrimitiveActorReference id="445" valueAsString="mitre-attack" roleName="source_name" userID="H24" flexoID="452" />
+    <PrimitiveActorReference id="446" valueAsString="https://attack.mitre.org/software/S0599" roleName="url" userID="H24" flexoID="453" />
+    <PrimitiveActorReference id="447" valueAsString="S0599" roleName="external_id" userID="H24" flexoID="454" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="448" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXMalware" userID="H24" flexoID="450">
+    <PrimitiveActorReference id="449" valueAsString="malware--d6e55656-e43f-411f-a7af-45df650471c5" roleName="id" userID="H24" flexoID="455" />
+    <PrimitiveActorReference id="450" valueAsString="Containers" roleName="x_mitre_platforms" userID="H24" flexoID="456" />
+    <PrimitiveActorReference id="451" valueAsString="Kinsing" roleName="name" userID="H24" flexoID="457" />
+    <PrimitiveActorReference id="452" valueAsString="enterprise-attack" roleName="x_mitre_domains" userID="H24" flexoID="458" />
+    <PrimitiveActorReference id="453" valueAsString="Center for Threat-Informed Defense (CTID)" roleName="x_mitre_contributors" userID="H24" flexoID="459" />
+    <PrimitiveActorReference id="454" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="x_mitre_modified_by_ref" userID="H24" flexoID="460" />
+    <PrimitiveActorReference id="455" valueAsString="2021-08-26T16:39:07.873Z" roleName="modified" userID="H24" flexoID="461" />
+    <PrimitiveActorReference id="456" valueAsString="2021-04-06T12:22:23.447Z" roleName="created" userID="H24" flexoID="462" />
+    <PrimitiveActorReference id="457" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="created_by_ref" userID="H24" flexoID="463" />
+    <PrimitiveActorReference id="458" valueAsString="1.1" roleName="x_mitre_version" userID="H24" flexoID="464" />
+    <PrimitiveActorReference id="459" valueAsString="2.1.0" roleName="x_mitre_attack_spec_version" userID="H24" flexoID="465" />
+    <PrimitiveActorReference id="460" valueAsString="[Kinsing](https://attack.mitre.org/software/S0599) is Golang-based malware that runs a cryptocurrency miner and attempts to spread itself to other hosts in the victim environment. (Citation: Aqua Kinsing April 2020)(Citation: Sysdig Kinsing November 2020)(Citation: Aqua Security Cloud Native Threat Report June 2021)" roleName="description" userID="H24" flexoID="466" />
+    <PrimitiveActorReference id="461" valueAsString="2.1" roleName="spec_version" userID="H24" flexoID="467" />
+    <PrimitiveActorReference id="462" valueAsString="marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168" roleName="object_marking_refs" userID="H24" flexoID="468" />
+    <ModelObjectActorReference id="463" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MASTIX1.fml.rt#H24_449" roleName="external_references" userID="H24" flexoID="469" />
+    <PrimitiveActorReference id="464" valueAsString="Kinsing" roleName="x_mitre_aliases" userID="H24" flexoID="470" />
+    <PrimitiveActorReference id="465" valueAsString="true" roleName="is_family" userID="H24" flexoID="471" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="466" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXExternalReference" userID="H24" flexoID="451">
+    <PrimitiveActorReference id="467" valueAsString="mitre-attack" roleName="source_name" userID="H24" flexoID="472" />
+    <PrimitiveActorReference id="468" valueAsString="https://attack.mitre.org/groups/G0035" roleName="url" userID="H24" flexoID="473" />
+    <PrimitiveActorReference id="469" valueAsString="G0035" roleName="external_id" userID="H24" flexoID="474" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="470" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXIntrusionSet" userID="H24" flexoID="475">
+    <PrimitiveActorReference id="471" valueAsString="intrusion-set--1c63d4ec-0a75-4daa-b1df-0d11af3d3cc1" roleName="id" userID="H24" flexoID="494" />
+    <PrimitiveActorReference id="472" valueAsString="Dragonfly" roleName="name" userID="H24" flexoID="495" />
+    <PrimitiveActorReference id="473" valueAsString="enterprise-attack" roleName="x_mitre_domains" userID="H24" flexoID="496" />
+    <PrimitiveActorReference id="474" valueAsString="Dragos Threat Intelligence" roleName="x_mitre_contributors" userID="H24" flexoID="497" />
+    <PrimitiveActorReference id="475" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="x_mitre_modified_by_ref" userID="H24" flexoID="498" />
+    <PrimitiveActorReference id="476" valueAsString="2024-01-08T20:40:31.822Z" roleName="modified" userID="H24" flexoID="499" />
+    <PrimitiveActorReference id="477" valueAsString="2017-05-31T21:32:05.217Z" roleName="created" userID="H24" flexoID="500" />
+    <PrimitiveActorReference id="478" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="created_by_ref" userID="H24" flexoID="501" />
+    <PrimitiveActorReference id="479" valueAsString="4.0" roleName="x_mitre_version" userID="H24" flexoID="502" />
+    <PrimitiveActorReference id="480" valueAsString="3.2.0" roleName="x_mitre_attack_spec_version" userID="H24" flexoID="503" />
+    <PrimitiveActorReference id="481" valueAsString="[Dragonfly](https://attack.mitre.org/groups/G0035) is a cyber espionage group that has been attributed to Russia's Federal Security Service (FSB) Center 16.(Citation: DOJ Russia Targeting Critical Infrastructure March 2022)(Citation: UK GOV FSB Factsheet April 2022) Active since at least 2010, [Dragonfly](https://attack.mitre.org/groups/G0035) has targeted defense and aviation companies, government entities, companies related to industrial control systems, and critical infrastructure sectors worldwide through supply chain, spearphishing, and drive-by compromise attacks.(Citation: Symantec Dragonfly)(Citation: Secureworks IRON LIBERTY July 2019)(Citation: Symantec Dragonfly Sept 2017)(Citation: Fortune Dragonfly 2.0 Sept 2017)(Citation: Gigamon Berserk Bear October 2021)(Citation: CISA AA20-296A Berserk Bear December 2020)(Citation: Symantec Dragonfly 2.0 October 2017)" roleName="description" userID="H24" flexoID="504" />
+    <PrimitiveActorReference id="482" valueAsString="2.1" roleName="spec_version" userID="H24" flexoID="505" />
+    <PrimitiveActorReference id="483" valueAsString="marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168" roleName="object_marking_refs" userID="H24" flexoID="506" />
+    <ModelObjectActorReference id="484" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MASTIX1.fml.rt#H24_451" roleName="external_references" userID="H24" flexoID="507" />
+    <PrimitiveActorReference id="485" valueAsString="TEMP.Isotope" roleName="x_mitre_aliases" userID="H24" flexoID="508" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="486" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXExternalReference" userID="H24" flexoID="476">
+    <PrimitiveActorReference id="487" valueAsString="mitre-attack" roleName="source_name" userID="H24" flexoID="509" />
+    <PrimitiveActorReference id="488" valueAsString="https://attack.mitre.org/groups/G009" roleName="url" userID="H24" flexoID="510" />
+    <PrimitiveActorReference id="489" valueAsString="G0093" roleName="external_id" userID="H24" flexoID="511" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="490" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXIntrusionSet" userID="H24" flexoID="477">
+    <PrimitiveActorReference id="491" valueAsString="intrusion-set--06a11b7e-2a36-47fe-8d3e-82c265df3258" roleName="id" userID="H24" flexoID="512" />
+    <PrimitiveActorReference id="492" valueAsString="GALLIUM" roleName="name" userID="H24" flexoID="513" />
+    <PrimitiveActorReference id="493" valueAsString="enterprise-attack" roleName="x_mitre_domains" userID="H24" flexoID="514" />
+    <PrimitiveActorReference id="494" valueAsString="Daniyal Naeem, BT Security" roleName="x_mitre_contributors" userID="H24" flexoID="515" />
+    <PrimitiveActorReference id="495" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="x_mitre_modified_by_ref" userID="H24" flexoID="516" />
+    <PrimitiveActorReference id="496" valueAsString="2024-04-17T22:10:27.139Z" roleName="modified" userID="H24" flexoID="517" />
+    <PrimitiveActorReference id="497" valueAsString="2019-07-18T20:47:50.050Z" roleName="created" userID="H24" flexoID="518" />
+    <PrimitiveActorReference id="498" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="created_by_ref" userID="H24" flexoID="519" />
+    <PrimitiveActorReference id="499" valueAsString="4.0" roleName="x_mitre_version" userID="H24" flexoID="520" />
+    <PrimitiveActorReference id="500" valueAsString="3.2.0" roleName="x_mitre_attack_spec_version" userID="H24" flexoID="521" />
+    <PrimitiveActorReference id="501" valueAsString="[GALLIUM](https://attack.mitre.org/groups/G0093) is a cyberespionage group that has been active since at least 2012, primarily targeting telecommunications companies, financial institutions, and government entities in Afghanistan, Australia, Belgium, Cambodia, Malaysia, Mozambique, the Philippines, Russia, and Vietnam. This group is particularly known for launching Operation Soft Cell, a long-term campaign targeting telecommunications providers.(Citation: Cybereason Soft Cell June 2019) Security researchers have identified [GALLIUM](https://attack.mitre.org/groups/G0093) as a likely Chinese state-sponsored group, based in part on tools used and TTPs commonly associated with Chinese threat actors.(Citation: Cybereason Soft Cell June 2019)(Citation: Microsoft GALLIUM December 2019)(Citation: Unit 42 PingPull Jun 2022)" roleName="description" userID="H24" flexoID="522" />
+    <PrimitiveActorReference id="502" valueAsString="2.1" roleName="spec_version" userID="H24" flexoID="523" />
+    <PrimitiveActorReference id="503" valueAsString="marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168" roleName="object_marking_refs" userID="H24" flexoID="524" />
+    <ModelObjectActorReference id="504" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MASTIX1.fml.rt#H24_476" roleName="external_references" userID="H24" flexoID="525" />
+    <PrimitiveActorReference id="505" valueAsString="Granite Typhoon" roleName="x_mitre_aliases" userID="H24" flexoID="526" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="506" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXExternalReference" userID="H24" flexoID="478">
+    <PrimitiveActorReference id="507" valueAsString="mitre-attack" roleName="source_name" userID="H24" flexoID="527" />
+    <PrimitiveActorReference id="508" valueAsString="https://attack.mitre.org/groups/G0026" roleName="url" userID="H24" flexoID="528" />
+    <PrimitiveActorReference id="509" valueAsString="G0026" roleName="external_id" userID="H24" flexoID="529" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="510" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXIntrusionSet" userID="H24" flexoID="479">
+    <PrimitiveActorReference id="511" valueAsString="intrusion-set--38fd6a28-3353-4f2b-bb2b-459fecd5c648" roleName="id" userID="H24" flexoID="530" />
+    <PrimitiveActorReference id="512" valueAsString="" roleName="x_mitre_platforms" userID="H24" flexoID="531" />
+    <PrimitiveActorReference id="513" valueAsString="APT18" roleName="name" userID="H24" flexoID="532" />
+    <PrimitiveActorReference id="514" valueAsString="enterprise-attack" roleName="x_mitre_domains" userID="H24" flexoID="533" />
+    <PrimitiveActorReference id="515" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="x_mitre_modified_by_ref" userID="H24" flexoID="534" />
+    <PrimitiveActorReference id="516" valueAsString="2024-04-11T03:03:44.056Z" roleName="modified" userID="H24" flexoID="535" />
+    <PrimitiveActorReference id="517" valueAsString="2017-05-31T21:31:57.733Z" roleName="created" userID="H24" flexoID="536" />
+    <PrimitiveActorReference id="518" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="created_by_ref" userID="H24" flexoID="537" />
+    <PrimitiveActorReference id="519" valueAsString="2.2" roleName="x_mitre_version" userID="H24" flexoID="538" />
+    <PrimitiveActorReference id="520" valueAsString="3.2.0" roleName="x_mitre_attack_spec_version" userID="H24" flexoID="539" />
+    <PrimitiveActorReference id="521" valueAsString="[APT18](https://attack.mitre.org/groups/G0026) is a threat group that has operated since at least 2009 and has targeted a range of industries, including technology, manufacturing, human rights groups, government, and medical. (Citation: Dell Lateral Movement)" roleName="description" userID="H24" flexoID="540" />
+    <PrimitiveActorReference id="522" valueAsString="2.1" roleName="spec_version" userID="H24" flexoID="541" />
+    <PrimitiveActorReference id="523" valueAsString="marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168" roleName="object_marking_refs" userID="H24" flexoID="542" />
+    <ModelObjectActorReference id="524" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MASTIX1.fml.rt#H24_478" roleName="external_references" userID="H24" flexoID="543" />
+    <PrimitiveActorReference id="525" valueAsString="TG-0416" roleName="x_mitre_aliases" userID="H24" flexoID="544" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="526" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXExternalReference" userID="H24" flexoID="480">
+    <PrimitiveActorReference id="527" valueAsString="mitre-attack" roleName="source_name" userID="H24" flexoID="545" />
+    <PrimitiveActorReference id="528" valueAsString="https://attack.mitre.org/techniques/T1078/004" roleName="url" userID="H24" flexoID="546" />
+    <PrimitiveActorReference id="529" valueAsString="T1078.004" roleName="external_id" userID="H24" flexoID="547" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="530" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXAttackPattern" userID="H24" flexoID="481">
+    <PrimitiveActorReference id="531" valueAsString="attack-pattern--f232fa7a-025c-4d43-abc7-318e81a73d65" roleName="id" userID="H24" flexoID="548" />
+    <PrimitiveActorReference id="532" valueAsString="Azure AD" roleName="x_mitre_platforms" userID="H24" flexoID="549" />
+    <PrimitiveActorReference id="533" valueAsString="Cloud Accounts" roleName="name" userID="H24" flexoID="550" />
+    <PrimitiveActorReference id="534" valueAsString="enterprise-attack" roleName="x_mitre_domains" userID="H24" flexoID="551" />
+    <PrimitiveActorReference id="535" valueAsString="Jon Sternstein, Stern Security" roleName="x_mitre_contributors" userID="H24" flexoID="552" />
+    <PrimitiveActorReference id="536" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="x_mitre_modified_by_ref" userID="H24" flexoID="553" />
+    <PrimitiveActorReference id="537" valueAsString="2024-03-29T15:42:13.499Z" roleName="modified" userID="H24" flexoID="554" />
+    <PrimitiveActorReference id="538" valueAsString="2020-03-13T20:36:57.378Z" roleName="created" userID="H24" flexoID="555" />
+    <PrimitiveActorReference id="539" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="created_by_ref" userID="H24" flexoID="556" />
+    <PrimitiveActorReference id="540" valueAsString="1.7" roleName="x_mitre_version" userID="H24" flexoID="557" />
+    <PrimitiveActorReference id="541" valueAsString="3.2.0" roleName="x_mitre_attack_spec_version" userID="H24" flexoID="558" />
+    <PrimitiveActorReference id="542" valueAsString="Valid accounts in cloud environments may allow adversaries to perform actions to achieve Initial Access, Persistence, Privilege Escalation, or Defense Evasion. Cloud accounts are those created and configured by an organization for use by users, remote support, services, or for administration of resources within a cloud service provider or SaaS application. Cloud Accounts can exist solely in the cloud; alternatively, they may be hybrid-joined between on-premises systems and the cloud through syncing or federation with other identity sources such as Windows Active Directory. (Citation: AWS Identity Federation)(Citation: Google Federating GC)(Citation: Microsoft Deploying AD Federation)\n\nService or user accounts may be targeted by adversaries through [Brute Force](https://attack.mitre.org/techniques/T1110), [Phishing](https://attack.mitre.org/techniques/T1566), or various other means to gain access to the environment. Federated or synced accounts may be a pathway for the adversary to affect both on-premises systems and cloud environments - for example, by leveraging shared credentials to log onto [Remote Services](https://attack.mitre.org/techniques/T1021). High privileged cloud accounts, whether federated, synced, or cloud-only, may also allow pivoting to on-premises environments by leveraging SaaS-based [Software Deployment Tools](https://attack.mitre.org/techniques/T1072) to run commands on hybrid-joined devices.\n\nAn adversary may create long lasting [Additional Cloud Credentials](https://attack.mitre.org/techniques/T1098/001) on a compromised cloud account to maintain persistence in the environment. Such credentials may also be used to bypass security controls such as multi-factor authentication. \n\nCloud accounts may also be able to assume [Temporary Elevated Cloud Access](https://attack.mitre.org/techniques/T1548/005) or other privileges through various means within the environment. Misconfigurations in role assignments or role assumption policies may allow an adversary to use these mechanisms to leverage permissions outside the intended scope of the account. Such over privileged accounts may be used to harvest sensitive data from online storage accounts and databases through [Cloud API](https://attack.mitre.org/techniques/T1059/009) or other methods. \n" roleName="description" userID="H24" flexoID="559" />
+    <PrimitiveActorReference id="543" valueAsString="2.1" roleName="spec_version" userID="H24" flexoID="560" />
+    <PrimitiveActorReference id="544" valueAsString="marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168" roleName="object_marking_refs" userID="H24" flexoID="561" />
+    <ModelObjectActorReference id="545" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MASTIX1.fml.rt#H24_2" roleName="kill_chain_phases" userID="H24" flexoID="562" />
+    <PrimitiveActorReference id="546" valueAsString="Monitor the activity of cloud accounts to detect abnormal or malicious behavior, such as accessing information outside of the normal function of the account or account usage at atypical hours." roleName="x_mitre_detection" userID="H24" flexoID="563" />
+    <PrimitiveActorReference id="547" valueAsString="true" roleName="x_mitre_is_subtechnique" userID="H24" flexoID="564" />
+    <ModelObjectActorReference id="548" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MASTIX1.fml.rt#H24_480" roleName="external_references" userID="H24" flexoID="565" />
+    <PrimitiveActorReference id="549" valueAsString="Administrator" roleName="x_mitre_permissions_required" userID="H24" flexoID="566" />
+    <PrimitiveActorReference id="550" valueAsString="Jon Sternstein, Stern Security" roleName="x_mitre_contributors" userID="H24" flexoID="567" />
+    <PrimitiveActorReference id="551" valueAsString="User Account: User Account Authentication" roleName="x_mitre_data_sources" userID="H24" flexoID="568" />
+    <PrimitiveActorReference id="552" valueAsString="marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168" roleName="object_marking_refs" userID="H24" flexoID="569" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="553" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXExternalReference" userID="H24" flexoID="482">
+    <PrimitiveActorReference id="554" valueAsString="mitre-attack" roleName="source_name" userID="H24" flexoID="570" />
+    <PrimitiveActorReference id="555" valueAsString="https://attack.mitre.org/campaigns/C0032" roleName="url" userID="H24" flexoID="571" />
+    <PrimitiveActorReference id="556" valueAsString="C0032" roleName="external_id" userID="H24" flexoID="572" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="557" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXCampaign" userID="H24" flexoID="483">
+    <PrimitiveActorReference id="558" valueAsString="campaign--7ec2826c-0bf0-4b47-acae-fd683431a4ca" roleName="id" userID="H24" flexoID="573" />
+    <PrimitiveActorReference id="559" valueAsString="" roleName="x_mitre_platforms" userID="H24" flexoID="574" />
+    <PrimitiveActorReference id="560" valueAsString="C0032" roleName="name" userID="H24" flexoID="575" />
+    <PrimitiveActorReference id="561" valueAsString="enterprise-attack" roleName="x_mitre_domains" userID="H24" flexoID="576" />
+    <PrimitiveActorReference id="562" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="x_mitre_modified_by_ref" userID="H24" flexoID="577" />
+    <PrimitiveActorReference id="563" valueAsString="2024-04-15T21:10:00.969Z" roleName="modified" userID="H24" flexoID="578" />
+    <PrimitiveActorReference id="564" valueAsString="2024-03-28T15:22:19.075Z" roleName="created" userID="H24" flexoID="579" />
+    <PrimitiveActorReference id="565" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="created_by_ref" userID="H24" flexoID="580" />
+    <PrimitiveActorReference id="566" valueAsString="1.0" roleName="x_mitre_version" userID="H24" flexoID="581" />
+    <PrimitiveActorReference id="567" valueAsString="3.2.0" roleName="x_mitre_attack_spec_version" userID="H24" flexoID="582" />
+    <PrimitiveActorReference id="568" valueAsString="[C0032](https://attack.mitre.org/campaigns/C0032) was an extended campaign suspected to involve the [Triton](https://attack.mitre.org/software/S1009) adversaries with related capabilities and techniques focused on gaining a foothold within IT environments. This campaign occurred in 2019 and was distinctly different from the [Triton Safety Instrumented System Attack](https://attack.mitre.org/campaigns/C0030).(Citation: FireEye TRITON 2019)" roleName="description" userID="H24" flexoID="583" />
+    <PrimitiveActorReference id="569" valueAsString="2.1" roleName="spec_version" userID="H24" flexoID="584" />
+    <PrimitiveActorReference id="570" valueAsString="marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168" roleName="object_marking_refs" userID="H24" flexoID="585" />
+    <ModelObjectActorReference id="571" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MASTIX1.fml.rt#H24_482" roleName="external_references" userID="H24" flexoID="586" />
+    <PrimitiveActorReference id="572" valueAsString="2014-10-01T04:00:00.000Z" roleName="first_seen" userID="H24" flexoID="587" />
+    <PrimitiveActorReference id="573" valueAsString="2017-01-01T05:00:00.000Z" roleName="last_seen" userID="H24" flexoID="588" />
+    <PrimitiveActorReference id="574" valueAsString="(Citation: FireEye TRITON 2019)" roleName="x_mitre_first_seen_citation" userID="H24" flexoID="589" />
+    <PrimitiveActorReference id="575" valueAsString="(Citation: FireEye TRITON 2019)" roleName="x_mitre_last_seen_citation" userID="H24" flexoID="590" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="576" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXExternalReference" userID="H24" flexoID="484">
+    <PrimitiveActorReference id="577" valueAsString="mitre-attack" roleName="source_name" userID="H24" flexoID="591" />
+    <PrimitiveActorReference id="578" valueAsString="https://attack.mitre.org/groups/G0032" roleName="url" userID="H24" flexoID="592" />
+    <PrimitiveActorReference id="579" valueAsString="G0032" roleName="external_id" userID="H24" flexoID="593" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="580" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXIntrusionSet" userID="H24" flexoID="485">
+    <PrimitiveActorReference id="581" valueAsString="intrusion-set--c93fccb1-e8e8-42cf-ae33-2ad1d183913a" roleName="id" userID="H24" flexoID="594" />
+    <PrimitiveActorReference id="582" valueAsString="Lazarus Group" roleName="name" userID="H24" flexoID="595" />
+    <PrimitiveActorReference id="583" valueAsString="enterprise-attack" roleName="x_mitre_domains" userID="H24" flexoID="596" />
+    <PrimitiveActorReference id="584" valueAsString="Kyaw Pyiyt Htet, @KyawPyiytHtet" roleName="x_mitre_contributors" userID="H24" flexoID="597" />
+    <PrimitiveActorReference id="585" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="x_mitre_modified_by_ref" userID="H24" flexoID="598" />
+    <PrimitiveActorReference id="586" valueAsString="false" roleName="revoked" userID="H24" flexoID="599" />
+    <PrimitiveActorReference id="587" valueAsString="2024-04-11T16:06:34.699Z" roleName="modified" userID="H24" flexoID="600" />
+    <PrimitiveActorReference id="588" valueAsString="2017-05-31T21:32:03.807Z" roleName="created" userID="H24" flexoID="601" />
+    <PrimitiveActorReference id="589" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="created_by_ref" userID="H24" flexoID="602" />
+    <PrimitiveActorReference id="590" valueAsString="4.0" roleName="x_mitre_version" userID="H24" flexoID="603" />
+    <PrimitiveActorReference id="591" valueAsString="3.2.0" roleName="x_mitre_attack_spec_version" userID="H24" flexoID="604" />
+    <PrimitiveActorReference id="592" valueAsString="[Lazarus Group](https://attack.mitre.org/groups/G0032) is a North Korean state-sponsored cyber threat group that has been attributed to the Reconnaissance General Bureau.(Citation: US-CERT HIDDEN COBRA June 2017)(Citation: Treasury North Korean Cyber Groups September 2019) The group has been active since at least 2009 and was reportedly responsible for the November 2014 destructive wiper attack against Sony Pictures Entertainment as part of a campaign named Operation Blockbuster by Novetta. Malware used by [Lazarus Group](https://attack.mitre.org/groups/G0032) correlates to other reported campaigns, including Operation Flame, Operation 1Mission, Operation Troy, DarkSeoul, and Ten Days of Rain.(Citation: Novetta Blockbuster)\n\nNorth Korean group definitions are known to have significant overlap, and some security researchers report all North Korean state-sponsored cyber activity under the name [Lazarus Group](https://attack.mitre.org/groups/G0032) instead of tracking clusters or subgroups, such as [Andariel](https://attack.mitre.org/groups/G0138), [APT37](https://attack.mitre.org/groups/G0067), [APT38](https://attack.mitre.org/groups/G0082), and [Kimsuky](https://attack.mitre.org/groups/G0094). " roleName="description" userID="H24" flexoID="605" />
+    <PrimitiveActorReference id="593" valueAsString="2.1" roleName="spec_version" userID="H24" flexoID="606" />
+    <PrimitiveActorReference id="594" valueAsString="marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168" roleName="object_marking_refs" userID="H24" flexoID="607" />
+    <ModelObjectActorReference id="595" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MASTIX1.fml.rt#H24_484" roleName="external_references" userID="H24" flexoID="608" />
+    <PrimitiveActorReference id="596" valueAsString="Labyrinth Chollima" roleName="x_mitre_aliases" userID="H24" flexoID="609" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="597" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXExternalReference" userID="H24" flexoID="486">
+    <PrimitiveActorReference id="598" valueAsString="mitre-attack" roleName="source_name" userID="H24" flexoID="610" />
+    <PrimitiveActorReference id="599" valueAsString="https://attack.mitre.org/groups/G0114" roleName="url" userID="H24" flexoID="611" />
+    <PrimitiveActorReference id="600" valueAsString="G0114" roleName="external_id" userID="H24" flexoID="612" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="601" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXIntrusionSet" userID="H24" flexoID="487">
+    <PrimitiveActorReference id="602" valueAsString="intrusion-set--8c1f0187-0826-4320-bddc-5f326cfcfe2c" roleName="id" userID="H24" flexoID="613" />
+    <PrimitiveActorReference id="603" valueAsString="" roleName="x_mitre_platforms" userID="H24" flexoID="614" />
+    <PrimitiveActorReference id="604" valueAsString="Chimera" roleName="name" userID="H24" flexoID="615" />
+    <PrimitiveActorReference id="605" valueAsString="enterprise-attack" roleName="x_mitre_domains" userID="H24" flexoID="616" />
+    <PrimitiveActorReference id="606" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="x_mitre_modified_by_ref" userID="H24" flexoID="617" />
+    <PrimitiveActorReference id="607" valueAsString="2023-03-22T03:25:24.295Z" roleName="modified" userID="H24" flexoID="618" />
+    <PrimitiveActorReference id="608" valueAsString="2020-08-24T17:01:55.842Z" roleName="created" userID="H24" flexoID="619" />
+    <PrimitiveActorReference id="609" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="created_by_ref" userID="H24" flexoID="620" />
+    <PrimitiveActorReference id="610" valueAsString="2.2" roleName="x_mitre_version" userID="H24" flexoID="621" />
+    <PrimitiveActorReference id="611" valueAsString="3.1.0" roleName="x_mitre_attack_spec_version" userID="H24" flexoID="622" />
+    <PrimitiveActorReference id="612" valueAsString="[Chimera](https://attack.mitre.org/groups/G0114) is a suspected China-based threat group that has been active since at least 2018 targeting the semiconductor industry in Taiwan as well as data from the airline industry.(Citation: Cycraft Chimera April 2020)(Citation: NCC Group Chimera January 2021)" roleName="description" userID="H24" flexoID="623" />
+    <PrimitiveActorReference id="613" valueAsString="2.1" roleName="spec_version" userID="H24" flexoID="624" />
+    <PrimitiveActorReference id="614" valueAsString="marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168" roleName="object_marking_refs" userID="H24" flexoID="625" />
+    <ModelObjectActorReference id="615" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MASTIX1.fml.rt#H24_486" roleName="external_references" userID="H24" flexoID="626" />
+    <PrimitiveActorReference id="616" valueAsString="Chimera" roleName="x_mitre_aliases" userID="H24" flexoID="627" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="617" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXExternalReference" userID="H24" flexoID="488">
+    <PrimitiveActorReference id="618" valueAsString="mitre-attack" roleName="source_name" userID="H24" flexoID="628" />
+    <PrimitiveActorReference id="619" valueAsString="https://attack.mitre.org/software/S0053" roleName="url" userID="H24" flexoID="629" />
+    <PrimitiveActorReference id="620" valueAsString="S0053" roleName="external_id" userID="H24" flexoID="630" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="621" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXMalware" userID="H24" flexoID="489">
+    <PrimitiveActorReference id="622" valueAsString="malware--67e6d66b-1b82-4699-b47a-e2efb6268d14" roleName="id" userID="H24" flexoID="631" />
+    <PrimitiveActorReference id="623" valueAsString="Windows" roleName="x_mitre_platforms" userID="H24" flexoID="632" />
+    <PrimitiveActorReference id="624" valueAsString="SeaDuke" roleName="name" userID="H24" flexoID="633" />
+    <PrimitiveActorReference id="625" valueAsString="enterprise-attack" roleName="x_mitre_domains" userID="H24" flexoID="634" />
+    <PrimitiveActorReference id="626" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="x_mitre_modified_by_ref" userID="H24" flexoID="635" />
+    <PrimitiveActorReference id="627" valueAsString="2022-04-25T14:00:00.188Z" roleName="modified" userID="H24" flexoID="636" />
+    <PrimitiveActorReference id="628" valueAsString="2017-05-31T21:32:37.767Z" roleName="created" userID="H24" flexoID="637" />
+    <PrimitiveActorReference id="629" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="created_by_ref" userID="H24" flexoID="638" />
+    <PrimitiveActorReference id="630" valueAsString="1.1" roleName="x_mitre_version" userID="H24" flexoID="639" />
+    <PrimitiveActorReference id="631" valueAsString="2.1.0" roleName="x_mitre_attack_spec_version" userID="H24" flexoID="640" />
+    <PrimitiveActorReference id="632" valueAsString="[SeaDuke](https://attack.mitre.org/software/S0053) is malware that was used by [APT29](https://attack.mitre.org/groups/G0016) from 2014 to 2015. It was used primarily as a secondary backdoor for victims that were already compromised with [CozyCar](https://attack.mitre.org/software/S0046). (Citation: F-Secure The Dukes)" roleName="description" userID="H24" flexoID="641" />
+    <PrimitiveActorReference id="633" valueAsString="2.1" roleName="spec_version" userID="H24" flexoID="642" />
+    <PrimitiveActorReference id="634" valueAsString="marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168" roleName="object_marking_refs" userID="H24" flexoID="643" />
+    <ModelObjectActorReference id="635" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MASTIX1.fml.rt#H24_488" roleName="external_references" userID="H24" flexoID="644" />
+    <PrimitiveActorReference id="636" valueAsString="SeaDuke" roleName="x_mitre_aliases" userID="H24" flexoID="645" />
+    <PrimitiveActorReference id="637" valueAsString="true" roleName="is_family" userID="H24" flexoID="646" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="638" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXExternalReference" userID="H24" flexoID="490">
+    <PrimitiveActorReference id="639" valueAsString="mitre-attack" roleName="source_name" userID="H24" flexoID="647" />
+    <PrimitiveActorReference id="640" valueAsString="https://attack.mitre.org/mitigations/M1027" roleName="url" userID="H24" flexoID="648" />
+    <PrimitiveActorReference id="641" valueAsString="M1027" roleName="external_id" userID="H24" flexoID="649" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="642" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXCourseOfAction" userID="H24" flexoID="491">
+    <PrimitiveActorReference id="643" valueAsString="course-of-action--90c218c3-fbf8-4830-98a7-e8cfb7eaa485" roleName="id" userID="H24" flexoID="650" />
+    <PrimitiveActorReference id="644" valueAsString="Password Policies" roleName="name" userID="H24" flexoID="651" />
+    <PrimitiveActorReference id="645" valueAsString="enterprise-attack" roleName="x_mitre_domains" userID="H24" flexoID="652" />
+    <PrimitiveActorReference id="646" valueAsString="" roleName="x_mitre_contributors" userID="H24" flexoID="653" />
+    <PrimitiveActorReference id="647" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="x_mitre_modified_by_ref" userID="H24" flexoID="654" />
+    <PrimitiveActorReference id="648" valueAsString="2022-10-21T15:52:23.327Z" roleName="modified" userID="H24" flexoID="655" />
+    <PrimitiveActorReference id="649" valueAsString="2019-06-06T21:10:35.792Z" roleName="created" userID="H24" flexoID="656" />
+    <PrimitiveActorReference id="650" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="created_by_ref" userID="H24" flexoID="657" />
+    <PrimitiveActorReference id="651" valueAsString="1.0" roleName="x_mitre_version" userID="H24" flexoID="658" />
+    <PrimitiveActorReference id="652" valueAsString="2.1.0" roleName="x_mitre_attack_spec_version" userID="H24" flexoID="659" />
+    <PrimitiveActorReference id="653" valueAsString="Set and enforce secure password policies for accounts." roleName="description" userID="H24" flexoID="660" />
+    <PrimitiveActorReference id="654" valueAsString="2.1" roleName="spec_version" userID="H24" flexoID="661" />
+    <PrimitiveActorReference id="655" valueAsString="marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168" roleName="object_marking_refs" userID="H24" flexoID="662" />
+    <ModelObjectActorReference id="656" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MASTIX1.fml.rt#H24_490" roleName="external_references" userID="H24" flexoID="663" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="657" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXMitreDataComponent" userID="H24" flexoID="492">
+    <PrimitiveActorReference id="658" valueAsString="x-mitre-data-component--9ce98c86-8d30-4043-ba54-0784d478d0b5" roleName="id" userID="H24" flexoID="664" />
+    <PrimitiveActorReference id="659" valueAsString="Logon Session Creation" roleName="name" userID="H24" flexoID="665" />
+    <PrimitiveActorReference id="660" valueAsString="enterprise-attack" roleName="x_mitre_domains" userID="H24" flexoID="666" />
+    <PrimitiveActorReference id="661" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="x_mitre_modified_by_ref" userID="H24" flexoID="667" />
+    <PrimitiveActorReference id="662" valueAsString="2022-10-07T16:18:20.802Z" roleName="modified" userID="H24" flexoID="668" />
+    <PrimitiveActorReference id="663" valueAsString="2021-10-20T15:05:19.274Z" roleName="created" userID="H24" flexoID="669" />
+    <PrimitiveActorReference id="664" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="created_by_ref" userID="H24" flexoID="670" />
+    <PrimitiveActorReference id="665" valueAsString="1.1" roleName="x_mitre_version" userID="H24" flexoID="671" />
+    <PrimitiveActorReference id="666" valueAsString="2.1.0" roleName="x_mitre_attack_spec_version" userID="H24" flexoID="672" />
+    <PrimitiveActorReference id="667" valueAsString="Initial construction of a successful new user logon following an authentication attempt. (e.g. Windows EID 4624, /var/log/utmp, or /var/log/wmtp)" roleName="description" userID="H24" flexoID="673" />
+    <PrimitiveActorReference id="668" valueAsString="2.1" roleName="spec_version" userID="H24" flexoID="674" />
+    <PrimitiveActorReference id="669" valueAsString="marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168" roleName="object_marking_refs" userID="H24" flexoID="675" />
+    <PrimitiveActorReference id="670" valueAsString="x-mitre-data-source--4358c631-e253-4557-86df-f687d0ef9891" roleName="x_mitre_data_source_ref" userID="H24" flexoID="676" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="671" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXExternalReference" userID="H24" flexoID="493">
+    <PrimitiveActorReference id="672" valueAsString="mitre-attack" roleName="source_name" userID="H24" flexoID="677" />
+    <PrimitiveActorReference id="673" valueAsString="https://attack.mitre.org/datasources/DS0028" roleName="url" userID="H24" flexoID="678" />
+    <PrimitiveActorReference id="674" valueAsString="DS0028" roleName="external_id" userID="H24" flexoID="679" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="675" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXMitreDataSource" userID="H24" flexoID="680">
+    <PrimitiveActorReference id="676" valueAsString="x-mitre-data-source--4358c631-e253-4557-86df-f687d0ef9891" roleName="id" userID="H24" flexoID="683" />
+    <PrimitiveActorReference id="677" valueAsString="Azure AD" roleName="x_mitre_platforms" userID="H24" flexoID="684" />
+    <PrimitiveActorReference id="678" valueAsString="Logon Session" roleName="name" userID="H24" flexoID="685" />
+    <PrimitiveActorReference id="679" valueAsString="enterprise-attack" roleName="x_mitre_domains" userID="H24" flexoID="686" />
+    <PrimitiveActorReference id="680" valueAsString="Center for Threat-Informed Defense (CTID)" roleName="x_mitre_contributors" userID="H24" flexoID="687" />
+    <PrimitiveActorReference id="681" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="x_mitre_modified_by_ref" userID="H24" flexoID="688" />
+    <PrimitiveActorReference id="682" valueAsString="2022-12-07T19:45:09.019Z" roleName="modified" userID="H24" flexoID="689" />
+    <PrimitiveActorReference id="683" valueAsString="2021-10-20T15:05:19.274Z" roleName="created" userID="H24" flexoID="690" />
+    <PrimitiveActorReference id="684" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="created_by_ref" userID="H24" flexoID="691" />
+    <PrimitiveActorReference id="685" valueAsString="1.1" roleName="x_mitre_version" userID="H24" flexoID="692" />
+    <PrimitiveActorReference id="686" valueAsString="3.1.0" roleName="x_mitre_attack_spec_version" userID="H24" flexoID="693" />
+    <PrimitiveActorReference id="687" valueAsString="Logon occurring on a system or resource (local, domain, or cloud) to which a user/device is gaining access after successful authentication and authorization(Citation: Microsoft Audit Logon Events)" roleName="description" userID="H24" flexoID="694" />
+    <PrimitiveActorReference id="688" valueAsString="2.1" roleName="spec_version" userID="H24" flexoID="695" />
+    <PrimitiveActorReference id="689" valueAsString="marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168" roleName="object_marking_refs" userID="H24" flexoID="696" />
+    <ModelObjectActorReference id="690" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MASTIX1.fml.rt#H24_493" roleName="external_references" userID="H24" flexoID="697" />
+    <PrimitiveActorReference id="691" valueAsString="Cloud Control Plane" roleName="x_mitre_collection_layers" userID="H24" flexoID="698" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="692" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXExternalReference" userID="H24" flexoID="681">
+    <PrimitiveActorReference id="693" valueAsString="mitre-attack" roleName="source_name" userID="H24" flexoID="699" />
+    <PrimitiveActorReference id="694" valueAsString="https://attack.mitre.org/mitigations/M1018" roleName="url" userID="H24" flexoID="700" />
+    <PrimitiveActorReference id="695" valueAsString="M1018" roleName="external_id" userID="H24" flexoID="701" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="696" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml#MASTIXCourseOfAction" userID="H24" flexoID="682">
+    <PrimitiveActorReference id="697" valueAsString="course-of-action--93e7968a-9074-4eac-8ae9-9f5200ec3317" roleName="id" userID="H24" flexoID="702" />
+    <PrimitiveActorReference id="698" valueAsString="User Account Management" roleName="name" userID="H24" flexoID="703" />
+    <PrimitiveActorReference id="699" valueAsString="enterprise-attack" roleName="x_mitre_domains" userID="H24" flexoID="704" />
+    <PrimitiveActorReference id="700" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="x_mitre_modified_by_ref" userID="H24" flexoID="705" />
+    <PrimitiveActorReference id="701" valueAsString="2020-05-20T13:49:12.270Z" roleName="modified" userID="H24" flexoID="706" />
+    <PrimitiveActorReference id="702" valueAsString="2019-06-06T16:50:58.767Z" roleName="created" userID="H24" flexoID="707" />
+    <PrimitiveActorReference id="703" valueAsString="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5" roleName="created_by_ref" userID="H24" flexoID="708" />
+    <PrimitiveActorReference id="704" valueAsString="1.1" roleName="x_mitre_version" userID="H24" flexoID="709" />
+    <PrimitiveActorReference id="705" valueAsString="2.1.0" roleName="x_mitre_attack_spec_version" userID="H24" flexoID="710" />
+    <PrimitiveActorReference id="706" valueAsString="Manage the creation, modification, use, and permissions associated to user accounts." roleName="description" userID="H24" flexoID="711" />
+    <PrimitiveActorReference id="707" valueAsString="2.1" roleName="spec_version" userID="H24" flexoID="712" />
+    <PrimitiveActorReference id="708" valueAsString="marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168" roleName="object_marking_refs" userID="H24" flexoID="713" />
+    <ModelObjectActorReference id="709" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MASTIX1.fml.rt#H24_681" roleName="external_references" userID="H24" flexoID="714" />
+  </FlexoConceptInstance>
+</FMLRTVirtualModelInstance>

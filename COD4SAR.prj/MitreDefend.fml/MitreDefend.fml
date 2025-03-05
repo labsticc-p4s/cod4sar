@@ -1,0 +1,313 @@
+namespace "http://imt-atlantique.fr/COD4SAR/COD4SAR.prj" as COD4SAR;
+
+use org.openflexo.foundation.fml.rt.FMLRTVirtualModelInstanceModelSlot as FMLRT;
+
+import java.lang.String;
+import java.util.Date;
+
+//import [COD4SAR + "/MitreDefend.fml"] as MitreDefend;
+
+@URI("http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreDefend.fml")
+@Author("sylvainguerin")
+public model MitreDefend {
+
+   public concept MDAttack {
+
+      String name;
+   
+      create(String aName) {
+         name = parameters.aName;
+      }
+     
+      delete() {
+      }
+   }
+   public concept MDConcept {
+      String label;
+      String definition;
+      String iri;
+      //class, individual, or both
+      String type;
+                     
+   create(String aIRI, String aLabel, String aDefinition) {
+      iri = parameters.aIRI;
+      label = parameters.aLabel;
+      definition = parameters.aDefinition;
+   }
+
+   delete() {
+   }
+   }
+
+ 
+   
+   public concept MDDefendThing extends MDConcept{
+      
+
+      create(String aIRI, String aLabel, String aDefinition) {
+         super(parameters.aIRI,parameters.aLabel,parameters.aDefinition);
+      }
+     
+      delete() {
+      }
+      
+   }
+     public concept MDActivity extends MDDefendThing{
+     
+
+      create(String aIRI, String aLabel, String aDefinition) {
+         super(parameters.aIRI,parameters.aLabel,parameters.aDefinition);
+      }
+     
+      delete() {
+      }
+      
+   }
+   public concept MDOrganizationalActivity extends MDActivity{
+     
+
+      create(String aIRI, String aLabel, String aDefinition) {
+         super(parameters.aIRI,parameters.aLabel,parameters.aDefinition);
+      }
+     
+      delete() {
+      }
+      
+   }
+   
+   public concept MDArtifact extends MDDefendThing{
+      
+
+      create(String aIRI, String aLabel, String aDefinition) {
+         super(parameters.aIRI,parameters.aLabel,parameters.aDefinition);
+      }
+     
+      delete() {
+      }
+      
+   }
+   public concept MDDigitalObject extends MDDefendThing{
+      
+
+      create(String aIRI, String aLabel, String aDefinition) {
+        super(parameters.aIRI,parameters.aLabel,parameters.aDefinition);
+      }
+     
+      delete() {
+      }
+      
+   }
+   public concept MDDefensiveTactic extends MDDefendThing{
+      
+
+      create(String aIRI, String aLabel, String aDefinition) {
+         super(parameters.aIRI,parameters.aLabel,parameters.aDefinition);
+      }
+     
+      delete() {
+      }
+      
+   }
+   public concept MDOffensiveTactic extends MDDefendThing{
+      
+
+      create(String aIRI, String aLabel, String aDefinition) {
+         super(parameters.aIRI,parameters.aLabel,parameters.aDefinition);
+      }
+     
+      delete() {
+      }
+      
+   }
+   public concept MDTechniqueReference extends MDDefendThing{
+      
+
+      create(String aIRI, String aLabel, String aDefinition) {
+         super(parameters.aIRI,parameters.aLabel,parameters.aDefinition);
+      }
+     
+      delete() {
+      }
+      
+   }
+   public concept MDDigitalArtifact extends MDArtifact,MDDigitalObject{
+      
+
+      create(String aIRI, String aLabel, String aDefinition) {
+         super(parameters.aIRI,parameters.aLabel,parameters.aDefinition);
+      }
+     
+      delete() {
+      }
+      
+   }
+   public concept MDTechnique extends MDDefendThing{
+      
+
+      create(String aIRI, String aLabel, String aDefinition) {
+         super(parameters.aIRI,parameters.aLabel,parameters.aDefinition);
+      }
+     
+      delete() {
+      }
+      
+   }
+   public concept MDProcedure extends MDDefendThing{
+      
+
+      create(String aIRI, String aLabel, String aDefinition) {
+         super(parameters.aIRI,parameters.aLabel,parameters.aDefinition);
+      }
+     
+      delete() {
+      }
+      
+   }
+   public concept MDDefensiveTechnique extends MDDefendThing,MDTechnique{
+      
+
+      create(String aIRI, String aLabel, String aDefinition) {
+         super(parameters.aIRI,parameters.aLabel,parameters.aDefinition);
+      }
+     
+      delete() {
+      }
+      
+   }
+   public concept MDOffensiveTechnique extends MDTechnique{
+      
+
+      create(String aIRI, String aLabel, String aDefinition) {
+         super(parameters.aIRI,parameters.aLabel,parameters.aDefinition);
+      }
+     
+      delete() {
+      }
+      
+   }
+
+   public concept MDCodeSegment extends MDDigitalArtifact{
+      
+
+      create(String aIRI, String aLabel, String aDefinition) {
+         super(parameters.aIRI,parameters.aLabel,parameters.aDefinition);
+      }
+     
+      delete() {
+      }
+      
+   }
+   public concept MDProcess extends MDDigitalArtifact{
+      
+
+      create(String aIRI, String aLabel, String aDefinition) {
+         super(parameters.aIRI,parameters.aLabel,parameters.aDefinition);
+      }
+     
+      delete() {
+      }
+      
+   }
+   public concept MDFile extends MDDigitalArtifact{
+      
+
+      create(String aIRI, String aLabel, String aDefinition) {
+         super(parameters.aIRI,parameters.aLabel,parameters.aDefinition);
+      }
+     
+      delete() {
+      }
+      
+   }
+   public concept MDUrl extends MDDigitalArtifact{
+      
+
+      create(String aIRI, String aLabel, String aDefinition) {
+         super(parameters.aIRI,parameters.aLabel,parameters.aDefinition);
+      }
+     
+      delete() {
+      }
+      
+   }
+   public concept MDUserAccount extends MDDigitalArtifact{
+      
+
+      create(String aIRI, String aLabel, String aDefinition) {
+         super(parameters.aIRI,parameters.aLabel,parameters.aDefinition);
+      }
+     
+      delete() {
+      }
+      
+   }
+   public concept MDProcessCodeSegment extends MDCodeSegment{
+      
+
+      create(String aIRI, String aLabel, String aDefinition) {
+         super(parameters.aIRI,parameters.aLabel,parameters.aDefinition);
+      }
+     
+      delete() {
+      }
+      
+   }
+   public concept MDExecutableFile extends MDFile{
+      
+
+      create(String aIRI, String aLabel, String aDefinition) {
+         super(parameters.aIRI,parameters.aLabel,parameters.aDefinition);
+      }
+     
+      delete() {
+      }
+      
+   }
+   public concept MDExecutableBinaryFile extends MDExecutableFile{
+      
+
+      create(String aIRI, String aLabel, String aDefinition) {
+         super(parameters.aIRI,parameters.aLabel,parameters.aDefinition);
+      }
+     
+      delete() {
+      }
+      
+   }
+    public concept MDRelationship {
+      String sourceId;
+      String sourceName;
+      String sourceRef;
+      String sourceType;
+      String mappingType;
+      String targetId;
+      String targetName;
+      String targetRef;
+      String targetType;
+
+      
+   
+      create(String aSourceId,String aSourceName, String aMappingType, String aTargetId,String aTargetName) {
+         sourceId = parameters.aSourceId;
+         sourceName = parameters.aSourceName;
+         mappingType = parameters.aMappingType;
+         targetId = parameters.aTargetId;
+         targetName = parameters.aTargetName;
+      }
+     
+      delete() {
+      }
+   }
+   public concept MDWeakness extends MDConcept{
+      
+
+      create(String aIRI, String aLabel, String aDefinition) {
+         super(parameters.aIRI,parameters.aLabel,parameters.aDefinition);
+      }
+     
+      delete() {
+      }
+      
+   }
+   
+}

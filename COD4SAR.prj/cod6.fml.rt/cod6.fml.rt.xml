@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FMLRTVirtualModelInstance id="0" virtualModelURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/Cod4sarCore.fml" modelVersion="1.0" title="cod6" version="0.1" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/Cod4sarCore.fml" userID="H24" flexoID="1">
+  <FlexoConceptInstance id="1" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/Cod4sarCore.fml#MD_MA_Attack" userID="H24" flexoID="3">
+    <ModelObjectActorReference id="2" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/monMD1.fml.rt#H24_13" roleName="mdOffensiveTechnique" userID="H24" flexoID="7" />
+    <ModelObjectActorReference id="3" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MASTIX1.fml.rt#H24_4" roleName="masAttack" userID="H24" flexoID="5" />
+    <ConceptActorReference id="4" conceptURI="http://coad4sar#Valid_Accounts" roleName="individual" userID="H24" flexoID="4" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="5" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/Cod4sarCore.fml#MD_MA_Defense" userID="H24" flexoID="8">
+    <ModelObjectActorReference id="6" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MASTIX1.fml.rt#H24_682" roleName="masCourseOfAction" userID="H24" flexoID="11" />
+    <ModelObjectActorReference id="7" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/monMD1.fml.rt#H24_6" roleName="mdDefensiveTechnique" userID="H24" flexoID="12" />
+    <ModelObjectActorReference id="8" objectReference="http://coad4sar#null_null" roleName="defenseOWLClass" userID="H24" flexoID="10" />
+    <ConceptActorReference id="9" conceptURI="http://coad4sar#User_Account_Management" roleName="individual" userID="H24" flexoID="9" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="10" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/Cod4sarCore.fml#CAPEC_MA_Attack" userID="H24" flexoID="13">
+    <ModelObjectActorReference id="11" objectReference="http://coad4sar#null_null" roleName="attackOWLClass" userID="H24" flexoID="15" />
+    <ModelObjectActorReference id="12" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MCAPEC1.fml.rt#H24_28" roleName="mcapecAttackPattern" userID="H24" flexoID="16" />
+    <ModelObjectActorReference id="13" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MASTIX1.fml.rt#H24_4" roleName="masAttack" userID="H24" flexoID="17" />
+    <ConceptActorReference id="14" conceptURI="http://coad4sar#Use_of_Known_Domain_Credentials" roleName="individual" userID="H24" flexoID="14" />
+  </FlexoConceptInstance>
+  <FlexoConceptInstance id="15" flexoConceptURI="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/Cod4sarCore.fml#MD_MA_CAPEC_Attack" userID="H24" flexoID="18">
+    <ModelObjectActorReference id="16" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/monMD1.fml.rt#H24_13" roleName="mdOffensiveTechnique" userID="H24" flexoID="22" />
+    <ModelObjectActorReference id="17" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MASTIX1.fml.rt#H24_4" roleName="masAttack" userID="H24" flexoID="21" />
+    <ModelObjectActorReference id="18" objectReference="http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MCAPEC1.fml.rt#H24_28" roleName="mcapecAttackPattern" userID="H24" flexoID="20" />
+    <ModelObjectActorReference id="19" objectReference="http://coad4sar#null_null" roleName="attackOWLClass" userID="H24" flexoID="23" />
+    <ConceptActorReference id="20" conceptURI="http://coad4sar#Valid_Accounts" roleName="individual" userID="H24" flexoID="19" />
+  </FlexoConceptInstance>
+  <FlexoOntologyModelSlotInstance id="21" modelURI="http://coad4sar" modelSlotName="ontology" roleName="ontology" userID="H24" flexoID="2" />
+  <ModelObjectActorReference id="22" objectReference="http://coad4sar#null_null" roleName="attackOWLClass" userID="H24" flexoID="6" />
+</FMLRTVirtualModelInstance>

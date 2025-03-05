@@ -1,0 +1,682 @@
+use org.openflexo.foundation.fml.rt.FMLRTVirtualModelInstanceModelSlot as FMLRT;
+
+import java.lang.String;
+import java.util.Date;
+
+@URI("http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreCVE.fml")
+@Author("h24hnain")
+public model MitreCVE {
+
+   public concept MCVERecord {
+    String dataType;
+    String dataVersion;
+	 MCVEMetaData cveMetaData with ConceptInstance(virtualModelInstance=container);
+	 MCVEContainer containers with ConceptInstance(virtualModelInstance=container);
+    create(String dataType,String dataVersion, MCVEMetaData cveMetaData, MCVEContainer containers) {
+      dataType =parameters.dataType;
+      dataVersion =parameters.dataVersion;
+      cveMetaData = parameters.cveMetaData;
+      containers = parameters.containers;
+      
+    }
+    delete() {
+      }
+    
+   }
+
+   public concept MCVEMetaData {
+    String state;
+    String cveId;
+    String assignerOrgId;
+    String assignerShortName;
+    String dateUpdated;
+    String dateReserved;
+    String datePublished;
+    String requesterUserId;
+    int serial;
+
+    create(String aState,String aCveId,String aAssignerOrgId,String aAssignerShortName, String aDateUpdated,
+    String aDateReserved, String aDatePublished, String aRequesterUserId, int aSerial) {
+      state =parameters.aState;
+      cveId =parameters.aCveId;
+      assignerOrgId = parameters.aAssignerOrgId;
+      assignerShortName = parameters.aAssignerShortName;
+      dateUpdated =parameters.aDateUpdated;
+      dateReserved = parameters.aDateReserved;
+      datePublished = parameters.aDatePublished;
+      requesterUserId = parameters.aRequesterUserId;
+      serial = parameters.aSerial;
+      
+    }
+    delete() {
+      }
+   }
+   public concept MCVEContainer {
+	MCVECna cna with ConceptInstance(virtualModelInstance=container);
+	MCVEAdp adp with ConceptInstance(virtualModelInstance=container);
+    
+
+    create(MCVECna aCNA,MCVEAdp aAdp) {
+      cna = parameters.aCNA;
+      adp = parameters.aAdp;
+      
+    }
+    delete() {
+      }
+   }
+   public concept MCVECna {
+	MCVEProviderMetaData providerMetaData with ConceptInstance(virtualModelInstance=container);
+   String dateAssigned;
+   String datePublic;
+   String title;
+	MCVECNADescription[1,*] descriptions with ConceptInstance(virtualModelInstance=container);
+   MCVEAffected[0,*] affected with ConceptInstance(virtualModelInstance=container);
+	MCVEProblemTypeDescription[0,*] problemTypes with ConceptInstance(virtualModelInstance=container);
+	MCVECNAReference[0,*] references with ConceptInstance(virtualModelInstance=container);
+	MCVECNAImpact[0,*] impacts with ConceptInstance(virtualModelInstance=container);
+	MCVECNAMetric[0,*] metrics with ConceptInstance(virtualModelInstance=container);
+	MCVECNADescription[0,*] configurations with ConceptInstance(virtualModelInstance=container);
+   MCVECNADescription[0,*] workarounds with ConceptInstance(virtualModelInstance=container);
+   MCVECNADescription[0,*] solutions with ConceptInstance(virtualModelInstance=container);
+   MCVECNADescription[0,*] exploits with ConceptInstance(virtualModelInstance=container);
+	MCVECNATimeline[0,*] timeline with ConceptInstance(virtualModelInstance=container);
+	MCVECNACredit[0,*] credits with ConceptInstance(virtualModelInstance=container);
+	MCVECNASource source with ConceptInstance(virtualModelInstance=container);
+   String[0,*] tags;
+	MCVETaxonomyMapping[0,*] taxonomyMappings with ConceptInstance(virtualModelInstance=container);
+   
+   
+
+    create(MCVEProviderMetaData aProviderMetaData, String aDateAssigned,
+    String aDatePublic, String aTitle,MCVECNADescription aDescription,MCVEAffected aAffected,
+      MCVEProblemTypeDescription aProblemType,MCVECNAReference aReference,MCVECNAImpact aImpact,
+      MCVECNAMetric aMetric,MCVECNADescription aConfiguration,MCVECNADescription aWorkaround,
+       MCVECNADescription aSolution,MCVECNADescription aExploit,MCVECNATimeline aTimeline,MCVECNACredit
+       aCredit,MCVECNASource aSource, String aTag, MCVETaxonomyMapping aTaxonomyMapping ) {
+      providerMetaData = parameters.aProviderMetaData;
+      dateAssigned = parameters.aDateAssigned;
+      datePublic = parameters.aDatePublic;
+      title = parameters.aTitle;
+      descriptions.add(parameters.aDescription);
+      affected.add(parameters.aAffected);
+      problemTypes.add(parameters.aProblemType);
+      references.add(parameters.aReference);
+      impacts.add(parameters.aImpact);
+      metrics.add(parameters.aMetric);
+      configurations.add(parameters.aConfiguration);
+      workarounds.add(parameters.aWorkaround);
+      solutions.add(parameters.aSolution);
+      exploits.add(parameters.aExploit);
+      timeline.add(parameters.aTimeline);
+      credits.add(parameters.aCredit);
+      source =parameters.aSource;
+      tags.add(parameters.aTag);
+      taxonomyMappings.add(parameters.aTaxonomyMapping);
+
+      
+    }
+    delete() {
+      }
+   }
+
+   public concept MCVEProviderMetaData {
+    String orgId;
+    String shortName;
+    String dateUpdate;
+   
+
+    create(String aOrgId,String aShortName,String aDateUpdate) {
+      orgId =parameters.aOrgId;
+      shortName =parameters.aShortName;
+      dateUpdate = parameters.aDateUpdate;
+      
+    }
+    delete() {
+      }
+   }
+   public concept MCVECNADescription {
+    String lang;
+    String value;
+	 MCVESupportingMedia[0,*] supportingMedia with ConceptInstance(virtualModelInstance=container);
+
+
+    create(String aLang,String aValue,MCVESupportingMedia aSupportingMedia) {
+      lang =parameters.aLang;
+      value =parameters.aValue;
+      supportingMedia.add(parameters.aSupportingMedia);
+    }
+    delete() {
+      }
+   }
+   public concept MCVESupportingMedia {
+    String type;
+    boolean base64;
+    String value;
+
+
+    create(String aType,boolean aBase64,String aValue) {
+      type =parameters.aType;
+      base64 =parameters.aBase64;
+      value =parameters.aValue;
+      
+    }
+    delete() {
+      }
+   }
+
+    public concept MCVEAffected {
+    String product;
+    String vendor;
+    String collectionURL;
+    String packageName;
+    String [0,*] cpes;
+    String[0,*] modules;
+    String[0,*] programFiles;
+	 MCVEProgramRoutine[0,*] programRoutines with ConceptInstance(virtualModelInstance=container);
+    String[0,*] platforms;
+    String repo;
+    String defaultStatus;
+	 MCVEVersion[0,*] versions with ConceptInstance(virtualModelInstance=container);
+    
+    create(String aProduct,String aVendor,String aCollectionURL, String aPackageName, String aCPE, String aModule,
+    String aProgramFile,MCVEProgramRoutine aProgramRoutine, String aPlatform, String aRepo, String aDefaultStatus,
+     MCVEVersion aVersion) {
+      product = parameters.aProduct;
+      vendor = parameters.aVendor;
+      collectionURL = parameters.aCollectionURL;
+      packageName = parameters.aPackageName;
+      cpes.add(parameters.aCPE);
+      modules.add(parameters.aModule);
+      programFiles.add(parameters.aProgramFile);
+      programRoutines.add(parameters.aProgramRoutine);
+      platforms.add(parameters.aPlatform);
+      repo = parameters.aRepo;
+      defaultStatus = parameters.aDefaultStatus;
+      versions.add(parameters.aVersion);
+      
+    }
+    delete() {
+      }
+   }
+
+   public concept MCVEVersion {
+    String version;
+    String status;
+    String versionType;
+    String lessThan;
+    String lessThanOrEqual;
+	 MCVEChange[0,*] changes with ConceptInstance(virtualModelInstance=container);
+    
+
+    create(String aVersion, String aStatus, String aVersionType, String aLessThan, String aLessThanOrEqual,
+     MCVEChange aChange) {
+     version =parameters.aVersion;
+     status =parameters.aStatus;
+     versionType = parameters.aVersionType;
+     lessThan = parameters.aLessThan;
+     lessThanOrEqual = parameters.aLessThanOrEqual;
+     changes.add(parameters.aChange);
+      
+    }
+    delete() {
+      }
+   }
+   public concept MCVEProgramRoutine {
+    String name;
+
+
+    create(String aName) {
+      name =parameters.aName;
+      
+    }
+    delete() {
+      }
+   }
+
+   public concept MCVEChange {
+    String at;
+    String status;
+
+    create(String aAt,String aStatus) {
+      at =parameters.aAt;
+      status = parameters.aStatus;
+      
+    }
+    delete() {
+      }
+   }
+   public concept MCVEProblemTypeDescription {
+    String lang;
+    String description;
+    String cweId;
+    String type;
+    String [0,*] references;
+
+    create(String aLang,String aDescription,String aCweId,String aType, String aReference) {
+      lang =parameters.aLang;
+      description =parameters.aDescription;
+      cweId = parameters.aCweId;
+      type = parameters.aType;
+      references.add(parameters.aReference);
+    }
+    delete() {
+      }
+   }
+   public concept MCVECNAReference {
+    String url;
+    String name;
+    String [0,*] tags;
+
+
+    create(String aUrl,String aName, String aTag) {
+      url =parameters.aUrl;
+      name =parameters.aName;
+      tags.add(parameters.aTag);
+    }
+    delete() {
+      }
+   }
+   public concept MCVECNAImpact {
+    String capecId;
+    MCVECNADescription [0,*] descriptions with ConceptInstance(virtualModelInstance=container);
+
+
+    create(String aCapecId,MCVECNADescription aDescription) {
+      capecId =parameters.aCapecId;
+      descriptions.add(parameters.aDescription);
+  
+    }
+    delete() {
+      }
+   }
+   public concept MCVECNAMetric {
+    String format;
+    String [0,*] descriptions;
+	 MCVECNAMetricScenario[0,*] scenarios with ConceptInstance(virtualModelInstance=container);
+	 MCVECNAMetricCvssV40 cvssV4_0 with ConceptInstance(virtualModelInstance=container);
+	 MCVECNAMetricCvssV3 cvssV3_1 with ConceptInstance(virtualModelInstance=container);
+	 MCVECNAMetricCvssV3 cvssV3_0 with ConceptInstance(virtualModelInstance=container);
+	 MCVECNAMetricCvssV20 cvssV2_0 with ConceptInstance(virtualModelInstance=container);
+	 MCVECNAMetricOther other with ConceptInstance(virtualModelInstance=container);
+    
+    
+    
+
+    create(String aFormat, String aDescription,MCVECNAMetricScenario aScenario,MCVECNAMetricCvssV40 aCvss4_0,
+      MCVECNAMetricCvssV3 aCvss3_1, MCVECNAMetricCvssV3 aCvss3_0,MCVECNAMetricCvssV20 aCvss2_0,
+       MCVECNAMetricOther aOther) {
+
+      format = parameters.aFormat;
+      descriptions.add(parameters.aDescription);
+      scenarios.add(parameters.aScenario);
+      cvssV4_0 = parameters.aCvss4_0;
+      cvssV3_1 = parameters.aCvss3_1;
+      cvssV3_0 = parameters.aCvss3_0;
+      cvssV2_0 = parameters.aCvss2_0;
+      other = parameters.aOther;
+    }
+    delete() {
+      }
+   }
+   public concept MCVECNAMetricScenario {
+    String lang;
+    String value;
+
+
+    create(String aLang,String aValue) {
+      lang =parameters.aLang;
+      value = parameters.aValue;
+  
+    }
+    delete() {
+      }
+   }
+   public concept MCVECNAMetricCvssV40 {
+    String version;
+    String vectorString;
+    float baseScore;
+    String baseSeverity;
+    String attackVector;
+    String attackComplexity;
+    String attackRequirements;
+    String privilegesRequired; 
+    String userInteraction;
+    String vulnConfidentialityImpact;
+    String vulnIntegrityImpact;
+    String vulnAvailabilityImpact;
+    String subConfidentialityImpact;
+    String subIntegrityImpact;
+    String subAvailabilityImpact;
+    String exploitMaturity;
+    String confidentialityRequirement;
+    String integrityRequirement; 
+    String availabilityRequirement;
+    String modifiedAttackVector;
+    String modifiedAttackComplexity;
+    String modifiedAttackRequirements;
+    String modifiedPrivilegesRequired;
+    String modifiedUserInteraction;
+    String modifiedVulnConfidentialityImpact;
+    String modifiedVulnIntegrityImpact;
+    String modifiedVulnAvailabilityImpact;
+    String modifiedSubConfidentialityImpact;
+    String modifiedSubIntegrityImpact;
+    String modifiedSubAvailabilityImpact;
+    String safety;
+    String automatable;
+    String recovery;
+    String valueDensity;
+    String vulnerabilityResponseEffort;
+    String providerUrgency;
+
+    create(String aVersion,String aVectorString,float aBaseScore,String aBaseSeverity, String aAttackVector,
+    String aAttackComplexity,String aAttackRequirements, String aPrivilegesRequired, String aUserInteraction,
+    String aVulnConfidentialityImpact,String aVulnIntegrityImpact, String aVulnAvailabilityImpact,
+    String aSubConfidentialityImpact,String aSubIntegrityImpact,String aSubAvailabilityImpact,
+    String aExploitMaturity, String aConfidentialityRequirement, String aIntegrityRequirement, String aAvailabilityRequirement,
+    String aModifiedAttackVector, String aModifiedAttackComplexity, String aModifiedAttackRequirements,
+    String aModifiedPrivilegesRequired, String aModifiedUserInteraction,String aModifiedVulnConfidentialityImpact,
+    String aModifiedVulnIntegrityImpact,String aModifiedVulnAvailabilityImpact,String aModifiedSubConfidentialityImpact,
+    String aModifiedSubIntegrityImpact,String aModifiedSubAvailabilityImpact,String aSafety,String aAutomatable,
+     String aRecovery, String aValueDensity,String aVulnerabilityResponseEffort,String aProviderUrgency) {
+        version = parameters.aVersion;
+        vectorString = parameters.aVectorString;
+        baseScore = parameters.aBaseScore;
+        baseSeverity = parameters.aBaseSeverity;
+        attackVector = parameters.aAttackVector;
+        attackComplexity = parameters.aAttackComplexity;
+        attackRequirements = parameters.aAttackRequirements;
+        privilegesRequired = parameters.aPrivilegesRequired;
+        userInteraction = parameters.aUserInteraction;
+        vulnConfidentialityImpact = parameters.aVulnConfidentialityImpact;
+        vulnIntegrityImpact = parameters.aVulnIntegrityImpact;
+        vulnAvailabilityImpact = parameters.aVulnAvailabilityImpact;
+        subConfidentialityImpact = parameters.aSubConfidentialityImpact;
+        subIntegrityImpact = parameters.aSubIntegrityImpact;
+        subAvailabilityImpact =parameters.aSubAvailabilityImpact;
+        exploitMaturity = parameters.aExploitMaturity;
+        confidentialityRequirement = parameters.aConfidentialityRequirement;
+        integrityRequirement = parameters.aIntegrityRequirement;
+        availabilityRequirement =parameters.aAvailabilityRequirement;
+        modifiedAttackVector = parameters.aModifiedAttackVector;
+        modifiedAttackComplexity = parameters.aModifiedAttackComplexity;
+        modifiedAttackRequirements = parameters.aModifiedAttackRequirements;
+        modifiedPrivilegesRequired = parameters.aModifiedPrivilegesRequired;
+        modifiedUserInteraction = parameters.aModifiedUserInteraction;
+        modifiedVulnConfidentialityImpact = parameters.aModifiedVulnConfidentialityImpact;
+        modifiedVulnIntegrityImpact = parameters.aModifiedVulnIntegrityImpact;
+        modifiedVulnAvailabilityImpact = parameters.aModifiedVulnAvailabilityImpact;
+        modifiedSubConfidentialityImpact = parameters.aModifiedSubConfidentialityImpact;
+        modifiedSubIntegrityImpact = parameters.aModifiedSubIntegrityImpact;
+        modifiedSubAvailabilityImpact = parameters.aModifiedSubAvailabilityImpact;
+        safety = parameters.aSafety;
+        automatable = parameters.aAutomatable;
+        recovery = parameters.aRecovery;
+        valueDensity = parameters.aValueDensity;
+        vulnerabilityResponseEffort = parameters.aVulnerabilityResponseEffort;
+        providerUrgency = parameters.aProviderUrgency;
+    }
+    delete() {
+      }
+  }
+  public concept MCVECNAMetricCvssV3 {
+    String version;
+    String vectorString;
+    float baseScore;
+    String baseSeverity;
+    String attackVector;
+    String attackComplexity;
+    String privilegesRequired; 
+    String userInteraction;
+    String scope;
+    String confidentialityImpact;
+    String integrityImpact;
+    String availabilityImpact;
+    String exploitCodeMaturity;
+    String remediationLevel;
+    String reportConfidence;
+    float temporalScore;
+    String temporalSeverity;
+    String confidentialityRequirement;
+    String integrityRequirement;
+    String availabilityRequirement;
+    String modifiedAttackVector;
+    String modifiedAttackComplexity;
+    String modifiedPrivilegesRequired;
+    String modifiedUserInteraction;
+    String modifiedScope;
+    String modifiedConfidentialityImpact;
+    String modifiedIntegrityImpact;
+    String modifiedAvailabilityImpact;
+    float environmentalScore;
+    String environmentalSeverity;
+
+   create(String aVersion,String aVectorString,float aBaseScore,String aBaseSeverity, String aAttackVector,
+       String aAttackComplexity, String aPrivilegesRequired, String aUserInteraction, String aScope,
+       String aConfidentialityImpact,String aIntegrityImpact, String aAvailabilityImpact,
+       String aExploitCodeMaturity,String aRemediationLevel, String aReportConfidence,
+        float aTemporalScore,String aTemporalSeverity, String aConfidentialityRequirement, String aIntegrityRequirement, String aAvailabilityRequirement,
+       String aModifiedAttackVector, String aModifiedAttackComplexity,
+       String aModifiedPrivilegesRequired, String aModifiedUserInteraction,String aModifiedConfidentialityImpact,
+       String aModifiedIntegrityImpact,String aModifiedAvailabilityImpact, float aEnvironmentalScore,
+       String aEnvironmentalSeverity) {
+           version = parameters.aVersion;
+           vectorString = parameters.aVectorString;
+           baseScore = parameters.aBaseScore;
+           baseSeverity = parameters.aBaseSeverity;
+           attackVector = parameters.aAttackVector;
+           attackComplexity = parameters.aAttackComplexity;
+           privilegesRequired = parameters.aPrivilegesRequired;
+           userInteraction = parameters.aUserInteraction;
+           scope = parameters.aScope;
+           confidentialityImpact = parameters.aConfidentialityImpact;
+           integrityImpact = parameters.aIntegrityImpact;
+           availabilityImpact = parameters.aAvailabilityImpact;
+           exploitCodeMaturity = parameters.aExploitCodeMaturity;
+           remediationLevel = parameters.aRemediationLevel;
+           reportConfidence = parameters.aReportConfidence;
+           temporalScore = parameters.aTemporalScore;
+           temporalSeverity = parameters.aTemporalSeverity;
+           confidentialityRequirement = parameters.aConfidentialityRequirement;
+           integrityRequirement = parameters.aIntegrityRequirement;
+           availabilityRequirement =parameters.aAvailabilityRequirement;
+           modifiedAttackVector = parameters.aModifiedAttackVector;
+           modifiedAttackComplexity = parameters.aModifiedAttackComplexity;
+           modifiedPrivilegesRequired = parameters.aModifiedPrivilegesRequired;
+           modifiedUserInteraction = parameters.aModifiedUserInteraction;
+           modifiedConfidentialityImpact = parameters.aModifiedConfidentialityImpact;
+           modifiedIntegrityImpact = parameters.aModifiedIntegrityImpact;
+           modifiedAvailabilityImpact = parameters.aModifiedAvailabilityImpact;
+           environmentalScore = parameters.aEnvironmentalScore;
+           environmentalSeverity = parameters.aEnvironmentalSeverity;
+
+       }
+    delete() {
+      }
+  }
+  public concept MCVECNAMetricCvssV20 {
+    String version;
+    String vectorString;
+    float baseScore;
+    String accessVector;
+    String accessComplexity;
+    String authentication;
+    String confidentialityImpact;
+    String integrityImpact;
+    String availabilityImpact;
+    String exploitability;
+    String remediationLevel;
+    String reportConfidence;
+    String temporalScore;
+    String collateralDamagePotential;
+    String targetDistribution;
+    String confidentialityRequirement;
+    String integrityRequirement;
+    String availabilityRequirement;
+    float environmentalScore;
+
+    create(String aVersion,String aVectorString,float aBaseScore, String aAccessVector,
+           String aAccessComplexity, String aAuthentication,
+           String aConfidentialityImpact,String aIntegrityImpact, String aAvailabilityImpact,
+           String aExploitability,String aRemediationLevel, String aReportConfidence,
+            String aTemporalScore,String aCollateralDamagePotential,String aTargetDistribution, String aConfidentialityRequirement, String aIntegrityRequirement, String aAvailabilityRequirement,
+           float aEnvironmentalScore) {
+               version = parameters.aVersion;
+               vectorString = parameters.aVectorString;
+               baseScore = parameters.aBaseScore;
+               accessVector = parameters.aAccessVector;
+               accessComplexity = parameters.aAccessComplexity;
+               authentication = parameters.aAuthentication;
+               confidentialityImpact = parameters.aConfidentialityImpact;
+               integrityImpact = parameters.aIntegrityImpact;
+               availabilityImpact = parameters.aAvailabilityImpact;
+               exploitability = parameters.aExploitability;
+               remediationLevel = parameters.aRemediationLevel;
+               reportConfidence = parameters.aReportConfidence;
+               temporalScore = parameters.aTemporalScore;
+               collateralDamagePotential = parameters.aCollateralDamagePotential;
+               targetDistribution = parameters.aTargetDistribution;
+               confidentialityRequirement = parameters.aConfidentialityRequirement;
+               integrityRequirement = parameters.aIntegrityRequirement;
+               availabilityRequirement =parameters.aAvailabilityRequirement;
+               environmentalScore = parameters.aEnvironmentalScore;
+
+
+           }
+    delete() {
+      }
+  }
+
+    public concept MCVECNAMetricOther {
+    String type;
+    String content;
+
+    create(String aType,String aContent) {
+        type = parameters.aType;
+        content = parameters.aContent;
+  
+    }
+    delete() {
+      }
+  }
+
+  public concept MCVECNATimeline {
+    String time;
+    String lang;
+    String value;
+    create(String aTime,String aLang,String aValue) {
+        time = parameters.aTime;
+        lang = parameters.aLang;
+        value = parameters.aValue;
+  
+    }
+    delete() {
+      }
+  }
+  public concept MCVECNACredit {
+    String time;
+    String lang;
+    String user;
+    String type;
+    create(String aTime,String aLang,String aUser, String aType) {
+        time = parameters.aTime;
+        lang = parameters.aLang;
+        user = parameters.aUser;
+        type = parameters.aType;
+  
+    }
+    delete() {
+      }
+  }
+  public concept MCVECNASource {
+    String advisory;
+    String discovery;
+
+    create(String aAdvisory,String aDiscovery) {
+        advisory = parameters.aAdvisory;
+        discovery = parameters.aDiscovery;
+
+    }
+    delete() {
+      }
+  }
+  public concept MCVETaxonomyMapping {
+    String taxonomyName;
+    String taxonomyVersion;
+	MCVETaxonomyRelation[0,*] taxonomyRelations with ConceptInstance(virtualModelInstance=container);
+
+    create(String aTaxonomyName,String aTaxonomyVersion,MCVETaxonomyRelation aTaxonomyRelation) {
+        taxonomyName = parameters.aTaxonomyName;
+        taxonomyVersion = parameters.aTaxonomyVersion;
+        taxonomyRelations.add(parameters.aTaxonomyRelation);
+
+    }
+    delete() {
+      }
+  }
+  public concept MCVETaxonomyRelation {
+    String taxonomyId;
+    String relationshipName;
+    String relationshipValue;
+
+    create(String taxonomyId,String relationshipName,String relationshipValue) {
+        taxonomyId = parameters.taxonomyId;
+        relationshipName = parameters.relationshipName;
+        relationshipValue = parameters.relationshipValue;
+
+    }
+    delete() {
+      }
+  }
+     public concept MCVEAdp {
+   MCVEProviderMetaData providerMetaData with ConceptInstance(virtualModelInstance=container);
+   String datePublic;
+   String title;
+   MCVECNADescription[1,*] descriptions with ConceptInstance(virtualModelInstance=container);
+   MCVEAffected[0,*] affected with ConceptInstance(virtualModelInstance=container);
+   MCVEProblemTypeDescription[0,*] problemTypes with ConceptInstance(virtualModelInstance=container);
+   MCVECNAReference[0,*] references with ConceptInstance(virtualModelInstance=container);
+   MCVECNAImpact[0,*] impacts with ConceptInstance(virtualModelInstance=container);
+   MCVECNAMetric[0,*] metrics with ConceptInstance(virtualModelInstance=container);
+   MCVECNADescription[0,*] configurations with ConceptInstance(virtualModelInstance=container);
+   MCVECNADescription[0,*] workarounds with ConceptInstance(virtualModelInstance=container);
+   MCVECNADescription[0,*] solutions with ConceptInstance(virtualModelInstance=container);
+   MCVECNADescription[0,*] exploits with ConceptInstance(virtualModelInstance=container);
+   MCVECNATimeline[0,*] timeline with ConceptInstance(virtualModelInstance=container);
+   MCVECNACredit[0,*] credits with ConceptInstance(virtualModelInstance=container);
+   MCVECNASource source with ConceptInstance(virtualModelInstance=container);
+   String[0,*] tags;
+   MCVETaxonomyMapping[0,*] taxonomyMappings with ConceptInstance(virtualModelInstance=container);
+   
+   
+
+     create(MCVEProviderMetaData aProviderMetaData, String aDatePublic, String aTitle,MCVECNADescription aDescription,MCVEAffected aAffected,
+          MCVEProblemTypeDescription aProblemType,MCVECNAReference aReference,MCVECNAImpact aImpact,
+          MCVECNAMetric aMetric,MCVECNADescription aConfiguration,MCVECNADescription aWorkaround,
+           MCVECNADescription aSolution,MCVECNADescription aExploit,MCVECNATimeline aTimeline,MCVECNACredit
+           aCredit,MCVECNASource aSource, String aTag, MCVETaxonomyMapping aTaxonomyMapping ) {
+          providerMetaData = parameters.aProviderMetaData;
+          datePublic = parameters.aDatePublic;
+          title = parameters.aTitle;
+          descriptions.add(parameters.aDescription);
+          affected.add(parameters.aAffected);
+          problemTypes.add(parameters.aProblemType);
+          references.add(parameters.aReference);
+          impacts.add(parameters.aImpact);
+          metrics.add(parameters.aMetric);
+          configurations.add(parameters.aConfiguration);
+          workarounds.add(parameters.aWorkaround);
+          solutions.add(parameters.aSolution);
+          exploits.add(parameters.aExploit);
+          timeline.add(parameters.aTimeline);
+          credits.add(parameters.aCredit);
+          source =parameters.aSource;
+          tags.add(parameters.aTag);
+          taxonomyMappings.add(parameters.aTaxonomyMapping);
+
+
+        }
+    delete() {
+      }
+   }
+}

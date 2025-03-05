@@ -1,0 +1,519 @@
+namespace "http://imt-atlantique.fr/COD4SAR/COD4SAR.prj" as COD4SAR;
+
+use org.openflexo.foundation.fml.rt.FMLRTVirtualModelInstanceModelSlot as FMLRT;
+
+import java.lang.String;
+
+//import [COD4SAR + "/MitreAttackSTIX.fml"] as MitreAttackSTIX;
+
+@URI("http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml")
+@Author("h24hnain")
+
+public model MitreAttackSTIX {
+   String type;
+   String id_ma;
+   String spec_version_ma;
+   
+  
+   public concept MASTIXConcept {
+      String id;
+      String[0,*] x_mitre_platforms;
+      boolean x_mitre_deprecated;
+      String name;
+      String[0,*] x_mitre_domains;
+      String[0,*] x_mitre_contributors;
+      String x_mitre_modified_by_ref;
+      boolean revoked;
+      String modified;
+      String created;
+      String created_by_ref;
+      String x_mitre_version;
+      String x_mitre_attack_spec_version;
+      String description;
+      String spec_version;
+      String[0,*] object_marking_refs;
+      
+      
+
+   create(String id,String platform,boolean deprecated,String name,String domain,String contributor,String modified_ref,
+   boolean revoked, String modified,String created,String created_by_ref,String x_mitre_version, String x_mitre_attack_spec_version,
+   String description, String spec_version, String object_marking_ref) {
+      id = parameters.id;
+      x_mitre_platforms.add(parameters.platform);
+      x_mitre_deprecated = parameters.deprecated;
+      name = parameters.name;
+      x_mitre_domains.add(parameters.domain);
+      x_mitre_contributors.add(parameters.contributor);
+      x_mitre_modified_by_ref =parameters.modified_ref;
+      revoked = parameters.revoked;
+      modified = parameters.modified;
+      created = parameters.created;
+      created_by_ref = parameters.created_by_ref;
+      x_mitre_version = parameters.x_mitre_version;
+      x_mitre_attack_spec_version = parameters.x_mitre_attack_spec_version;
+      description = parameters.description;
+      spec_version = parameters.spec_version;
+      object_marking_refs.add(parameters.object_marking_ref);  
+      
+      
+      
+      
+      
+      
+   }
+
+   delete() {
+   }
+           
+      
+   }
+
+   public concept MASTIXMitreCollection extends MASTIXConcept{
+ 
+	   MASTIXMitreContent[0,*] x_mitre_contents with ConceptInstance(virtualModelInstance=container);
+
+	create(String id,String platform,boolean deprecated,String name,String domain,String contributor,String modified_ref,
+   boolean revoked, String modified,String created,String created_by_ref,String x_mitre_version, String x_mitre_attack_spec_version,
+   String description, String spec_version, String object_marking_ref,MASTIXMitreContent x_mitre_content) {
+      super(parameters.id,parameters.platform,parameters.deprecated,parameters.name,parameters.domain,parameters.contributor,parameters.modified_ref,parameters.revoked,parameters.modified,parameters.created,parameters.created_by_ref,parameters.x_mitre_version,parameters.x_mitre_attack_spec_version,parameters.description,parameters.spec_version,parameters.object_marking_ref);
+      x_mitre_contents.add(parameters.x_mitre_content);
+	}
+
+	delete() {
+	}
+           
+      
+   }
+   public concept MASTIXMitreContent {
+      String object_ref;
+      String object_modified;
+
+	create(String aRef, String aModified) {
+      object_ref = parameters.aRef;
+      object_modified = parameters.aModified;
+	}
+
+	delete() {
+	}
+  
+      
+   }
+   
+   //Technique
+   public concept MASTIXAttackPattern extends MASTIXConcept{
+    
+    //tactics
+   MASTIXKillChainPhase[0,*] kill_chain_phases with ConceptInstance(virtualModelInstance=container);
+    String x_mitre_detection;
+    boolean x_mitre_is_subtechnique;
+    String[0,*] x_mitre_data_sources;
+    String[0,*] x_mitre_defense_bypassed;
+    MASTIXExternalReference[0,*] external_references with ConceptInstance(virtualModelInstance=container);
+    boolean x_mitre_remote_support;
+    String [0,*] x_mitre_permissions_required;
+    String [0,*] x_mitre_effective_permissions;
+    
+
+     
+
+   create(String id, String name, String platform, String domain,MASTIXKillChainPhase kill_chain_phase,String detection,boolean is_subTechnique,
+   String modified,String modified_ref, String defense_bypassed,boolean revoked, boolean remote_support,
+   MASTIXExternalReference external_reference, String permission, boolean deprecated, String contributor,
+   String created,String created_by_ref,String x_mitre_version,String x_mitre_attack_spec_version,
+   String description, String spec_version, String data_source,String object_marking_ref) {
+       super(parameters.id,parameters.platform,parameters.deprecated,parameters.name,parameters.domain,parameters.contributor,parameters.modified_ref,parameters.revoked,parameters.modified,parameters.created,parameters.created_by_ref,parameters.x_mitre_version,parameters.x_mitre_attack_spec_version,parameters.description,parameters.spec_version,parameters.object_marking_ref);
+
+      kill_chain_phases.add(parameters.kill_chain_phase);
+      x_mitre_detection = parameters.detection;
+      x_mitre_is_subtechnique = parameters.is_subTechnique;
+
+      x_mitre_defense_bypassed.add(parameters.defense_bypassed);
+
+      x_mitre_remote_support = parameters.remote_support;
+      external_references.add(parameters.external_reference);
+      x_mitre_permissions_required.add(parameters.permission);
+      x_mitre_contributors.add(parameters.contributor);
+
+      x_mitre_data_sources.add(parameters.data_source);
+      object_marking_refs.add(parameters.object_marking_ref);
+      
+        
+      
+   }
+
+
+   delete() {
+   }
+           
+      
+   }
+
+   public concept MASTIXKillChainPhase {
+    String kill_chain_name;
+    String phase_name;
+
+     
+      
+
+   create(String aKCName, String aPName) {
+      kill_chain_name = parameters.aKCName;
+      phase_name = parameters.aPName;
+   }
+
+   delete() {
+   }
+           
+      
+   }
+   public concept MASTIXExternalReference {
+    String source_name;
+    String url;
+    String external_id;
+    String description;
+
+     
+      
+
+   create(String aSourceName, String aUrl,String aExternal_id,String aDescription) {
+      source_name = parameters.aSourceName;
+      url = parameters.aUrl;
+      external_id = parameters.aExternal_id;
+      description = parameters.aDescription;
+      
+   }
+
+   delete() {
+   }
+           
+      
+   }
+      //Procedures are represented in the relationships
+   public concept MASTIXRelationship extends MASTIXConcept{
+
+    
+    String relationship_type;
+    String source_ref;
+    String target_ref;
+    
+    MASTIXExternalReference[0,*] external_references with ConceptInstance(virtualModelInstance=container);
+    
+    
+    
+    
+    
+     
+      
+
+  create(String id,String platform,boolean deprecated,String name,String domain,String contributor,String modified_ref,
+   boolean revoked, String modified,String created,String created_by_ref,String x_mitre_version, String x_mitre_attack_spec_version,
+   String description, String spec_version, String object_marking_ref,MASTIXMitreContent x_mitre_content, String relationship_type,
+   String source_ref, String target_ref,MASTIXExternalReference external_reference) {
+      super(parameters.id,parameters.platform,parameters.deprecated,parameters.name,parameters.domain,parameters.contributor,parameters.modified_ref,parameters.revoked,parameters.modified,parameters.created,parameters.created_by_ref,parameters.x_mitre_version,parameters.x_mitre_attack_spec_version,parameters.description,parameters.spec_version,parameters.object_marking_ref);
+      relationship_type = parameters.relationship_type;
+      source_ref = parameters.source_ref;
+      target_ref = parameters.target_ref;
+      external_references.add(parameters.external_reference);
+   }
+
+   delete() {
+   }
+           
+      
+   }
+
+	public concept MASTIXTool extends MASTIXConcept {
+		
+
+    MASTIXExternalReference[0,*] external_references with ConceptInstance(virtualModelInstance=container);
+    String[0,*] x_mitre_aliases;   
+    create(String id, String name, String modified, String description, String platform, boolean deprecated, 
+      String domain, String x_mitre_version, String contributor,String alias, String created, String created_by_ref,
+      boolean revoked,MASTIXExternalReference external_reference,String object_marking_ref, String x_mitre_attack_spec_version, 
+      String modified_ref, String spec_version) {
+         super(parameters.id,parameters.platform,parameters.deprecated,parameters.name,parameters.domain,parameters.contributor,parameters.modified_ref,parameters.revoked,parameters.modified,parameters.created,parameters.created_by_ref,parameters.x_mitre_version,parameters.x_mitre_attack_spec_version,parameters.description,parameters.spec_version,parameters.object_marking_ref);
+      
+      external_references.add(parameters.external_reference);
+      x_mitre_aliases.add(parameters.alias);
+      
+   }
+   delete() {
+}
+
+     
+	}
+	   public concept MASTIXMalware extends MASTIXTool{
+      //Software
+    boolean is_family;    
+      
+
+   create(String id, String name, String modified, String description, String platform, boolean deprecated, 
+      String domain, String x_mitre_version, String contributor,String alias, String created, String created_by_ref,
+      boolean revoked,MASTIXExternalReference external_reference,String object_marking_ref, String x_mitre_attack_spec_version, 
+      String modified_ref, String spec_version, boolean is_family) {
+         super(parameters.id,parameters.name,parameters.modified,parameters.description,parameters.platform,parameters.deprecated,parameters.domain,parameters.x_mitre_version,parameters.contributor,parameters.alias,parameters.created,parameters.created_by_ref,parameters.revoked,parameters.external_reference,parameters.object_marking_ref,parameters.x_mitre_attack_spec_version,parameters.modified_ref,parameters.spec_version);
+      is_family = parameters.is_family;
+      
+   }
+   delete() {
+   }
+           
+      
+   }
+   public concept MASTIXIntrusionSet extends MASTIXConcept{
+    //Group
+
+    MASTIXExternalReference[0,*] external_references with ConceptInstance(virtualModelInstance=container);
+    String[0,*] x_mitre_aliases;
+    boolean is_family;    
+      
+
+   create(String id, String name, String modified, String description, String platform, boolean deprecated, 
+      String domain, String x_mitre_version, String contributor,String alias, String created, String created_by_ref,
+      boolean revoked,MASTIXExternalReference external_reference,String object_marking_ref, String x_mitre_attack_spec_version, 
+      String modified_ref, String spec_version, boolean is_family) {
+     super(parameters.id,parameters.platform,parameters.deprecated,parameters.name,parameters.domain,parameters.contributor,parameters.modified_ref,parameters.revoked,parameters.modified,parameters.created,parameters.created_by_ref,parameters.x_mitre_version,parameters.x_mitre_attack_spec_version,parameters.description,parameters.spec_version,parameters.object_marking_ref);
+      
+      external_references.add(parameters.external_reference);
+      x_mitre_aliases.add(parameters.alias);
+      is_family = parameters.is_family;
+      
+   }
+
+   delete() {
+   }
+           
+      
+   }
+
+   public concept MASTIXCourseOfAction extends MASTIXConcept{
+   //Mitigation
+
+    MASTIXExternalReference[0,*] external_references with ConceptInstance(virtualModelInstance=container);
+
+     
+
+     create(String id, String name, String modified, String description, String platform, boolean deprecated,
+      String domain, String x_mitre_version, String contributor,String alias, String created, String created_by_ref,
+      boolean revoked,MASTIXExternalReference external_reference,String object_marking_ref, String x_mitre_attack_spec_version, 
+      String modified_ref, String spec_version) {
+     super(parameters.id,parameters.platform,parameters.deprecated,parameters.name,parameters.domain,parameters.contributor,parameters.modified_ref,parameters.revoked,parameters.modified,parameters.created,parameters.created_by_ref,parameters.x_mitre_version,parameters.x_mitre_attack_spec_version,parameters.description,parameters.spec_version,parameters.object_marking_ref);
+
+      external_references.add(parameters.external_reference);
+      
+   }
+
+   delete() {
+   }
+           
+      
+   }
+  public concept MASTIXCampaign extends MASTIXConcept{
+
+    MASTIXExternalReference[0,*] external_references with ConceptInstance(virtualModelInstance=container);
+    String first_seen;
+    String last_seen;
+    String x_mitre_first_seen_citation;
+    String x_mitre_last_seen_citation;
+      
+
+   create(String id, String name, String modified, String description, String platform, boolean deprecated,
+      String domain, String x_mitre_version, String contributor,String alias, String created, String created_by_ref,
+      boolean revoked,MASTIXExternalReference external_reference,String object_marking_ref, String x_mitre_attack_spec_version, 
+      String modified_ref, String spec_version, String first_seen, String last_seen, String x_mitre_first_seen_citation,String x_mitre_last_seen_citation) {
+    super(parameters.id,parameters.platform,parameters.deprecated,parameters.name,parameters.domain,parameters.contributor,parameters.modified_ref,parameters.revoked,parameters.modified,parameters.created,parameters.created_by_ref,parameters.x_mitre_version,parameters.x_mitre_attack_spec_version,parameters.description,parameters.spec_version,parameters.object_marking_ref);
+
+      external_references.add(parameters.external_reference);
+      first_seen = parameters.first_seen;
+      last_seen = parameters.last_seen;
+      x_mitre_first_seen_citation = parameters.x_mitre_first_seen_citation;
+      x_mitre_last_seen_citation = parameters.x_mitre_last_seen_citation;
+      
+   }
+
+   delete() {
+   }
+           
+      
+   }
+   public concept MASTIXMitreMatrix extends MASTIXConcept{
+
+    MASTIXExternalReference[0,*] external_references with ConceptInstance(virtualModelInstance=container);
+    String[0,*] tactic_refs;
+
+    create(String id, String name, String modified, String description, String platform, boolean deprecated,
+      String domain, String x_mitre_version, String contributor,String alias, String created, String created_by_ref,
+      boolean revoked,MASTIXExternalReference external_reference,String object_marking_ref, String x_mitre_attack_spec_version, 
+      String modified_ref, String spec_version, String tactic_ref) {
+       super(parameters.id,parameters.platform,parameters.deprecated,parameters.name,parameters.domain,parameters.contributor,parameters.modified_ref,parameters.revoked,parameters.modified,parameters.created,parameters.created_by_ref,parameters.x_mitre_version,parameters.x_mitre_attack_spec_version,parameters.description,parameters.spec_version,parameters.object_marking_ref);
+
+       external_references.add(parameters.external_reference);
+      tactic_refs.add(parameters.tactic_ref);
+      
+   }
+
+   delete() {
+   }
+           
+      
+   }
+   public concept MASTIXMitreTactic extends MASTIXConcept{
+
+    MASTIXExternalReference[0,*] external_references with ConceptInstance(virtualModelInstance=container);
+    String x_mitre_shortname;
+
+   create(String id, String name, String modified, String description, String platform, boolean deprecated,
+      String domain, String x_mitre_version, String contributor,String alias, String created, String created_by_ref,
+      boolean revoked,MASTIXExternalReference external_reference,String object_marking_ref, String x_mitre_attack_spec_version, 
+      String modified_ref, String spec_version, String x_mitre_shortname) {
+        super(parameters.id,parameters.platform,parameters.deprecated,parameters.name,parameters.domain,parameters.contributor,parameters.modified_ref,parameters.revoked,parameters.modified,parameters.created,parameters.created_by_ref,parameters.x_mitre_version,parameters.x_mitre_attack_spec_version,parameters.description,parameters.spec_version,parameters.object_marking_ref);
+
+        external_references.add(parameters.external_reference);
+        x_mitre_shortname = parameters.x_mitre_shortname;
+      
+   }
+
+   delete() {
+   }
+           
+      
+   }
+   public concept MASTIXMitreDataSource extends MASTIXConcept{
+
+    MASTIXExternalReference[0,*] external_references with ConceptInstance(virtualModelInstance=container);
+    String[0,*] x_mitre_collection_layers;
+
+
+   create(String id, String name, String modified, String description, String platform, boolean deprecated,
+      String domain, String x_mitre_version, String contributor,String alias, String created, String created_by_ref,
+      boolean revoked,MASTIXExternalReference external_reference,String object_marking_ref, String x_mitre_attack_spec_version, 
+      String modified_ref, String spec_version,String collection_layer) {
+        super(parameters.id,parameters.platform,parameters.deprecated,parameters.name,parameters.domain,parameters.contributor,parameters.modified_ref,parameters.revoked,parameters.modified,parameters.created,parameters.created_by_ref,parameters.x_mitre_version,parameters.x_mitre_attack_spec_version,parameters.description,parameters.spec_version,parameters.object_marking_ref);
+
+        external_references.add(parameters.external_reference);
+        x_mitre_collection_layers.add(parameters.collection_layer);
+      
+   }
+
+   delete() {
+   }
+           
+      
+   }
+   public concept MASTIXMitreDataComponent extends MASTIXConcept{
+    
+    String x_mitre_data_source_ref;
+
+
+   create(String id, String name, String modified, String description, String platform, boolean deprecated,
+      String domain, String x_mitre_version, String contributor,String alias, String created, String created_by_ref,
+      boolean revoked,String object_marking_ref, String x_mitre_attack_spec_version, 
+      String modified_ref, String spec_version, String x_mitre_data_source_ref) {
+        super(parameters.id,parameters.platform,parameters.deprecated,parameters.name,parameters.domain,parameters.contributor,parameters.modified_ref,parameters.revoked,parameters.modified,parameters.created,parameters.created_by_ref,parameters.x_mitre_version,parameters.x_mitre_attack_spec_version,parameters.description,parameters.spec_version,parameters.object_marking_ref);
+
+        x_mitre_data_source_ref = parameters.x_mitre_data_source_ref;
+      
+   }
+
+   delete() {
+   }
+           
+      
+   }
+    public concept MASTIXIdentity extends MASTIXConcept{
+    
+    String identity_class;
+     create(String id, String name, String modified, String description, String platform, boolean deprecated,
+      String domain, String x_mitre_version, String contributor,String alias, String created, String created_by_ref,
+      boolean revoked,String object_marking_ref, String x_mitre_attack_spec_version, 
+      String modified_ref, String spec_version, String identity_class) {
+        super(parameters.id,parameters.platform,parameters.deprecated,parameters.name,parameters.domain,parameters.contributor,parameters.modified_ref,parameters.revoked,parameters.modified,parameters.created,parameters.created_by_ref,parameters.x_mitre_version,parameters.x_mitre_attack_spec_version,parameters.description,parameters.spec_version,parameters.object_marking_ref);
+
+
+        identity_class = parameters.identity_class;
+      
+   }
+
+
+   create(String id) {
+      id = parameters.id;
+   }
+
+   delete() {
+   }
+           
+      
+   }
+   public concept MASTIXMarkingDefinition extends MASTIXConcept{
+    String definition_type;
+	 MASTIXDefinition definition with ConceptInstance(virtualModelInstance=container);
+
+
+    create(String id, String name, String modified, String description, String platform, boolean deprecated,
+      String domain, String x_mitre_version, String contributor,String alias, String created, String created_by_ref,
+      boolean revoked,MASTIXExternalReference external_reference,String object_marking_ref, String x_mitre_attack_spec_version, 
+      String modified_ref, String spec_version, String defintion_type, MASTIXDefinition definition) {
+       super(parameters.id,parameters.platform,parameters.deprecated,parameters.name,parameters.domain,parameters.contributor,parameters.modified_ref,parameters.revoked,parameters.modified,parameters.created,parameters.created_by_ref,parameters.x_mitre_version,parameters.x_mitre_attack_spec_version,parameters.description,parameters.spec_version,parameters.object_marking_ref);
+      definition_type = parameters.defintion_type;
+      definition = parameters.definition;
+      
+   }
+
+   delete() {
+   }
+           
+      
+   }
+   public concept MASTIXDefinition {
+    String statement;
+
+
+   create(String statement) {
+      statement = parameters.statement;
+   }
+
+   delete() {
+   }
+           
+      
+   }
+   public concept MASTIXMitreAsset extends MASTIXConcept{
+  
+    String[0,*] x_mitre_sectors;
+    MASTIXExternalReference[0,*] external_references with ConceptInstance(virtualModelInstance=container);
+	 MASTIXMitreRelatedAsset[0,*] x_mitre_related_assets with ConceptInstance(virtualModelInstance=container);
+
+
+   create(String id, String name, String modified, String description, String platform, boolean deprecated,
+      String domain, String x_mitre_version, String contributor,String alias, String created, String created_by_ref,
+      boolean revoked,MASTIXExternalReference external_reference,String object_marking_ref, String x_mitre_attack_spec_version, 
+      String modified_ref, String spec_version, String x_mitre_sector,MASTIXMitreRelatedAsset related_asset ) {
+       super(parameters.id,parameters.platform,parameters.deprecated,parameters.name,parameters.domain,parameters.contributor,parameters.modified_ref,parameters.revoked,parameters.modified,parameters.created,parameters.created_by_ref,parameters.x_mitre_version,parameters.x_mitre_attack_spec_version,parameters.description,parameters.spec_version,parameters.object_marking_ref);
+
+      external_references.add(parameters.external_reference);
+      x_mitre_sectors.add(parameters.x_mitre_sector);
+      x_mitre_related_assets.add(parameters.related_asset);
+      
+      
+   }
+
+   delete() {
+   }
+           
+      
+   }
+   public concept MASTIXMitreRelatedAsset {
+    String name;
+    String description;
+    String[0,*] related_asset_sectors;
+
+
+   create(String name) {
+      name = parameters.name;
+   }
+
+   delete() {
+   }
+           
+      
+   }
+}

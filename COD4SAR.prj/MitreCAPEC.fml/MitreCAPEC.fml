@@ -1,0 +1,349 @@
+use org.openflexo.foundation.fml.rt.FMLRTVirtualModelInstanceModelSlot as FMLRT;
+
+import java.lang.String;
+import java.util.Date;
+
+@URI("http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreCAPEC.fml")
+@Author("h24hnain")
+public model MitreCAPEC { 
+   public concept MCAPECAttackPatterns {
+	MCAPECAttackPattern[1,*] attackPatterns with ConceptInstance(virtualModelInstance=container);
+      create(MCAPECAttackPattern aAttackPattern) {
+       attackPatterns.add(parameters.aAttackPattern);
+      }
+
+      delete() {
+         }
+   }
+   public concept MCAPECAttackPattern {
+      String xmlns_capec;
+      String id;
+      String name;
+      String status;
+      String abstraction;
+      String description;
+      String extendedDescription;
+      String likelihoodOfAttack;
+      String typicalSeverity;
+	   MCAPECRelatedAttackPattern[0,*] relatedAttackPatterns with ConceptInstance(virtualModelInstance=container);
+	   MCAPECExecutionFlow executionFlow with ConceptInstance(virtualModelInstance=container);
+      String[0,*] prerequisites;
+	   MCAPECSkill[0,*] skillsRequired with ConceptInstance(virtualModelInstance=container);
+      String[0,*] resourcesRequired;
+      String[0,*] indicators;
+	   MCAPECConsequence[0,*] consequences with ConceptInstance(virtualModelInstance=container);
+      String[0,*] mitigations;      
+      String[0,*] exampleInstances;
+	   MCAPECRelatedWeakness[0,*] relatedWeaknesses with ConceptInstance(virtualModelInstance=container);
+	   MCAPECTaxonomyMapping[0,*] taxonomyMappings with ConceptInstance(virtualModelInstance=container);
+	   MCAPECReference[0,*] references with ConceptInstance(virtualModelInstance=container);
+      MCAPECContentHistory contentHistory with ConceptInstance(virtualModelInstance=container);
+      
+      
+      
+      
+      
+      create(String aXmlns_capec,String aId, String aName,String aStatus,String aAbstraction, String aDescription, String aExtendedDescription, String aLikelihoodOfAttack,
+      String aTypicalSeverity,MCAPECRelatedAttackPattern aRelatedAttackPattern,MCAPECExecutionFlow aExecutionFlow,
+      String aPrerequisite,MCAPECSkill aSkillsRequired,String aResourceRequired,String aIndicator,
+      MCAPECConsequence aConsequence,String aMitigation,String aExampleInstance,MCAPECRelatedWeakness aRelatedWeakness,
+      MCAPECTaxonomyMapping aTaxonomyMapping,MCAPECReference aReference,MCAPECContentHistory aContentHistory) {
+      xmlns_capec = parameters.aXmlns_capec;
+      id = parameters.aId;
+      name = parameters.aName;
+      status = parameters.aStatus;
+      abstraction = parameters.aAbstraction;
+      description = parameters.aDescription;
+      extendedDescription = parameters.aExtendedDescription;
+      likelihoodOfAttack = parameters.aLikelihoodOfAttack;
+      typicalSeverity = parameters.aTypicalSeverity;
+      relatedAttackPatterns.add(parameters.aRelatedAttackPattern);
+      executionFlow = parameters.aExecutionFlow;
+      prerequisites.add(parameters.aPrerequisite);
+      skillsRequired.add(parameters.aSkillsRequired);
+      resourcesRequired.add(parameters.aResourceRequired);
+      indicators.add(parameters.aIndicator);
+      consequences.add(parameters.aConsequence);
+      mitigations.add(parameters.aMitigation);
+      exampleInstances.add(parameters.aExampleInstance);
+      relatedWeaknesses.add(parameters.aRelatedWeakness);
+      taxonomyMappings.add(parameters.aTaxonomyMapping);
+      references.add(parameters.aReference);
+      contentHistory = parameters.aContentHistory;
+
+
+
+
+
+      }
+
+      delete() {
+         }
+   }
+
+   public concept MCAPECRelatedAttackPattern {
+      String capecId;
+      String nature;
+      create(String aCapecId, String aNature) {
+         capecId = parameters.aCapecId;
+         nature = parameters.aNature;
+      }
+
+      delete() {
+         }
+   }
+
+   public concept MCAPECExecutionFlow {
+	MCAPECAttackStep[0,*] attackSteps with ConceptInstance(virtualModelInstance=container);
+      
+
+
+      delete() {
+         }
+
+	create(required MCAPECAttackStep aAttackSteps) {
+       attackSteps.add(parameters.aAttackSteps);
+	}
+   }
+
+   public concept MCAPECAttackStep {
+      String step;
+      String phase;
+      String description;
+      String [0,*] techniques;
+      create(String aStep, String aPhase,String aDescription,String aTechnique) {
+         step = parameters.aStep;
+         phase = parameters.aPhase;
+         description = parameters.aDescription;
+         techniques.add(parameters.aTechnique);
+      }
+
+      delete() {
+         }
+   }
+
+   public concept MCAPECSkill {
+      String level;
+      String description;
+      create(String aLevel, String aDescription) {
+         level = parameters.aLevel;
+         description = parameters.aDescription;
+      }
+
+      delete() {
+         }
+   }
+   public concept MCAPECConsequence {
+      String[0,*] scopes;
+      String impact;
+      String note;
+      create(String aScope, String aImpact,String aNote) {
+         scopes.add(parameters.aScope);
+         impact = parameters.aImpact;
+         note = parameters.aNote;
+      }
+
+      delete() {
+         }
+   }
+   public concept MCAPECRelatedWeakness {
+      String cweId;
+      create(String aCweId) {
+         cweId = parameters.aCweId;
+      }
+
+      delete() {
+         }
+   }
+   public concept MCAPECTaxonomyMapping  {
+      String taxonomyName;
+      String entryId;
+      String entryName;
+      create(String aTaxonomyName, String aEntryId, String aEntryName) {
+         taxonomyName = parameters.aTaxonomyName;
+         entryId = parameters.aEntryId;
+         entryName = parameters.aEntryName;
+      }
+
+      delete() {
+         }
+   }
+   public concept MCAPECReference  {
+      String externalReferenceId;
+      String section;
+      create(String aExternalReferenceId, String aSection) {
+         externalReferenceId = parameters.aExternalReferenceId;
+         section = parameters.aSection;
+      }
+
+      delete() {
+         }
+   }
+
+   public concept MCAPECContentHistory  {
+	MCAPECSubmission submission with ConceptInstance(virtualModelInstance=container);
+	MCAPECModification[0,*] modifications with ConceptInstance(virtualModelInstance=container);
+	
+      
+      create(MCAPECSubmission aSubmission,MCAPECModification aModification ) {
+         submission = parameters.aSubmission;
+         modifications.add(parameters.aModification);
+      }
+
+      delete() {
+         }
+   }
+
+   public concept MCAPECSubmission  {
+      String submissionName;
+      String submissionOrganization;
+      String submissionDate;
+      create(String aSubmissionName, String aSubmissionOrganization, String aSubmissionDate) {
+         submissionName = parameters.aSubmissionName;
+         submissionOrganization = parameters.aSubmissionOrganization;
+         submissionDate = parameters.aSubmissionDate;
+      }
+
+      delete() {
+         }
+   }
+   public concept MCAPECModification  {
+      String modificationName;
+      String modificationOrganization;
+      String modificationDate;
+      String modificationComment;
+      create(String aModificationName, String aModificationOrganization, String aModificationDate,String aModificationComment) {
+         modificationName = parameters.aModificationName;
+         modificationOrganization = parameters.aModificationOrganization;
+         modificationDate = parameters.aModificationDate;
+         modificationComment = parameters.aModificationComment;
+      }
+
+      delete() {
+         }
+   }
+
+    public concept MCAPECCategories  {
+	 MCAPECCategory[1,*] categories with ConceptInstance(virtualModelInstance=container);
+      
+      create(MCAPECCategory aCategory) {
+         categories.add(parameters.aCategory);
+      }
+
+      delete() {
+         }
+   }
+
+   public concept MCAPECCategory  {
+      String xmlnsCapec;
+      String id;
+      String name;
+      String status;
+      String summary;
+	   MCAPECRelationship[0,*] relationships with ConceptInstance(virtualModelInstance=container);
+	   MCAPECTaxonomyMapping[0,*] taxonomyMappings with ConceptInstance(virtualModelInstance=container);
+	   MCAPECContentHistory contentHistory with ConceptInstance(virtualModelInstance=container);
+     
+     
+      
+      
+      create(String aId, String aName,String aStatus, String aSummary,MCAPECRelationship aRelationship,
+      MCAPECTaxonomyMapping aTaxonomyMapping,MCAPECContentHistory aContentHistory) {
+         id = parameters.aId;
+         name = parameters.aName;
+         status = parameters.aStatus;
+         summary = parameters.aSummary;
+         relationships.add(parameters.aRelationship);
+         taxonomyMappings.add(parameters.aTaxonomyMapping);
+         contentHistory = parameters.aContentHistory;
+      }
+
+      delete() {
+         }
+   }
+   public concept MCAPECRelationship  {
+      String type;
+      String capecID;
+     
+      create(String aType, String aCapecId) {
+         type = parameters.aType;
+         capecID = parameters.aCapecId;
+      }
+
+      delete() {
+         }
+   }
+
+	public concept MCAPECViews {
+	MCAPECView[1,*] views with ConceptInstance(virtualModelInstance=container);
+		create(MCAPECView aView) {
+        views.add(parameters.aView);
+		}
+		delete() {
+		}
+	}
+	
+  public concept MCAPECView {
+   String id;
+   String name;
+   String status;
+   String type;
+   String objective;
+   String filter;
+	MCAPECContentHistory contentHistory with ConceptInstance(virtualModelInstance=container);
+   
+    create(String aId, String aName, String aStatus, String aType, String aObjective, String aFilter,
+    MCAPECContentHistory aContentHistory) {
+      id = parameters.aId;
+      name = parameters.aName;
+      status = parameters.aStatus;
+      type = parameters.aType;
+      objective = parameters.aObjective;
+      filter = parameters.aFilter;
+      contentHistory = parameters.aContentHistory;
+      }
+      delete() {
+      }
+   }
+   public concept MCAPECExternalReferences {
+   MCAPECReference[0,*] references with ConceptInstance(virtualModelInstance=container);
+      create(MCAPECReference aReference) {
+        references.add(parameters.aReference);
+      }
+      delete() {
+      }
+   }
+   public concept MCAPECExternalReference {
+   String xmlnsCapec;
+   String referenceId;
+   String[1,*] authors;
+   String title;
+   String publicationYear;
+   String publicationMonth;
+   String publisher;
+   String url;
+   String edition;
+   String urlDate;
+   
+    create(String aXmlnCapec,String aReferenceId,String aAuthor, String aTitle, String aPublicationYear,
+    String aPublicationMonth, String aPublisher, String aUrl, String aEdition,String aUrlDate ) {
+      xmlnsCapec = parameters.aXmlnCapec;
+      referenceId = parameters.aReferenceId;
+      authors.add(parameters.aAuthor);
+      title = parameters.aTitle;
+      publicationYear = parameters.aPublicationYear;
+      publicationMonth = parameters.aPublicationMonth;
+      publisher = parameters.aPublisher;
+      url = parameters.aUrl;
+      edition = parameters.aEdition;
+      urlDate = parameters.aUrlDate;
+      }
+      delete() {
+      }
+   }
+   
+   
+
+   
+   
+}

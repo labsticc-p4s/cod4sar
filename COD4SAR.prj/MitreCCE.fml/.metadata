@@ -1,0 +1,8 @@
+#Metadata for directory C:\Users\h24hnain\Desktop\Security-Ontology\cod4sar-model\COD4SAR.prj\MitreCCE.fml
+#Wed Mar 05 15:35:35 CET 2025
+MitreCCE.fml.flexoConceptsList=MCce_CCE,OtherAttributes
+MitreCCE.fml.version=0.1
+MitreCCE.fml.name=MitreCCE
+MitreCCE.fml.uri=http\://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreCCE.fml
+MitreCCE.fml.requiredModelSlotList=org.openflexo.foundation.fml.rt.FMLRTVirtualModelInstanceModelSlot
+MitreCCE.fml.virtualModelClassName=org.openflexo.foundation.fml.VirtualModel

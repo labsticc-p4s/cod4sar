@@ -1,0 +1,19 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:j.0="http://coad4sar#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:base="http://coad4sar"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+  xml:base="http://coad4sar">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource=""/>
+  </owl:Ontology>
+  <owl:Class rdf:ID="Domain"/>
+  <owl:Class rdf:ID="Attack"/>
+  <owl:Class rdf:ID="Defense"/>
+  <j.0:Domain rdf:ID="enterprise_attack"/>
+  <j.0:Defense rdf:ID="User_Account_Management"/>
+  <j.0:Attack rdf:ID="Use_of_Known_Domain_Credentials"/>
+  <j.0:Attack rdf:ID="Valid_Accounts"/>
+</rdf:RDF>

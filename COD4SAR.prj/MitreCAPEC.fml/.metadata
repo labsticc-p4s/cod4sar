@@ -1,0 +1,8 @@
+#Metadata for directory C:\Users\h24hnain\Desktop\Security-Ontology\cod4sar-model\COD4SAR.prj\MitreCAPEC.fml
+#Wed Mar 05 15:35:35 CET 2025
+MitreCAPEC.fml.uri=http\://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreCAPEC.fml
+MitreCAPEC.fml.name=MitreCAPEC
+MitreCAPEC.fml.flexoConceptsList=MCAPECAttackPatterns,MCAPECAttackPattern,MCAPECRelatedAttackPattern,MCAPECExecutionFlow,MCAPECAttackStep,MCAPECSkill,MCAPECConsequence,MCAPECRelatedWeakness,MCAPECTaxonomyMapping,MCAPECReference,MCAPECContentHistory,MCAPECSubmission,MCAPECModification,MCAPECCategories,MCAPECCategory,MCAPECRelationship,MCAPECViews,MCAPECView,MCAPECExternalReferences,MCAPECExternalReference
+MitreCAPEC.fml.requiredModelSlotList=org.openflexo.foundation.fml.rt.FMLRTVirtualModelInstanceModelSlot
+MitreCAPEC.fml.virtualModelClassName=org.openflexo.foundation.fml.VirtualModel
+MitreCAPEC.fml.version=0.1

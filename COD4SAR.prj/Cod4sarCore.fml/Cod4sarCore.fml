@@ -1,0 +1,267 @@
+namespace "http://imt-atlantique.fr/COD4SAR/COD4SAR.prj" as COD4SARPRJ;
+
+use org.openflexo.foundation.fml.rt.FMLRTVirtualModelInstanceModelSlot as FMLRT;
+use org.openflexo.technologyadapter.owl.OWLModelSlot as OWL;
+
+import java.lang.String;
+import org.openflexo.technologyadapter.owl.model.OWLOntology;
+import org.openflexo.technologyadapter.owl.model.OWLIndividual;
+import org.openflexo.technologyadapter.owl.model.OWLClass;
+
+import [COD4SARPRJ + "/MitreDefend.fml"] as MitreDefend;
+import [COD4SARPRJ + "/MitreAttack.fml"] as MitreAttack;
+import [COD4SARPRJ + "/MitreAttackSTIX.fml"] as MitreAttackSTIX;
+import [COD4SARPRJ + "/MitreCAPEC.fml"] as MitreCAPEC;
+
+@URI("http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/Cod4sarCore.fml")
+@Author("sylvainguerin")
+public model Cod4sarCore {
+   
+	MitreDefend mitreDefend with ModelInstance();
+   MitreAttack mitreAttack with ModelInstance();
+	OWLOntology ontology with OWLModelSlot();
+
+   
+	MitreAttackSTIX mitreAttackStix with ModelInstance();
+	MitreCAPEC mitreCAPEC with ModelInstance();
+  
+
+   create() {	
+      ontology = OWL::CreateOWLResource(resourceName="resultat",resourceCenter=this.resourceCenter,relativePath="ontology",resourceURI="http://coad4sar");
+      
+	   //attackOWLClass = OWL::AddOWLClass(className="Attack") in ontology;
+      
+   
+ }
+
+	delete() {
+		//delete attackOWLClass;
+	}
+
+     public concept MD_MA_CAPEC_Attack {
+      
+
+      OWLClass attackOWLClass;
+      OWLIndividual individual with OWLIndividualRole(container=ontology);
+      MASTIXAttackPattern masAttack with ConceptInstance(virtualModelInstance=mitreAttackStix);
+      MDOffensiveTechnique mdOffensiveTechnique with ConceptInstance(virtualModelInstance=mitreDefend);
+      MCAPECAttackPattern mcapecAttackPattern with ConceptInstance(virtualModelInstance=mitreCAPEC);
+      
+     
+
+   
+      create(MDOffensiveTechnique mdOffensiveTechnique,MASTIXAttackPattern masAttack,MCAPECAttackPattern mcapecAttackPattern) {
+         mdOffensiveTechnique = parameters.mdOffensiveTechnique;
+         masAttack = parameters.masAttack;
+         mcapecAttackPattern = parameters.mcapecAttackPattern;
+        attackOWLClass = select unique OWLClass from ontology where (selected.name == "Attack");
+         if ( this.attackOWLClass == null ) {  OWL::AddOWLClass(className="Attack") in ontology;
+}
+         attackOWLClass = select unique OWLClass from ontology where (selected.name == "Attack");
+         log  attackOWLClass.toString;
+        // this.addDataProperty("isSubTechnique");
+        // log ontology.dataProperties.toString;
+        //Must define which name to choose
+         this.createIndividualInOntology();
+         for (String domain :  masAttack.x_mitre_domains) {
+               this.container.addDomain(domain);
+               OWLIndividual domainOWLInd =select unique OWLIndividual from ontology where (selected.name == domain.replace("-","_"));
+               //OWL::AddObjectPropertyStatement(subject=attackOWLClass,object=domainOWLInd) in ontology;
+
+         }
+         
+      }
+
+      createIndividualInOntology() {   
+         
+          
+         OWL::AddOWLIndividual(individualName=masAttack.name.replace(" ","_").trim(),dynamicType=attackOWLClass) in ontology;
+         individual = select unique OWLIndividual from ontology where (selected.name == masAttack.name.replace(" ","_").trim());
+         log individual.toString;
+      
+         
+         
+         
+   
+      }
+
+      addDataProperty(String dataProperty) {
+      //IFlexoOntologyDataProperty property =   OWL::AddOWLDataProperty(propertyName=parameters.dataProperty,dynamicDomain=attack) in ontology;
+      //log property.toString;
+   
+
+      }
+      
+      delete() {
+        delete individual;
+       // delete attackOWLClass;
+      }
+   }
+
+   public concept MD_MA_Attack {
+
+      OWLClass attackOWLClass;
+	   OWLIndividual individual with OWLIndividualRole(container=ontology);
+	   MASTIXAttackPattern masAttack with ConceptInstance(virtualModelInstance=mitreAttackStix);
+	   MDOffensiveTechnique mdOffensiveTechnique with ConceptInstance(virtualModelInstance=mitreDefend);
+	   
+     
+
+      create(MDOffensiveTechnique mdOffensiveTechnique,MASTIXAttackPattern masAttack) {
+         mdOffensiveTechnique = parameters.mdOffensiveTechnique;
+         masAttack = parameters.masAttack;
+        attackOWLClass = select unique OWLClass from ontology where (selected.name == "Attack");
+         if ( this.attackOWLClass == null ) {  OWL::AddOWLClass(className="Attack") in ontology;
+}
+         attackOWLClass = select unique OWLClass from ontology where (selected.name == "Attack");
+         log  attackOWLClass.toString;
+        // this.addDataProperty("isSubTechnique");
+        // log ontology.dataProperties.toString;
+         this.createIndividualInOntology();
+         for (String domain :  masAttack.x_mitre_domains) {
+            	this.container.addDomain(domain);
+               OWLIndividual domainOWLInd =select unique OWLIndividual from ontology where (selected.name == domain.replace("-","_"));
+	            //OWL::AddObjectPropertyStatement(subject=attackOWLClass,object=domainOWLInd) in ontology;
+
+         }
+         
+      }
+
+      createIndividualInOntology() {	
+         
+          
+         OWL::AddOWLIndividual(individualName=masAttack.name.replace(" ","_").trim(),dynamicType=attackOWLClass) in ontology;
+         individual = select unique OWLIndividual from ontology where (selected.name == masAttack.name.replace(" ","_").trim());
+         log individual.toString;
+      
+         
+         
+         
+	
+      }
+
+      addDataProperty(String dataProperty) {
+      //IFlexoOntologyDataProperty property =	OWL::AddOWLDataProperty(propertyName=parameters.dataProperty,dynamicDomain=attack) in ontology;
+      //log property.toString;
+	
+
+      }
+      
+      delete() {
+        delete individual;
+       // delete attackOWLClass;
+      }
+   }
+      public concept CAPEC_MA_Attack {
+      
+      OWLClass attackOWLClass;
+      OWLIndividual individual with OWLIndividualRole(container=ontology);
+      MASTIXAttackPattern masAttack with ConceptInstance(virtualModelInstance=mitreAttackStix);
+      MCAPECAttackPattern mcapecAttackPattern with ConceptInstance(virtualModelInstance=mitreCAPEC);
+      
+     
+
+   
+      create(MCAPECAttackPattern mcapecAttackPattern,MASTIXAttackPattern masAttack) {
+         attackOWLClass = select unique OWLClass from ontology where (selected.name == "Attack");
+         if ( this.attackOWLClass == null ) {  OWL::AddOWLClass(className="Attack") in ontology;
+}
+         attackOWLClass = select unique OWLClass from ontology where (selected.name == "Attack");
+         mcapecAttackPattern = parameters.mcapecAttackPattern;
+         masAttack = parameters.masAttack;
+         OWL::AddOWLClass(className="Attack") in ontology;
+         attackOWLClass = select unique OWLClass from ontology where (selected.name == "Attack");
+         log  attackOWLClass.toString;
+        // this.addDataProperty("isSubTechnique");
+        // log ontology.dataProperties.toString;
+         this.createIndividualInOntology();
+        
+         
+      }
+
+      createIndividualInOntology() {   
+       
+          
+         OWL::AddOWLIndividual(individualName=mcapecAttackPattern.name.replace(" ","_").trim(),dynamicType=attackOWLClass) in ontology;
+         individual = select unique OWLIndividual from ontology where (selected.name == mcapecAttackPattern.name.replace(" ","_").trim());
+         log individual.toString;
+      
+         
+         
+         
+   
+      }
+
+      addDataProperty(String dataProperty) {
+      //IFlexoOntologyDataProperty property = OWL::AddOWLDataProperty(propertyName=parameters.dataProperty,dynamicDomain=attack) in ontology;
+      //log property.toString;
+   
+
+      }
+      
+      delete() {
+        delete individual;
+        //delete attackOWLClass;
+      }
+   }
+    public concept MD_MA_Defense {
+      
+ 
+      OWLIndividual individual with OWLIndividualRole(container=ontology);
+      MASTIXCourseOfAction masCourseOfAction with ConceptInstance(virtualModelInstance=mitreAttackStix);
+      MDDefensiveTechnique mdDefensiveTechnique with ConceptInstance(virtualModelInstance=mitreDefend);
+      OWLClass defenseOWLClass;
+     
+
+   
+      create(MASTIXCourseOfAction masCourseOfAction, MDDefensiveTechnique mdDefensiveTechnique) {
+         masCourseOfAction = parameters.masCourseOfAction;
+         mdDefensiveTechnique = parameters.mdDefensiveTechnique;
+         OWL::AddOWLClass(className="Defense") in ontology;
+         defenseOWLClass = select unique OWLClass from ontology where (selected.name == "Defense");
+         log  defenseOWLClass.toString;
+        
+         this.createIndividualInOntology();
+         
+      }
+
+      createIndividualInOntology() {   
+      
+          
+         OWL::AddOWLIndividual(individualName= masCourseOfAction.name.replace(" ","_").trim(),dynamicType=defenseOWLClass) in ontology;
+         individual = select unique OWLIndividual from ontology where (selected.name == masCourseOfAction.name.replace(" ","_").trim());
+         log individual.toString;
+      
+         
+         
+         
+   
+      }
+
+      addDataProperty(String dataProperty) {
+      
+   
+
+      }
+      
+      delete() {
+        delete individual;
+        //delete attackOWLClass;
+      }
+   }
+
+   
+
+
+   addDomain(String aDomain) {
+         
+        
+         OWLClass domainOWLClass = select unique OWLClass from ontology where (selected.name == "Domain");
+         if (domainOWLClass == null) { OWL::AddOWLClass(className="Domain") in ontology;
+}
+         domainOWLClass = select unique OWLClass from ontology where (selected.name == "Domain");
+         log  domainOWLClass.toString;
+         OWL::AddOWLIndividual(individualName= parameters.aDomain.replace("-","_").trim(),dynamicType=domainOWLClass) in ontology;
+         
+   }
+}

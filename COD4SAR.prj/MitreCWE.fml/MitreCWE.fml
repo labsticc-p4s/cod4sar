@@ -1,0 +1,516 @@
+namespace "http://imt-atlantique.fr/COD4SAR/COD4SAR.prj" as COD4SARPRJ;
+
+use org.openflexo.foundation.fml.rt.FMLRTVirtualModelInstanceModelSlot as FMLRT;
+
+import java.lang.String;
+
+import [COD4SARPRJ + "/MitreCWE.fml"] as MitreCWE;
+
+@URI("http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreCWE.fml")
+@Author("h24hnain")
+public model MitreCWE {
+
+   public concept MCWEWeaknessCatalog {
+      String xmlns;
+      String xmlns_xhtml;
+      String xmlns_xsi;
+      String name;
+      String version;
+      String date;
+      String xsi_schemaLocation;
+      CWEWeakness[1,*] weaknesses with ConceptInstance(virtualModelInstance=container);
+      CWECategory[0,*] categories with ConceptInstance(virtualModelInstance=container);
+      CWEView[0,*] views with ConceptInstance(virtualModelInstance=container);
+      CWEExternalReferenceType[0,*] externalReferences with ConceptInstance(virtualModelInstance=container);
+
+	create::_create(String a_xmlns,String a_xmlns_xhtml, String a_xmlns_xsi, required String a_name, String a_version, String a_date,
+	String a_xsi_schemaLocation, CWEWeakness a_weakness, CWECategory a_category, CWEView a_view) {
+      this.xmlns =parameters.a_xmlns;
+      this.xmlns_xhtml =parameters.a_xmlns_xhtml;
+      this.xmlns_xsi =parameters.a_xmlns_xsi;
+      this.name =parameters.a_name;
+      this.date = parameters.a_date;
+      this.version = parameters.a_version;
+      this.xsi_schemaLocation = parameters.a_xsi_schemaLocation;
+      this.weaknesses.add(parameters.a_weakness);
+      this.categories.add(parameters.a_category);
+      this.views.add(parameters.a_view);
+
+      	}
+      delete() {
+      }
+   }
+
+	public concept CWEWeakness {
+      String id;
+      String name;
+      String abstraction;
+      String structure;
+      String status;
+      String description;
+      String extendedDescription;
+      CWERelatedWeakness[0,*] relatedWeaknesses with ConceptInstance(virtualModelInstance=container);
+      CWEWeaknessOrdinality[0,*] weaknessOrdinalities with ConceptInstance(virtualModelInstance=container);
+      CWEReference[0,*] references with ConceptInstance(virtualModelInstance=container);
+      CWEMappingNotes[0,*] mappingNotes with ConceptInstance(virtualModelInstance=container);
+      CWEContentHistory contentHistory with ConceptInstance(virtualModelInstance=container);
+      CWEApplicablePlatform[0,*] applicablePlatforms with ConceptInstance(virtualModelInstance=container);
+      CWEIntroduction[0,*] modesOfIntroduction with ConceptInstance(virtualModelInstance=container);
+      CWEConsequence[0,*] commonConsequences with ConceptInstance(virtualModelInstance=container);
+      CWEMitigation[0,*] possibleMitigations with ConceptInstance(virtualModelInstance=container);
+      String[0,*] backgroundDetails;
+      CWEAlternateTerm[0,*] alternateTerms with ConceptInstance(virtualModelInstance=container);
+      String[0,*] exploitationFactors;
+      String likelihoodOfExploit;
+      CWEDetectionMethod[0,*] detectionMethods with ConceptInstance(virtualModelInstance=container);
+      CWEDemonstrativeExample[0,*] demonstrativeExamples with ConceptInstance(virtualModelInstance=container);
+      CWEObservedExample[0,*] observedExamples with ConceptInstance(virtualModelInstance=container);
+      String[0,*] functionalAreas;
+      String[0,*] affectedResources;
+      CWETaxonomyMapping[0,*] taxonomyMappings with ConceptInstance(virtualModelInstance=container);
+      CWERelatedAttackPattern[0,*] relatedAttackPatterns with ConceptInstance(virtualModelInstance=container);
+      CWENote[0,*] notes with ConceptInstance(virtualModelInstance=container);
+      
+      
+		create::_create() {
+		}
+		delete() {
+		}
+	}
+
+   //Mapping CWE to CWE
+	public concept CWERelatedWeakness {
+      String nature;
+      String cwe_id;
+      String view_id;
+      String chain_id;
+      String ordinal;
+   
+		create::_create(required String a_nature,required String a_cwe_id,String a_chain_id, String a_view_id, String a_ordinal) {
+         this.nature = parameters.a_nature;
+         this.cwe_id = parameters.a_cwe_id;
+         this.chain_id = parameters.a_chain_id;
+         this.view_id = parameters.a_view_id;
+         this.ordinal = parameters.a_ordinal;
+		}
+		delete() {
+		}
+	}
+
+	public concept CWEWeaknessOrdinality {
+      String ordinality;
+		create::_create(required String a_ordinality) {
+      this.ordinality = parameters.a_ordinality;
+		}
+		delete() {
+		}
+	}
+
+	public concept CWEReference {
+      String external_Reference_ID;
+      String section;
+		create::_create(required String a_external_reference_id, String a_section) {
+      this.external_Reference_ID = parameters.a_external_reference_id;
+      this.section = parameters.a_section;
+		}
+		delete() {
+		}
+	}
+
+	public concept CWEMappingNotes {
+      String usage;
+      String rationale;
+      String comments;
+      String[0,*] reasons;
+		create::_create(String a_usage, String a_rationale, String a_comments,String a_reason ) {
+         this.usage = parameters.a_usage;
+         this.rationale = parameters.a_rationale;
+         this.comments = parameters.a_comments;
+         this.reasons.add(parameters.a_reason);
+         
+		}
+		delete() {
+		}
+	}
+
+  public concept CWEContentHistory {
+      CWESubmission submission with ConceptInstance(virtualModelInstance=container);
+      CWEModification[0,*] modifications with ConceptInstance(virtualModelInstance=container);
+      CWEContribution[0,*] contributions with ConceptInstance(virtualModelInstance=container);
+      CWEPreviousEntry previousEntry with ConceptInstance(virtualModelInstance=container);
+    create::_create( CWESubmission a_submission) {
+      this.submission =parameters.a_submission;
+
+         
+      }
+      delete() {
+      }
+   }
+     public concept CWESubmission {
+      String name;
+      String organization;
+      String date;
+      String comment;
+      String version;
+      String releaseDate;
+    create::_create(required String a_name,String a_organization, String a_date, String a_version, String a_releaseDate, String a_comment) {
+
+         this.name = parameters.a_name;
+         this.organization = parameters.a_organization;
+         this.date = parameters.a_date;
+         this.version = parameters.a_version;
+         this.releaseDate = parameters.a_releaseDate;
+         this.comment = parameters.a_comment;
+         
+      }
+      delete() {
+      }
+   }
+   public concept CWEModification {
+      String name;
+      String organization;
+      String date;
+      String comment;
+      String importance;
+      create::_create(required String a_name,String a_organization, String a_date, String a_comment, String a_importance) {
+        this.name = parameters.a_name;
+         this.organization = parameters.a_organization;
+         this.date = parameters.a_date;
+         this.comment = parameters.a_comment;
+         this.importance = parameters.a_importance;
+         
+      }
+      delete() {
+      }
+   }
+   public concept CWEContribution {
+      String name;
+      String organization;
+      String date;
+      String comment;
+      String type;
+
+      create::_create(required String a_type,required String a_name,String a_organization, String a_date, String a_comment) {
+         this.type = parameters.a_type;
+        this.name = parameters.a_name;
+         this.organization = parameters.a_organization;
+         this.date = parameters.a_date;
+         this.comment = parameters.a_comment;
+
+         
+      }
+      delete() {
+      }
+   }
+   public concept CWEPreviousEntry {
+      String name;
+      String date;
+      create::_create(required String a_date,required String a_name) {
+         this.date = parameters.a_date;
+        this.name = parameters.a_name;
+         
+      }
+      delete() {
+      }
+      
+      }
+
+    //Mapping CWE to CPE
+    public concept CWEApplicablePlatform {
+      String type;
+      String class;
+      String prevalence;
+      String name;
+      String version;
+      String cpe_id;
+    create::_create(String a_type, String a_class, String a_prevalence, String a_name, String a_version, String a_cpe_id ) {
+         this.type = parameters.a_type;
+         this.class = parameters.a_class;
+         this.prevalence = parameters.a_prevalence;
+         this.name = parameters.a_name;
+         this.version =parameters.a_version;
+         this.cpe_id = parameters.a_cpe_id;
+        
+         
+      }
+      delete() {
+      }
+   }
+   public concept CWEIntroduction {
+      String phase;
+      String note;
+      create::_create(String a_phase,String a_note ) {
+         this.phase = parameters.a_phase;
+         this.note =parameters.a_note;
+        
+         
+      }
+      delete() {
+      }
+   }
+    public concept CWEConsequence {
+      String id;
+      String[0,*] scopes;
+      String[0,*] impacts;
+      String likelihood;
+      String note;
+      create::_create(String a_id, String a_scope, String a_impact,String a_likelihood, String a_note ) {
+         this.id =parameters.a_id;
+         this.scopes.add(parameters.a_scope);
+         this.impacts.add(parameters.a_impact);
+         this.likelihood = parameters.a_likelihood;
+         this.note = parameters.a_note;
+         
+        
+         
+      }
+      delete() {
+      }
+   }
+   public concept CWEMitigation {
+      String[0,*] phases;
+      String description;
+      String strategy;
+      String effectiveness;
+      String effectiveness_notes;
+      create::_create( String a_phase, String a_description,String a_strategy, String a_effectiveness, String a_effectiveness_notes ) {
+         this.phases.add(parameters.a_phase);
+         this.description = parameters.a_description;
+         this.strategy = parameters.a_strategy;
+         this.effectiveness = parameters.a_effectiveness;
+         this.effectiveness_notes = parameters.a_effectiveness_notes;
+         
+        
+         
+      }
+      delete() {
+      }
+   }
+
+   public concept CWEAlternateTerm {
+      String term;
+      String description;
+      create::_create( required String a_term, String a_description) {
+         this.term = parameters.a_term;
+         this.description = parameters.a_description;
+
+        
+         
+      }
+      delete() {
+      }
+   }
+
+  public concept CWEDetectionMethod {
+   String id;
+   String method;
+   String description;
+   String effectiveness;
+   String effectiveness_notes;
+   create::_create( String a_id, String a_description,String a_method, String a_effectiveness, String a_effectiveness_notes ) {
+         this.id = parameters.a_id;
+         this.description = parameters.a_description;
+         this.method = parameters.a_method;
+         this.effectiveness = parameters.a_effectiveness;
+         this.effectiveness_notes = parameters.a_effectiveness_notes;
+         
+        
+         
+      }
+      delete() {
+      }
+  }
+    public concept CWEDemonstrativeExample {
+   String id;
+   String title_text;
+   String intro_text;
+   String[0,*] body_text;
+   String[0,*] example_code;
+   CWEReference reference with ConceptInstance(virtualModelInstance=container);
+   create::_create( String a_id, String a_title_text,String a_intro_text, String a_body_text, String a_example_code, CWEReference a_reference ) {
+         this.id = parameters.a_id;
+         this.title_text = parameters.a_title_text;
+         this.intro_text =parameters.a_intro_text;
+         this.body_text.add(parameters.a_body_text);
+         this.example_code.add(parameters.a_example_code);
+         this.reference = parameters.a_reference;
+         
+        
+         
+      }
+      delete() {
+      }
+  }
+  public concept CWEObservedExample {
+   String reference;
+   String description;
+   String link;
+
+   create::_create(String a_link, String a_description, String a_reference ) {
+
+         this.description = parameters.a_description;
+         this.link = parameters.a_link;
+         this.reference = parameters.a_reference;
+         
+        
+         
+      }
+      delete() {
+      }
+  }
+  public concept CWETaxonomyMapping {
+   String entry_id;
+   String entry_name;
+   String mapping_fit;
+   String taxonomy_name;
+
+   create::_create(String a_entry_id, String a_entry_name, String a_mapping_fit,required String a_taxonomy_name ) {
+
+         this.entry_id = parameters.a_entry_id;
+         this.entry_name = parameters.a_entry_name;
+         this.mapping_fit = parameters.a_mapping_fit;
+         this.taxonomy_name = parameters.a_taxonomy_name;
+         
+        
+         
+      }
+      delete() {
+      }
+  }
+  public concept CWERelatedAttackPattern {
+   String capec_id;
+
+
+   create::_create(String a_capec_id ) {
+
+         this.capec_id = parameters.a_capec_id;
+
+         
+        
+         
+      }
+      delete() {
+      }
+  }
+    public concept CWENote {
+   String type;
+   String text;
+
+
+   create::_create(String a_type,String a_text ) {
+
+         this.type = parameters.a_type;
+         this.text = parameters.a_text;
+
+         
+        
+         
+      }
+      delete() {
+      }
+  }
+  public concept CWECategory {
+   String id;
+   String name;
+   String status;
+   String summary;
+   CWERelationshipType[0,*] relationships with ConceptInstance(virtualModelInstance=container);
+   CWETaxonomyMapping[0,*] taxonomyMappings with ConceptInstance(virtualModelInstance=container);
+   CWEReference[0,*] references with ConceptInstance(virtualModelInstance=container);
+   CWENote[0,*] notes with ConceptInstance(virtualModelInstance=container);
+   CWEContentHistory contentHistory with ConceptInstance(virtualModelInstance=container);
+      
+   
+   
+
+
+   create::_create(String a_id,String a_name, String a_status, String a_summary ) {
+      this.id = parameters.a_id;
+      this.name = parameters.a_name;
+      this.status = parameters.a_status;
+      this.summary = parameters.a_summary;
+ 
+
+         
+        
+         
+      }
+      delete() {
+      }
+  }
+  public concept CWEView {
+   String id;
+   String name;
+   String status;
+   String type;
+   String objective;
+   String filter;
+   CWERelationshipType[0,*] members with ConceptInstance(virtualModelInstance=container);
+   CWEReference[0,*] references with ConceptInstance(virtualModelInstance=container);
+   CWENote[0,*] notes with ConceptInstance(virtualModelInstance=container);
+   CWEContentHistory contentHistory with ConceptInstance(virtualModelInstance=container);
+      
+   
+   
+
+
+   create::_create(String a_id,String a_name, String a_status, String a_type ) {
+      this.id = parameters.a_id;
+      this.name = parameters.a_name;
+      this.status = parameters.a_status;
+      this.type = parameters.a_type;
+ 
+
+         
+        
+         
+      }
+      delete() {
+      }
+  }
+   public concept CWEExternalReferenceType {
+     String author;
+     String title;
+     String edition;
+     String publication;
+     String publication_year;
+     String publication_month;
+     String publication_day;
+     String publisher;
+     String url;
+     String url_date;
+     String reference_id;
+     create::_create(String a_reference_id,String a_author,String a_title ) {
+        this.reference_id = parameters.a_reference_id;
+        this.author = parameters.a_author;
+        this.title = parameters.a_title;
+
+
+
+
+
+
+        }
+        delete() {
+        }
+    }
+   public concept CWERelationshipType {
+   String type;
+   String cwe_id;
+   String view_id;
+   create::_create(String a_type,String a_cwe_id,String a_view_id ) {
+      this.type = parameters.a_type;
+      this.cwe_id = parameters.a_cwe_id;
+      this.view_id = parameters.a_view_id;
+
+ 
+
+         
+        
+         
+      }
+      delete() {
+      }
+  }
+  
+}

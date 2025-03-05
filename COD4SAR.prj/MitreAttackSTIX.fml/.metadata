@@ -1,0 +1,9 @@
+#Metadata for directory C:\Users\h24hnain\Desktop\Security-Ontology\cod4sar-model\COD4SAR.prj\MitreAttackSTIX.fml
+#Wed Mar 05 15:35:35 CET 2025
+MitreAttackSTIX.fml.name=MitreAttackSTIX
+MitreAttackSTIX.fml.flexoConceptsList=MASTIXConcept,MASTIXMitreCollection,MASTIXMitreContent,MASTIXAttackPattern,MASTIXKillChainPhase,MASTIXExternalReference,MASTIXRelationship,MASTIXTool,MASTIXMalware,MASTIXIntrusionSet,MASTIXCourseOfAction,MASTIXCampaign,MASTIXMitreMatrix,MASTIXMitreTactic,MASTIXMitreDataSource,MASTIXMitreDataComponent,MASTIXIdentity,MASTIXMarkingDefinition,MASTIXDefinition,MASTIXMitreAsset,MASTIXMitreRelatedAsset
+MitreAttackSTIX.fml.requiredModelSlotList=org.openflexo.foundation.fml.rt.FMLRTVirtualModelInstanceModelSlot
+MitreAttackSTIX.fml.virtualModelClassName=org.openflexo.foundation.fml.VirtualModel
+MitreAttackSTIX.fml.version=0.1
+MitreAttackSTIX.fml.uri=http\://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml
+MitreAttackSTIX.fml.dependenciesList=http\://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttackSTIX.fml

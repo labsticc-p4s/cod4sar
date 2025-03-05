@@ -1,0 +1,298 @@
+namespace "http://imt-atlantique.fr/COD4SAR/COD4SAR.prj" as COD4SAR;
+
+use org.openflexo.foundation.fml.rt.FMLRTVirtualModelInstanceModelSlot as FMLRT;
+
+import java.lang.String;
+import java.util.Date;
+
+import [COD4SAR + "/MitreAttack.fml"] as MitreAttack;
+
+@URI("http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/MitreAttack.fml")
+@Author("sylvainguerin")
+public model MitreAttack {
+
+   public concept MAAttack {
+      String name;
+   
+      create(String aName) {
+         name = parameters.aName;
+      }
+     
+      delete() {
+      }
+   }
+
+	public concept MAConcept {
+		String id;
+		String stixId;
+		String name;
+		String description;
+		String url;
+		Date created;
+		Date lastModified;
+		String domain;
+		String version;
+      create(String aId, String aName, String aDomain) {
+      id = parameters.aId;
+      name = parameters.aName;
+      domain = parameters.aDomain;
+      }
+
+         delete() {
+         }
+	}
+
+   public concept MAConceptWithCitation extends MAConcept {
+   Citation[1,*] relationshipCitations with ConceptInstance(virtualModelInstance=container);
+      
+           
+	create(String aId, String aName, String aDomain, Citation relationshipCitation) {
+		super(parameters.aId,parameters.aName,parameters.aDomain);
+		relationshipCitations.add(parameters.relationshipCitation);
+	}
+
+	delete() {
+	}
+           }
+
+   public concept Citation {
+      String reference;
+      String citation;
+      String url;
+      
+      create(String aRef,String aCitation,String aUrl) {
+         reference = parameters.aRef;
+         citation = parameters.aCitation;
+         url = parameters.aUrl;
+      }
+     
+      delete() {
+      }
+   }
+    
+    public concept MATechnique extends MAConceptWithCitation {
+	MATactic[1,*] tactics with ConceptInstance(virtualModelInstance=container);
+   String detection;
+   String[0,*] platforms;
+   String[0,*] datasources;
+   boolean isSubTechnique;
+   String subTechniqueOf;
+   String[0,*] defensesByPassed;
+   String[0,*] contributors;
+   String[0,*] permissionsRequired;
+   boolean supportsRemote;
+   String[0,*] systemRequirements;
+   String impactType;
+   String[0,*] effectivePermissions;
+   String tacticType;
+   String mtcId;
+      
+   
+      create(String aId,String aName, String aDomain,MATactic aTactic, String aDetection, boolean isSubTechnique,
+      String aPlatform, String aDatasource, String subTechniqueOf, String aDefensesByPassed, String aContributor,
+      String aPermissionRequired, boolean supportsRemote, String aSystemRequirement, String aImpactType, String aEffectivePermission,
+      String aTacticType,String aMtcId,Citation aCitation) {
+         super(parameters.aId,parameters.aName,parameters.aDomain,parameters.aCitation);
+         tactics.add(parameters.aTactic);
+         detection = parameters.aDetection;
+         platforms.add(parameters.aPlatform);
+         datasources.add(parameters.aDatasource);
+         isSubTechnique = parameters.isSubTechnique;
+         subTechniqueOf = parameters.subTechniqueOf;
+         defensesByPassed.add(parameters.aDefensesByPassed);
+         contributors.add(parameters.aContributor);
+         permissionsRequired.add(parameters.aPermissionRequired);
+         supportsRemote = parameters.supportsRemote;
+         systemRequirements.add(parameters.aSystemRequirement);
+         impactType = parameters.aImpactType;
+         effectivePermissions.add(parameters.aEffectivePermission);
+         tacticType = parameters.aTacticType;
+         mtcId = parameters.aMtcId;
+      }
+     
+      delete() {
+      }
+   }
+
+   public concept MATactic extends MAConceptWithCitation {
+    
+
+      
+   
+      create(String aId,String aName, String aDomain,Citation aCitation) {
+         super(parameters.aId,parameters.aName,parameters.aDomain,parameters.aCitation);
+      }
+     
+      delete() {
+      }
+   }
+
+   public concept MASoftware extends MAConceptWithCitation {
+    String[0,*] contributors;
+    String[0,*] platforms;
+    String[0,*] aliases;
+    String type;
+      
+   
+      create(String aId,String aName, String aDomain, String aContributor, String aPlatform, String aAlias,
+      String aType,Citation aCitation) {
+         super(parameters.aId,parameters.aName,parameters.aDomain,parameters.aCitation);
+         contributors.add(parameters.aContributor);
+         platforms.add(parameters.aPlatform);
+         aliases.add(parameters.aAlias);
+         type = parameters.aType;
+      }
+     
+      delete() {
+      }
+   }
+    public concept MAGroup extends MAConceptWithCitation {
+    String[0,*] contributors;
+    String[0,*] associatedGroups;
+    Citation[0,*] associatedGroupsCitations with ConceptInstance(virtualModelInstance=container);
+
+      
+   
+      create(String aId,String aName, String aDomain, String aContributor, String aAssociatedGroup,Citation aAssociatedGroupCitation,Citation aCitation) {
+         super(parameters.aId,parameters.aName,parameters.aDomain,parameters.aCitation);
+         contributors.add(parameters.aContributor);
+         associatedGroups.add(parameters.aAssociatedGroup);
+         associatedGroupsCitations.add(parameters.aAssociatedGroupCitation);
+      }
+     
+      delete() {
+      }
+   }
+   public concept MACampaign extends MAConceptWithCitation {
+    String[0,*] contributors;
+    String[0,*] associatedCampaigns;
+    Citation[0,*] associatedCampaignsCitations with ConceptInstance(virtualModelInstance=container);
+    String firstSeen;
+    Citation firstSeenCitation with ConceptInstance(virtualModelInstance=container);
+    String lastSeen;
+    Citation lastSeenCitation with ConceptInstance(virtualModelInstance=container);
+
+      
+   
+      create(String aId,String aName, String aDomain, String aContributor, String aAssociatedCampaign,
+      Citation aAssociatedCampaignCitation,String aFirstSeen, Citation aFirstSeenCitation, String aLastSeen,
+       Citation aLastSeenCitation,Citation aCitation) {
+        super(parameters.aId,parameters.aName,parameters.aDomain,parameters.aCitation);
+        contributors.add(parameters.aContributor);
+        associatedCampaigns.add(parameters.aAssociatedCampaign);
+        associatedCampaignsCitations.add(parameters.aAssociatedCampaignCitation);
+        firstSeen = parameters.aFirstSeen;
+        firstSeenCitation = parameters.aFirstSeenCitation;
+        lastSeen = parameters.aLastSeen;
+        lastSeenCitation = parameters.aLastSeenCitation;
+      }
+     
+      delete() {
+      }
+   }
+   public concept MAAsset extends MAConceptWithCitation {
+    String[0,*] sectors;
+    String[0,*] platforms;
+    String[0,*] relatedAssets;
+    String[0,*] relatedAssetsSectors;
+    String relatedAssetsDescription;
+      
+   
+      create(String aId,String aName, String aDomain,String aSector, String aPlatform,
+      String aRelatedAsset, String aRelatedAssetsSector, String aRelatedAssetsDescription,Citation aCitation) {
+         super(parameters.aId,parameters.aName,parameters.aDomain,parameters.aCitation);
+         sectors.add(parameters.aSector);
+         platforms.add(parameters.aPlatform);
+         relatedAssets.add(parameters.aRelatedAsset);
+         relatedAssetsSectors.add(parameters.aRelatedAssetsSector);
+         relatedAssetsDescription = parameters.aRelatedAssetsDescription;
+      }
+     
+      delete() {
+      }
+   }
+    public concept MAMitigation extends MAConceptWithCitation {
+      
+   
+      create(String aId,String aName, String aDomain,Citation aCitation) {
+         super(parameters.aId,parameters.aName,parameters.aDomain,parameters.aCitation);
+      }
+     
+      delete() {
+      }
+   }
+
+    public concept MARelationship {
+      String sourceId;
+      String sourceName;
+      String sourceRef;
+      String sourceType;
+      String mappingType;
+      String targetId;
+      String targetName;
+      String targetRef;
+      String targetType;
+      String mappingDescription;
+      String stixId;
+      String created;
+      String lastModified;
+      
+   
+      create(String aSourceId,String aSourceName,String aSourceRef, String aSourceType,
+       String aMappingType, String aTargetId,String aTargetName, String aTargetRef, String aTargetType,
+       String aMappingDescription, String aStixId, String aCreated, String aLastModified) {
+         sourceId = parameters.aSourceId;
+         sourceName = parameters.aSourceName;
+         sourceRef = parameters.aSourceRef;
+         sourceType = parameters.aSourceType;
+         mappingType = parameters.aMappingType;
+         targetId = parameters.aTargetId;
+         targetName = parameters.aTargetName;
+         targetRef = parameters.aTargetRef;
+         targetType = parameters.aTargetType;
+         mappingDescription = parameters.aMappingDescription;
+         stixId = parameters.aStixId;
+         created = parameters.aCreated;
+         lastModified = parameters.aLastModified;
+      }
+     
+      delete() {
+      }
+   }
+    public concept MADataSource {
+      String id;
+      String stixId;
+      String name;
+      String description;
+      String url;
+      String created;
+      String lastModified;
+      String version;
+      String[0,*] collectionLayers;
+      String[0,*] platforms;
+      String type;
+      
+      create(String aId,String aStixId,String aName,String aDescription, String aUrl, String aCreated,
+      String aLastModified, String aVersion, String aCollectionLayer,String aPlatform, String aType) {
+         id = parameters.aId;
+         stixId = parameters.aStixId;
+         name = parameters.aName;
+         description = parameters.aDescription;
+         url = parameters.aUrl;
+         created = parameters.aCreated;
+         lastModified = parameters.aLastModified;
+         version = parameters.aVersion;
+         collectionLayers.add(parameters.aCollectionLayer);
+         platforms.add(parameters.aPlatform);
+         type = parameters.aType;
+      }
+     
+      delete() {
+      }
+           }
+
+   
+
+   
+   
+}

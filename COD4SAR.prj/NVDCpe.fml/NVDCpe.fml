@@ -1,0 +1,67 @@
+use org.openflexo.foundation.fml.rt.FMLRTVirtualModelInstanceModelSlot as FMLRT;
+
+import java.lang.String;
+
+@URI("http://imt-atlantique.fr/COD4SAR/COD4SAR.prj/NVDCpe.fml")
+@Author("h24hnain")
+public model NVDCpe {
+
+public concept Cpe {
+   boolean deprecated;
+   String cpeName;
+   String cpeNameId;
+   String created;
+   String lastModified;
+   Title[0,*] titles with ConceptInstance(virtualModelInstance=container);
+   Reference[0,*] refs with ConceptInstance(virtualModelInstance=container);
+   Deprecation[0,*] deprecatedBy with ConceptInstance(virtualModelInstance=container);
+   Deprecation[0,*] deprecates with ConceptInstance(virtualModelInstance=container);
+
+		create::_create(required boolean a_deprecated,required String a_cpeName,required String a_cpeNameId,required String a_created,required String a_lastModified) {
+         this.deprecated = parameters.a_deprecated;
+         this.cpeName = parameters.a_cpeName;
+         this.cpeNameId = parameters.a_cpeNameId;
+         this.created = parameters.a_created;
+         this.lastModified = parameters.a_lastModified;
+
+
+		}
+		delete() {
+		}
+	}
+
+	public concept Title {
+   String title;
+   String lang;
+		create::_create(String a_title, String a_lang) {
+         this.title = parameters.a_title;
+         this.lang = parameters.a_lang;
+		}
+		delete() {
+		}
+	}
+  public concept Reference {
+   String ref;
+   String type;
+    create::_create(String a_ref, String a_type) {
+         this.ref = parameters.a_ref;
+         this.type = parameters.a_type;
+      }
+      delete() {
+      }
+   }
+
+   public concept Deprecation {
+   String cpeName;
+   String cpeNameId;
+    create::_create(String a_cpeName, String a_cpeNameId) {
+         this.cpeName = parameters.a_cpeName;
+         this.cpeNameId = parameters.a_cpeNameId;
+      }
+      delete() {
+      }
+   }
+
+   
+   
+}
