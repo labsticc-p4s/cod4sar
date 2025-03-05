@@ -1,2 +1,2 @@
 # cod4sar
-Prototype developed for Code4SAR project
+Prototype developed for Code4SAR project.
